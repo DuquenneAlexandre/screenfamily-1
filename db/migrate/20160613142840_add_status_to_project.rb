@@ -1,5 +1,5 @@
 class AddStatusToProject < ActiveRecord::Migration
   def change
-    add_column :status, :boolean, default: true
+    add_column :projects, :status, :boolean, default: true
   end
 end
