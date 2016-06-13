@@ -79,7 +79,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :city, :project_picture)
+    params.require(:project).permit(:name, :city, :project_picture, :project_picture_cache)
   end
 
   def set_project
