@@ -3,6 +3,7 @@ ruby '2.3.0'
 
 gem 'cloudinary'
 gem 'carrierwave'
+gem 'omniauth-facebook'
 
 gem 'rails', '4.2.6'
 gem 'puma'
