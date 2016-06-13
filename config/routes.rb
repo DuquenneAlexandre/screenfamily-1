@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   resources :pledges, only: [:index, :new, :create]
   end
 
+  resources :reviews, only: [:new, :create]
+
 end
