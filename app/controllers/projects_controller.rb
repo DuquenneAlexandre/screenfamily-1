@@ -64,7 +64,7 @@ class ProjectsController < ApplicationController
 
   def disable
     if project.is_disabled?
-      # @project.status = false
+      @project.status = false
       redirect_to projects_path
       flash[:notice] = "Project disabled!"
     else
@@ -87,6 +87,6 @@ class ProjectsController < ApplicationController
   end
 
   def is_disabled
-    # @project.status
+    @project.status
   end
 end
