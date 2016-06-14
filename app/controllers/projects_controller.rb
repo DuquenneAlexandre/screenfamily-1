@@ -87,7 +87,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :city, :genre, :start_date, :end_date, :project_picture, :project_picture_cache)
+    params.require(:project).permit(:name, :city, :genre, :start_date, :end_date, :synopsis, :scenario, :number_of_participants, :number_of_days_for_crowdfunding, :project_picture, :project_picture_cache)
   end
 
   def set_project
