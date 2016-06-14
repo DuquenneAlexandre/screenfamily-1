@@ -15,8 +15,7 @@ Rails.application.routes.draw do
 
   resources :projects do
   	collection do
-      get :search, :action => "search_project", :as => "search_project"
-      get "search/:city", :action => "search", :as => "search"
+      get "search/:city", :action => "index"
     end
   resources :roles, only: [:index, :new, :create, :edit, :update]
   resources :pledges, only: [:index, :new, :create]
