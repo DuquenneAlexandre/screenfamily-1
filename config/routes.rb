@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   devise_for :users
-  resources :users, only: [:show, :edit, :update]
-
-  # get '/profile', to: 'pages#profile'
+  resources :users, only: [:show, :edit, :update] do
+   get '/screener_profile', to: 'pages#screener_profile'
+ end
   #
   # resources :projects, only: [:index, :show, :new, :create, :edit, :update]
   # get '/projects/:id/disable', to: 'users#disable'
