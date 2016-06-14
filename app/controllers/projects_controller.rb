@@ -4,8 +4,11 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = policy_scope(Project)
-    if params[:city].present?
-      @projects = @projects.where("city LIKE ?", "%#{params[:city]}%")
+    @q = Project.ransack(params[:q])
+    @projects = @q.result(:distinct => true)
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @projects }
     end
     # if @projects == []
     #   @markers = Gmaps4rails.build_markers(Project.all) do |project, marker|
