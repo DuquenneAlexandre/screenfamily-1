@@ -1,3 +1,55 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.project_movie_title {
+	font-size: 3em;
+	font-family: bold;
+	text-decoration : underline;
+}
+
+.date {
+// text-decoration : underline;
+}
+
+.project_movie_city {
+
+}
+
+.project_movie_genre {
+
+}
+
+.project_movie_synopsis {
+
+}
+
+.project_movie_scenario {
+
+}
+
+.project_movie_participants {
+
+}
+
+.project_movie_number_of_days {
+
+}
+
+.undeline {
+
+}
+
+.card_projects {
+	text-align: center;
+	height: 60em;
+	background-color: #948585;
+	border-radius: 1em;
+}
+
+.project-percent-pledged {
+    background-color: black;
+     height: 0.5%;
+     border-radius: 1em;
+}
+
+.projects_search_bar {
+// 	margin-left: 10em;
+text-align: center;
+}

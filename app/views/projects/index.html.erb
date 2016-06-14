@@ -1,1 +1,35 @@
-<p>I am project index</p>
+<br>
+
+<form accept-charset="UTF-8" action="/projects/search" class="projects_search_bar" method="get" role="search">
+<input></form>
+</form>
+
+<br>
+
+<!-- --------------------------------------------------------------- -->
+<div class="container">
+<div class="row">
+ <%@projects.each do |proj|%>
+ <div class="col-xs-4">
+    <div class="card_projects">
+	       <p class="project_movie_title"><%= proj.name %></p>
+	       <p class="date">Du: <%= proj.start_date %>
+      	  Au: <%= proj.end_date %></p>
+      	 <p class="project_movie_city">Ville: <%= proj.city %></p>
+      	 <p class="project_movie_genre">Genre: "<%= proj.genre %>"</p>
+         <div class="project-percent-pledged" style="width: 100%"></div>
+      	 <p class="project_movie_synopsis">Synopsis: "<%= proj.synopsis %>"</p>
+      	 <p class="project_movie_scenario">Scenario: "<%= proj.scenario %>"</p>
+         <div class="project-percent-pledged" style="width: 100%"></div>
+      	 <p class="project_movie_participants">Participants: <%= proj.number_of_participants %></p>
+      	 <p class="project_movie_number_of_days"><%= proj.number_of_days_for_crowdfunding %></p>
+
+      	 <p class="project_movie_goal_for_crowd"><%= proj.goal_for_crowdfunding %></p>
+         </div>
+         <br>
+         </div>
+
+	     <% end %>
+       </div>
+ 
+</div>
