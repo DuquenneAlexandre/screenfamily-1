@@ -18,6 +18,10 @@ class ProjectPolicy < ApplicationPolicy
     #TODO : only a logged user can create a project
   end
 
+  def create?
+    true
+  end
+
   def edit?
     record.user == user # only the owner of the project can update it
   end
