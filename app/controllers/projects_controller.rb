@@ -1,13 +1,10 @@
 class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:my_projects, :show]
   before_action :set_project, only: [:edit, :show, :destroy]
-
-  def new
-    @project = Project.new
-  end
+  before_action :authorize_project, only: [:show, :new, :create, :edit, :update, :disable, :search_project]
 
   def index
-    @projects = Project.all
+    @projects = policy_scope(Project)
     if not params[:city].blank?
       @projects = @projects.where("city LIKE ?", "%#{params[:city]}%")
     end
@@ -28,6 +25,19 @@ class ProjectsController < ApplicationController
     @projects = current_user.projects
   end
 
+  def show
+    # @reviews = @project.reviews
+    # @review = Review.new
+    # @marker_show = Gmaps4rails.build_markers(@project) do |project, marker|
+    #   marker.lat project.latitude
+    #   marker.lng project.longitude
+    # end
+  end
+
+  def new
+    @project = Project.new
+  end
+
   def create
     @user = current_user
     @project = current_user.projects.build(project_params)
@@ -41,15 +51,6 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-  end
-
-  def show
-    # @reviews = @project.reviews
-    # @review = Review.new
-    # @marker_show = Gmaps4rails.build_markers(@project) do |project, marker|
-    #   marker.lat project.latitude
-    #   marker.lng project.longitude
-    # end
   end
 
   def update
@@ -84,6 +85,10 @@ class ProjectsController < ApplicationController
 
   def set_project
     @project = Project.find(params[:id])
+  end
+
+  def authorize_project
+    authorize @project
   end
 
   def is_disabled
