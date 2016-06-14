@@ -1,1 +1,6 @@
-<p>User edit I am</p>
+<%= simple_form_for (@user) do |f| %>
+  <%= render 'form_users' %>
+    <div class="text-center">
+      <%= f.button :submit %>
+    </div>
+<%end%>

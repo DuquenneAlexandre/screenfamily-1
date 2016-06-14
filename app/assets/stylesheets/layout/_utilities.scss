@@ -23,3 +23,14 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+  color: $gray-lighter;
+  text-decoration: none;
+}
