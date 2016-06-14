@@ -9,7 +9,8 @@
  <div class="col-xs-4">
     <div class="card_projects">
 	       <p class="project_movie_title"><%= proj.name %></p>
-	       <p class="date">Du: <%= proj.start_date %>
+    <div class="img-card-back" style="background: url('<%= proj.project_picture.url %>') no-repeat center center;background-size:cover;"></div>
+       <p class="date">Du: <%= proj.start_date %>
       	  Au: <%= proj.end_date %></p>
       	 <p class="project_movie_city">Ville: <%= proj.city %></p>
       	 <p class="project_movie_genre">Genre: "<%= proj.genre %>"</p>

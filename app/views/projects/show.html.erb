@@ -1,19 +1,27 @@
-<div class="container">
-<div class="row">
-<div class="card_projects">
-<p class="project_movie_title"><%= @project.name %></p>
-	       <p class="date">Du: <%= @project.start_date %>
-      	  Au: <%= @project.end_date %></p>
-      	 <p class="project_movie_city">Ville: <%= @project.city %></p>
-      	 <p class="project_movie_genre">Genre: "<%= @project.genre %>"</p>
-         <div class="project-percent-pledged" style="width: 100%"></div>
-      	 <p class="project_movie_synopsis">Synopsis: "<%= @project.synopsis %>"</p>
-      	 <p class="project_movie_scenario">Scenario: "<%= @project.scenario %>"</p>
-         <div class="project-percent-pledged" style="width: 100%"></div>
-      	 <p class="project_movie_participants">Participants: <%= @project.number_of_participants %></p>
-      	 <p class="project_movie_number_of_days"><%= @project.number_of_days_for_crowdfunding %></p>
-      	 <p class="project_movie_goal_for_crowd"><%= @project.goal_for_crowdfunding %></p>
-         <br>
-         </div>
-         </div>
-         </div>
+<br>
+<div class="container" >
+  <div class="row">
+    <div class="card_projects">
+        <p class="project_movie_title"><%= @project.name %></p>
+          <div class="container">
+
+    <div class="img-card-back" style="background: url('<%= @project.project_picture.url %>') no-repeat center center;background-size:cover;"></div>
+  </div>
+
+	         <p class="date">Du: <%= @project.start_date %>
+      	     Au: <%= @project.end_date %></p>
+      	     <p class="project_movie_city">Ville: <%= @project.city %></p>
+      	         <p class="project_movie_genre">Genre: "<%= @project.genre %>"</p>
+                    <div class="project-percent-pledged" style="width: 100%"></div>
+      	               <p class="project_movie_synopsis">Synopsis: "<%= @project.synopsis %>"</p>
+      	                 <p class="project_movie_scenario">Scenario: "<%= @project.scenario %>"</p>
+                            <div class="project-percent-pledged" style="width: 100%"></div>
+      	                       <p class="project_movie_participants">Participants: <%= @project.number_of_participants %></p>
+      	                           <p class="project_movie_number_of_days"><%= @project.number_of_days_for_crowdfunding %></p>
+      	                             <p class="project_movie_goal_for_crowd"><%= @project.goal_for_crowdfunding %></p>
+                                        <br>
+        </div>
+      </div>
+    </div>
+
+     
