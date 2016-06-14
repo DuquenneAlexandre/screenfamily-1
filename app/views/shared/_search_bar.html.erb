@@ -1,0 +1,38 @@
+<% content_for :after_js do %>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#datepicker, #datepicker1" ).datepicker();
+  });
+  </script>
+<% end %>
+
+
+<form class="form-inline">
+  <input name="begin_date" type="date" class="form-control input-lg searchbar" placeholder="begin date">
+  <input name="end_date" type="date" class="form-control input-lg searchbar" placeholder="end date">
+  <select name="city" class="form-control input-lg" placeholder="City">
+    <option value="any">City?</option>
+    <option value="Paris">Paris</option>
+    <option value="Lille">Lille</option>
+    <option value="Lyon">Lyon</option>
+    <option value="Bordeaux">Bordeaux</option>
+    <option value="Marseilles">Marseille</option>
+  </select>
+  <select name="category" class="form-control input-lg" placeholder="Cinema Category">
+    <option value="any">Type?</option>
+    <option value="Action">Action</option>
+    <option value="Adventure">Adventure</option>
+    <option value="Animated">Animated</option>
+    <option value="Comedy">Comedy</option>
+    <option value="Drama">Drama</option>
+    <option value="Horror">Horror</option>
+    <option value="Thriller">Thriller</option>
+    <option value="Romance">Romance</option>
+    <option value="Science Fiction">Science Fiction</option>
+    <option value="War">War</option>
+    <option value="Western">Western</option>
+  </select>
+  <input type="submit" class="btn btn-primary btn-lg" value="Search">
+</form>
