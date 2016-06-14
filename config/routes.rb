@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   # get '/projects/:id/disable', to: 'users#disable'
 
   resources :projects do
-  	collection do
-      get "search/:city", :action => "index"
+    collection do
+      match 'search' => 'projects#index', :via => [:get, :post], :as => :search
     end
   resources :roles, only: [:index, :new, :create, :edit, :update]
   resources :pledges, only: [:index, :new, :create]

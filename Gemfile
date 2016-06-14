@@ -6,6 +6,7 @@ gem 'carrierwave'
 gem 'omniauth-facebook'
 gem 'pundit'
 gem 'rails-i18n'
+gem 'ransack'
 
 gem 'rails', '4.2.6'
 gem 'puma'
