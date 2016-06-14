@@ -2,10 +2,13 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
+
   devise_for :users
-  resources :users, only: [:show, :edit, :update] do
+  resources :users, only: [:show, :edit, :update], controllers: { omniauth_callbacks: 'users/omniauth_callbacks' } do
    get '/screener_profile', to: 'pages#screener_profile'
  end
+
+  # get '/profile', to: 'pages#profile'
   #
   # resources :projects, only: [:index, :show, :new, :create, :edit, :update]
   # get '/projects/:id/disable', to: 'users#disable'

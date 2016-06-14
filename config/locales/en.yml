@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  projects:
+    index:
+      title: "List of Projects"
