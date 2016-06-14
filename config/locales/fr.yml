@@ -1,5 +1,5 @@
 fr:
   hello: "Bonjour à tous"
-    projects:
-      index:
-        title: "Liste des Projets"
+  projects:
+    index:
+      title: "Liste des Projets"
