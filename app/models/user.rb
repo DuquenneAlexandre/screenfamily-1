@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :reviews, as: :reviewable
+  has_many :projects
   devise :omniauthable, omniauth_providers: [:facebook]
 
   def self.find_for_facebook_oauth(auth)
