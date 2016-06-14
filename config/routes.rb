@@ -22,6 +22,9 @@ Rails.application.routes.draw do
     end
   resources :roles, only: [:index, :new, :create, :edit, :update]
   resources :pledges, only: [:index, :new, :create]
+    member do
+      put 'join', to: 'projects#join_project'
+    end
   end
 
   resources :reviews, only: [:new, :create]
