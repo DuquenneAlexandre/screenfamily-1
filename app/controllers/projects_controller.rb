@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = policy_scope(Project)
-    if not params[:city].blank?
+    if params[:city].present?
       @projects = @projects.where("city LIKE ?", "%#{params[:city]}%")
     end
     # if @projects == []
@@ -78,10 +78,6 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def search_project
-   redirect_to search_projects_path(params[:city])
-  end
-
   private
 
   def project_params
@@ -91,9 +87,5 @@ class ProjectsController < ApplicationController
   def set_project
     @project = Project.find(params[:id])
     authorize @project
-  end
-
-  def is_disabled
-    @project.status
   end
 end
