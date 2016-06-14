@@ -5,8 +5,10 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   resources :users, only: [:show, :edit, :update] do
-   get '/screener_profile', to: 'pages#screener_profile'
- end
+    member do
+      get 'profile', to: 'users#profile'
+    end
+  end
 
   # get '/profile', to: 'pages#profile'
   #
