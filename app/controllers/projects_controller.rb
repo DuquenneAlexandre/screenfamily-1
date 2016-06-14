@@ -86,9 +86,7 @@ class ProjectsController < ApplicationController
 
   def join_project
     @user = current_user
-    if !@project.users.find(@user)
-        @project.users << @user
-    end
+    @project.users << @user unless @project.users.include? @user
   end
 
   private
