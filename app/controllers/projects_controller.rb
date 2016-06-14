@@ -4,8 +4,8 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = policy_scope(Project)
-    @q = Project.ransack(params[:q])
-    @projects = @q.result(:distinct => true)
+    @search = Project.ransack(params[:q])
+    @projects = @search.result(:distinct => true)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @projects }
@@ -84,7 +84,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :city, :project_picture, :project_picture_cache)
+    params.require(:project).permit(:name, :city, :genre, :start_date, :end_date, :project_picture, :project_picture_cache)
   end
 
   def set_project
