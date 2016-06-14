@@ -1,0 +1,19 @@
+<div class="card_projects2">
+<div class="container" style="width: 20em;">
+    <%= simple_form_for(@project) do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :name %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.input :city, input_html: {id: "locality"} %>
+       <%= f.input :synopsis %>
+        <%= f.input :scenario %>
+        <%= f.input :number_of_participants %>
+        <%= f.input :number_of_days_for_crowdfunding %>
+       <%= f.input :project_picture %>
+      <%= f.input :project_picture_cache, as: :hidden %>
+      <%= f.button :submit %>
+      <%= link_to "Retour à la home", projects_path %>
+      <% end %>
+  </div>
+  </div>
