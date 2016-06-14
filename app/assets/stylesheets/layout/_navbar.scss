@@ -8,7 +8,6 @@
   padding: 0px 20px;
   align-items: center;
   justify-content: space-between;
-  color: white;
 }
 
 /* Optional class to fix the navbar on top */
@@ -137,4 +136,8 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.margin_right {
+  margin_right: 10px;
 }
