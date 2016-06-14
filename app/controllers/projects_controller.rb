@@ -4,11 +4,14 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = policy_scope(Project)
-    @search = Project.ransack(params[:q])
-    @projects = @search.result(:distinct => true)
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @projects }
+    if params[:city].present?
+      @projects = @projects.where("city LIKE ?", params[:city])
+    end
+    if params[:genre].present?
+      @projects = @projects.where("genre LIKE ?", params[:genre])
+    end
+    if (params[:start_date].present?) && (params[:end_date].present?) && (params[:start_date].to_date < params[:end_date].to_date)
+      @projects = @projects.where("start_date >= ? AND end_date <= ?", params[:start_date], params[:end_date])
     end
     # if @projects == []
     #   @markers = Gmaps4rails.build_markers(Project.all) do |project, marker|
