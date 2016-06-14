@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:my_projects, :show]
-  before_action :set_project, only: [:edit, :show, :update, :disable]
+  before_action :set_project, only: [:edit, :show, :update, :disable, :join_project]
 
   def index
     @projects = policy_scope(Project)
@@ -81,6 +81,13 @@ class ProjectsController < ApplicationController
       flash[:notice] = "Project disabled!"
     else
       flash[:alert] = "Project not disabled!"
+    end
+  end
+
+  def join_project
+    @user = current_user
+    if !@project.users.find(@user)
+        @project.users << @user
     end
   end
 

@@ -26,11 +26,15 @@ class ProjectPolicy < ApplicationPolicy
     record.user == user # only the owner of the project can update it
   end
 
-  def disable
+  def disable?
     record.user == user # only the owner of the project can update it
   end
 
-  def search_project
+  def search_project?
+    true
+  end
+
+  def join_project?
     true
   end
 end
