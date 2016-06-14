@@ -2,8 +2,11 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-  resources :users, only: [:show, :edit, :update]
+
+  devise_for :users
+  resources :users, only: [:show, :edit, :update], controllers: { omniauth_callbacks: 'users/omniauth_callbacks' } do
+   get '/screener_profile', to: 'pages#screener_profile'
+ end
 
   # get '/profile', to: 'pages#profile'
   #

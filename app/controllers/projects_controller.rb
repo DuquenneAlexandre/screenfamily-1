@@ -1,7 +1,6 @@
 class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:my_projects, :show]
-  before_action :set_project, only: [:edit, :show, :destroy]
-  before_action :authorize_project, only: [:show, :new, :create, :edit, :update, :disable, :search_project]
+  before_action :set_project, only: [:edit, :show, :update, :disable]
 
   def index
     @projects = policy_scope(Project)
@@ -36,12 +35,18 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    authorize @project
   end
 
   def create
-    @user = current_user
     @project = current_user.projects.build(project_params)
-    @project.user_id = current_user.id if current_user
+    authorize @project
+    if @project.save
+      redirect_to @project
+    end
+    # @user = current_user
+    # @project = current_user.projects.build(project_params)
+    # @project.user_id = current_user.id if current_user
     # if @project.save
     #   ProjectMailer.creation_confirmation(@project, @user).deliver_now
     #   redirect_to projects_path
@@ -54,8 +59,7 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    project = current_user.projects.find(params[:id])
-    if project.update!(project_params)
+    if project.update(project_params)
       redirect_to project
       flash[:notice] = "Project updated!"
     else
@@ -66,6 +70,7 @@ class ProjectsController < ApplicationController
   def disable
     if project.is_disabled?
       @project.status = false
+      @project.save
       redirect_to projects_path
       flash[:notice] = "Project disabled!"
     else
@@ -85,9 +90,6 @@ class ProjectsController < ApplicationController
 
   def set_project
     @project = Project.find(params[:id])
-  end
-
-  def authorize_project
     authorize @project
   end
 
