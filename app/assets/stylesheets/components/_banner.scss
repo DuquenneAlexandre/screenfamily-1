@@ -1,15 +1,15 @@
 .banner {
   text-align: center;
-  height: 80vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  height: 90vh;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#banner-picture {
-background-image: image-url("banner.jpg");
+.banner-picture {
+  background: image-url("banner.jpg");
+  background-position:center center;
 }
 
 .banner-wrapper{
@@ -18,16 +18,22 @@ background-image: image-url("banner.jpg");
   width: 100%;
 }
 
+
 .banner h1 {
   font-size: 50px;
   font-weight: bolder;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-  color: #F7D77B;
+  color: white;
+  }
+
+.suite {
+  color: #D23333;
 }
+
 .banner p {
   font-size: 20px;
   font-weight: bolder;;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
-  color: #F7D77B;
+  color: white;
 }
