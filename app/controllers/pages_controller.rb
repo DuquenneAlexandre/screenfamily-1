@@ -5,7 +5,4 @@ skip_after_action :verify_authorized
   def home
   end
 
-  def screener_profile
-    render 'screener_profile'
-  end
 end
