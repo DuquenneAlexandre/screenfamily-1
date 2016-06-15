@@ -20,8 +20,9 @@
       <br>
 
 
-      <%= select('role', 'type', [['Ingé son', 1],['Monteur', 2]], {}, :selected => @role.type) %>
-      <%= link_to "Join the screeny", join_project_path(:user_id => current_user.id, :project_id => @project.id, :type => @role.type), :method => :put %>
+      <!-- <%= select('role', 'title', [['Rôle 1', 'role1'],['Rôle 2', 'role2']], {}, :selected => @role.title) %> -->
+      <%= select_tag 'role_title', options_for_select(@roles.collect{ |r| [r.title, r.id] }, :selected => @role.title) %>
+      <%= link_to "Join the screeny", join_project_path(:user_id => current_user.id, :project_id => @project.id, :title => @role.title), :method => :put %>
     </div>
   </div>
 </div>

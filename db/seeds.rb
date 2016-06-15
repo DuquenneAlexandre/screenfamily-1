@@ -114,3 +114,12 @@ number_of_participants: 6)
 
 user10.save
 project10.save
+
+#----------------------------------------------------------------------------------------------------------------------------------
+
+role1 = Role.new(title: "Rôle 1", description: "Descrip 1")
+role1.save
+role2 = Role.new(title: "Rôle 2", description: "Descrip 2")
+role2.save
+role3 = Role.new(title: "Rôle 3", description: "Descrip 3")
+role3.save
