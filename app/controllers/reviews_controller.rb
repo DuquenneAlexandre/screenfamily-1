@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
       redirect_to @project
     end
   end
-  
+
    def new
 
   end
@@ -19,14 +19,13 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
- 
+
     redirect_to(@review.project)
   end
 
   private
 
     def review_params
-       params.require(:review)
-              .permit(:content)
+       params.require(:review).permit(:content)
     end
 end

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :show, :update, :profile]
+  before_action :set_user, only: [:edit, :show, :update]
 
   def show
   end
@@ -17,6 +17,8 @@ class UsersController < ApplicationController
   end
 
   def profile
+    @user = User.find(params[:id])
+    authorize @user
   end
 
   private
