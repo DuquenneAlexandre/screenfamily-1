@@ -45,7 +45,7 @@
     <%= comment.content %>
   </p>
  <% end %>
- 
+
 <h2>Add a review:</h2>
 <%= form_for([@project, @project.reviews.build]) do |f| %>
   <div class="field">
@@ -56,7 +56,14 @@
     <%= f.submit %>
   </div>
 <% end %>
- 
+
 <%= link_to 'Edit Post', edit_project_path(@project) %>
 <%= link_to 'Back to Posts', projects_path %>
 
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      alert('<%= j @alert_message %>');
+    });
+  <% end %>
+<% end %>

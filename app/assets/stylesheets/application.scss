@@ -5,12 +5,26 @@
 // External libraries
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
 
 // Your CSS
 @import "layout/index";
 @import "components/index";
 @import "pages/index";
 @import "vendor/index";
-@import "projects"
+@import "projects";
+
+// Vendor
+@import "animate";
+@import "font-awesome";
+@import "font-awesome.min";
+@import "ionicons";
+@import "ionicons.min";
+@import "magnific-popup";
+@import "owl.carousel";
+@import "owl.transitions";
+@import "simpletextrotator";
+@import "style";
+@import "superslides";
+@import "vertical";
