@@ -25,6 +25,7 @@ Rails.application.routes.draw do
     collection do
       match 'search' => 'projects#index', :via => [:get, :post], :as => :search
     end
+    resources :reviews, only: [:new, :create]
   resources :roles, only: [:index, :new, :create, :edit, :update]
   resources :pledges, only: [:index, :new, :create]
     member do
@@ -32,6 +33,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :reviews, only: [:new, :create]
+  
 
 end

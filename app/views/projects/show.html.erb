@@ -25,3 +25,37 @@
     </div>
   </div>
 </div>
+
+<h2>Reviews</h2>
+<% @project.reviews.each do |comment| %>
+  <p>
+    <b>Content:</b>
+    <%= comment.content %>
+  </p>
+ <% end %>
+    </div>
+  </div>
+</div>
+
+<h2>Reviews</h2>
+<% @project.reviews.each do |comment| %>
+  <p>
+    <b>Content:</b>
+    <%= comment.content %>
+  </p>
+ <% end %>
+ 
+<h2>Add a review:</h2>
+<%= form_for([@project, @project.reviews.build]) do |f| %>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+ 
+<%= link_to 'Edit Post', edit_project_path(@project) %>
+<%= link_to 'Back to Posts', projects_path %>
+
