@@ -1,0 +1,43 @@
+<nav class="navbar navbar-custom navbar-transparent navbar-fixed-top" style="opacity: 1; top: 0px;">
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- YOU LOGO HERE -->
+        <!-- IMAGE OR SIMPLE TEXT -->
+        <%= link_to root_path, class: "navbar-wagon-brand margin_right" do %>
+        <%= image_tag "logo.png" %>
+      <% end %>
+    </div>
+
+    <!-- ICONS NAVBAR -->
+    <ul id="icons-navbar" class="nav navbar-nav navbar-right">
+      <li>
+        <a href="#" id="toggle-menu" class="show-overlay" title="Menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+      </li>
+    </ul>
+    <!-- /ICONS NAVBAR -->
+
+    <ul class="extra-navbar nav navbar-nav navbar-right">
+      <li>
+        <%= link_to root_path do%>
+          Home
+        <% end %>
+      </li>
+      <li>
+        <%= link_to projects_path do%>
+          Discover
+        <% end %>
+      </li>
+      <li>
+        <%= link_to new_project_path do%>
+          Start project
+        <% end %>
+      </li>
+    </ul>
+
+  </div>
+</nav>

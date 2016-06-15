@@ -7,6 +7,12 @@ gem 'omniauth-facebook'
 gem 'pundit'
 gem 'rails-i18n'
 gem 'activeadmin', github: 'activeadmin'
+gem "geocoder"
+gem "coffee-rails"
+gem "gmaps4rails"
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
 
 gem 'rails', '4.2.6'
 gem 'puma'

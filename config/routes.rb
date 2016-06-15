@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   resources :users, only: [:show, :update] do
+    resources :reviews, only: [:new, :create]
     member do
+
       get 'profile', to: 'users#profile'
       get 'profile/edit', to: 'users#edit'
     end
