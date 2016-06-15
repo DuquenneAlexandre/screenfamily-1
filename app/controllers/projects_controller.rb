@@ -31,7 +31,8 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @role = Role.new
+    @roles = Role.all
+    @role = Role.find(params[:id])
     authorize @role
     # @reviews = @project.reviews
     # @review = Review.new
@@ -87,7 +88,7 @@ class ProjectsController < ApplicationController
   end
 
   def join_project
-    @role = Role.find(params[:id])
+    @role = Role.new(user_id: current_user.id, project_id: @project.id)
     authorize @role
     @project.users << current_user
     @project.roles << @role
