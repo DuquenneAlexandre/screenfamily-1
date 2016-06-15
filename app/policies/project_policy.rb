@@ -35,6 +35,6 @@ class ProjectPolicy < ApplicationPolicy
   end
 
   def join_project?
-    true
+    !record.users.include? user
   end
 end

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'roles/edit'
+
+  get 'roles/update'
+
   ActiveAdmin.routes(self)
   root to: 'pages#home'
 
