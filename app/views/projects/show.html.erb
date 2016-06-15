@@ -19,13 +19,27 @@
       <p class="project_movie_goal_for_crowd"><%= @project.goal_for_crowdfunding %></p>
       <br>
 
+      <!-- <% if policy(@project).join_project? %>
+        <%= simple_form_for @project do |f| %>
+          <%= f.input :title, collection: Role.roles_titles %>
+          <%= f.button :submit %>
+        <% end %>
 
-      <!-- <%= select('role', 'title', [['Rôle 1', 'role1'],['Rôle 2', 'role2']], {}, :selected => @role.title) %> -->
-      <%= select_tag 'role_title', options_for_select(@roles.collect{ |r| [r.title, r.id] }, :selected => @role.title) %>
-      <%= link_to "Join the screeny", join_project_path(:user_id => current_user.id, :project_id => @project.id, :title => @role.title), :method => :put %>
+
+        <%= select_tag 'title', options_for_select(Role.roles_titles, :selected => title) %>
+
+        <%= link_to "Join the screeny", join_project_path(:user_id => current_user.id, :project_id => @project.id, :title => title), :method => :put %>
+      <% end %> -->
+      
     </div>
   </div>
 </div>
+
+<h2> List of joiners </h2>
+<% @project.users.each do |user| %>
+<%= user.first_name %>
+<%= user.last_name %>
+<% end %>
 
 <h2>Reviews</h2>
 <% @project.reviews.each do |comment| %>
@@ -45,7 +59,7 @@
     <%= comment.content %>
   </p>
  <% end %>
- 
+
 <h2>Add a review:</h2>
 <%= form_for([@project, @project.reviews.build]) do |f| %>
   <div class="field">
@@ -56,7 +70,6 @@
     <%= f.submit %>
   </div>
 <% end %>
- 
+
 <%= link_to 'Edit Post', edit_project_path(@project) %>
 <%= link_to 'Back to Posts', projects_path %>
-
