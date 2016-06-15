@@ -28,3 +28,28 @@
     <%= link_to "Back Home", root_path %>
   </div>
 </div>
+
+<h2>Reviews</h2>
+<% @user.reviews.each do |comment| %>
+  <p>
+    <b>Content:</b>
+    <%= comment.content %>
+  </p>
+ <% end %>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<p>Add a review:</p>
+<%= form_for([@user, @user.reviews.build]) do |f| %>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
