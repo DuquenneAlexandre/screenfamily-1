@@ -38,7 +38,28 @@
   </div>
 </div>
 
+<<<<<<< HEAD
+<h2>Reviews</h2>
+<% @project.reviews.each do |comment| %>
+  <p>
+    <b>Content:</b>
+    <%= comment.content %>
+  </p>
+ <% end %>
+</div>
+</div>
+<h2>Add a review:</h2>
+<h2>Reviews</h2>
+ <% @project.reviews.each do |comment| %>
+  <p>
+    <b>Content:</b>
+    <%= comment.content %>
+  </p>
+ <% end %>
+
+ <h2>Add a review:</h2>
 <p>Add a review:</p>
+>>>>>>> 03bd10f2ec834b4de8f95e67d274731979a81e72
 <%= form_for([@project, @project.reviews.build]) do |f| %>
   <div class="field">
     <%= f.label :content %><br />
@@ -48,7 +69,14 @@
     <%= f.submit %>
   </div>
 <% end %>
- 
+
 <%= link_to 'Edit Post', edit_project_path(@project) %>
 <%= link_to 'Back to Posts', projects_path %>
 
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      alert('<%= j @alert_message %>');
+    });
+  <% end %>
+<% end %>
