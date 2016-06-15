@@ -19,18 +19,29 @@
       <p class="project_movie_goal_for_crowd"><%= @project.goal_for_crowdfunding %></p>
       <br>
 
-      <!-- <% if policy(@project).join_project? %>
-        <%= simple_form_for @project do |f| %>
+      <!-- <%= link_to "Join the screeny", join_project_path(:user_id => current_user.id, :project_id => @project.id, :title => title), :method => :put %> -->
+
+    <% if policy(@project).join_project? %>
+
+      <h2>Choose your role:</h2>
+      <%= simple_form_for([@project, @project.roles.build]) do |f| %>
+        <div class="field">
           <%= f.input :title, collection: Role.roles_titles %>
-          <%= f.button :submit %>
-        <% end %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
 
+      <h2>Roles</h2>
+      <% @project.roles.each do |role| %>
+        <p>
+          <%= role.title %>
+        </p>
+      <% end %>
 
-        <%= select_tag 'title', options_for_select(Role.roles_titles, :selected => title) %>
+    <% end %>
 
-        <%= link_to "Join the screeny", join_project_path(:user_id => current_user.id, :project_id => @project.id, :title => title), :method => :put %>
-      <% end %> -->
-      
     </div>
   </div>
 </div>
