@@ -18,7 +18,10 @@
       <p class="project_movie_number_of_days"><%= @project.number_of_days_for_crowdfunding %></p>
       <p class="project_movie_goal_for_crowd"><%= @project.goal_for_crowdfunding %></p>
       <br>
-      <%= link_to "Join the screeny", join_project_path(:project_id => @project.id, :user_id => current_user.id), :method => :put %>
+
+
+      <%= select('role', 'type', [['Ingé son', 1],['Monteur', 2]], {}, :selected => @role.type) %>
+      <%= link_to "Join the screeny", join_project_path(:user_id => current_user.id, :project_id => @project.id, :type => @role.type), :method => :put %>
     </div>
   </div>
 </div>

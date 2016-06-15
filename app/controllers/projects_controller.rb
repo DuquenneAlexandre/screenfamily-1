@@ -31,6 +31,8 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @role = Role.new
+    authorize @role
     # @reviews = @project.reviews
     # @review = Review.new
     # @marker_show = Gmaps4rails.build_markers(@project) do |project, marker|
@@ -85,8 +87,15 @@ class ProjectsController < ApplicationController
   end
 
   def join_project
-    @user = current_user
-    @project.users << @user unless @project.users.include? @user
+    @role = Role.find(params[:id])
+    authorize @role
+    @project.users << current_user
+    @project.roles << @role
+    if @project.save
+      flash[:notice] = "Project joined!"
+    else
+      flash[:alert] = "Project not joined!"
+    end
   end
 
   private

@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
   has_many :reviews, as: :reviewable
-  has_and_belongs_to_many :users
+  has_many :roles
+  has_many :users, through: :roles
   mount_uploader :project_picture, PhotoUploader
 
   def is_disabled
