@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'roles/update'
 
+  ActiveAdmin.routes(self)
   root to: 'pages#home'
 
 
