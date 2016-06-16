@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+gem "simple_calendar", "~> 2.0"
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'omniauth-facebook'
