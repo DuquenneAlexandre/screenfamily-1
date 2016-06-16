@@ -8,7 +8,6 @@
 //= require appear
 //= require contact
 //= require custom
-//= require gmaps
 //= require imagesloaded.pkgd
 //= require isotope.pkgd
 //= require isotope.pkgd.min
