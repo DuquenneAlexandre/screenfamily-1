@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :reviews, as: :reviewable
   has_many :roles
+  has_many :messages, through: :projects
   has_many :projects, through: :roles
   devise :omniauthable, omniauth_providers: [:facebook]
 

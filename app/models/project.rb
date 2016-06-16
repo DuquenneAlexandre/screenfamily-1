@@ -2,6 +2,7 @@ class Project < ActiveRecord::Base
   has_many :reviews, as: :reviewable
   has_many :roles
   has_many :users, through: :roles
+  has_many :messages
   mount_uploader :project_picture, PhotoUploader
 
   geocoded_by :city
