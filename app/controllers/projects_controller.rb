@@ -13,17 +13,17 @@ class ProjectsController < ApplicationController
     if (params[:start_date].present?) && (params[:end_date].present?) && (params[:start_date].to_date < params[:end_date].to_date)
       @projects = @projects.where("start_date >= ? AND end_date <= ?", params[:start_date], params[:end_date])
     end
-    # if @projects == []
-    #   @markers = Gmaps4rails.build_markers(Project.all) do |project, marker|
-    #     marker.lat project.latitude
-    #     marker.lng project.longitude
-    #   end
-    # else
-    #   @markers = Gmaps4rails.build_markers(@projects) do |project, marker|
-    #     marker.lat project.latitude
-    #     marker.lng project.longitude
-    #   end
-    # end
+    if @projects == []
+      @markers = Gmaps4rails.build_markers(Project.all) do |project, marker|
+        marker.lat project.latitude
+        marker.lng project.longitude
+      end
+    else
+      @markers = Gmaps4rails.build_markers(@projects) do |project, marker|
+        marker.lat project.latitude
+        marker.lng project.longitude
+      end
+    end
   end
 
   def my_projects
@@ -36,10 +36,10 @@ class ProjectsController < ApplicationController
     authorize @role
     # @reviews = @project.reviews
     # @review = Review.new
-    # @marker_show = Gmaps4rails.build_markers(@project) do |project, marker|
-    #   marker.lat project.latitude
-    #   marker.lng project.longitude
-    # end
+    @marker_show = Gmaps4rails.build_markers(@project) do |project, marker|
+      marker.lat project.latitude
+      marker.lng project.longitude
+    end
   end
 
   def new
