@@ -60,6 +60,7 @@ class ProjectsController < ApplicationController
     authorize @project
     if @project.save
       redirect_to @project
+      @project.users << current_user
     end
     # @user = current_user
     # @project = current_user.projects.build(project_params)

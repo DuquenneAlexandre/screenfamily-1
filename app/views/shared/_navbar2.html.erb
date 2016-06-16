@@ -9,31 +9,6 @@
       <% end %>
     </div>
 
-    <!-- ICONS NAVBAR -->
-    <% if user_signed_in? %>
-    <div class="nav navbar-nav navbar-right">
-      <div class="dropdown">
-          <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-        <ul class="dropdown-menu dropdown-menu-right">
-          <li>
-            <%= link_to "#" do %>
-              <i class=""></i> <%= t ".profile", default: "Profile" %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to destroy_user_session_path, method: :delete do %>
-              <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Log out" %>
-            <% end %>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <% else %>
-
-      <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "nav navbar-nav navbar-right" %>
-
-    <% end %>
     <!-- /ICONS NAVBAR -->
 
     <ul class="extra-navbar nav navbar-nav navbar-right">
@@ -50,6 +25,32 @@
       <li>
         <%= link_to new_project_path do%>
           Start project
+        <% end %>
+      </li>
+      <li>
+      <!-- ICONS NAVBAR -->
+        <% if user_signed_in? %>
+          <div class="nav navbar-nav navbar-right">
+            <div class="dropdown">
+                <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li>
+                  <%= link_to "#" do %>
+                    <i class=""></i> <%= t ".profile", default: "Profile" %>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to destroy_user_session_path, method: :delete do %>
+                    <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Log out" %>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+          </div>
+        <% else %>
+          <!-- Login text link -->
+          <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "nav navbar-nav navbar-right" %>
+
         <% end %>
       </li>
     </ul>
