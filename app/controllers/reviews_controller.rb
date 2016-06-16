@@ -1,31 +1,38 @@
 class ReviewsController < ApplicationController
+ def new
+    @context = context
+    @review = @context.reviews.new
+  end
+
   def create
-    @project = Project.find(params[:project_id])
-    @review = @project.reviews.build(review_params)
-    authorize @project
-    if @review.save!
-      ;flash[:notice] = 'review was successfully created.'
-      redirect_to @project
+    @context = context
+    @review = @context.reviews.new(review_params)
+    authorize @review
+    if @review.save
+      redirect_to context_url(context), notice: "The review has been successfully created."
+    end
+  end
+
+private
+  def review_params
+    params.require(:review).permit!
+  end
+
+  def context
+    if params[:project_id]
+      id = params[:project_id]
+      Project.find(params[:project_id])
     else
-      flash[:notice] = "Error creating review: #{@review.errors}"
-      redirect_to @project
+      id = params[:user_id]
+      User.find(params[:user_id])
+    end
+  end 
+
+  def context_url(context)
+    if Project === context
+      project_path(context)
+    else
+      user_path(context)
     end
   end
-
-   def new
-
-  end
-
-  def destroy
-    @review = Review.find(params[:id])
-    @review.destroy
-
-    redirect_to(@review.project)
-  end
-
-  private
-
-    def review_params
-       params.require(:review).permit(:content)
-    end
 end
