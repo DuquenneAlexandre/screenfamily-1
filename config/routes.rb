@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-
-  get 'roles/edit'
-
-  get 'roles/update'
-
   ActiveAdmin.routes(self)
   root to: 'pages#home'
 
@@ -27,6 +22,7 @@ Rails.application.routes.draw do
     collection do
       match 'search' => 'projects#index', :via => [:get, :post], :as => :search
     end
+    resources :messages, only: [:create]
     resources :reviews, only: [:new, :create]
   resources :roles, only: [:index, :new, :create, :edit, :update]
   resources :pledges, only: [:index, :new, :create]
@@ -35,6 +31,6 @@ Rails.application.routes.draw do
     end
   end
 
-  
+
 
 end
