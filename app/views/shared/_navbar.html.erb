@@ -1,83 +1,62 @@
-<div class="navbar-wagon ">
-  <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand margin_right" do %>
-    <%= image_tag "logo.png" %>
-  <% end %>
+<nav class="navbar navbar-custom navbar-light navbar-fixed-top navbar-transparent" style="opacity: 1; top: 0px;">
 
-  <!-- Left Navigation -->
-  <h5 class="navbar-wagon-left">
+          </a>
+    <div class="container">
 
-      <%= link_to root_path class:"a_navbar" do%>
-        Discover
-      <% end %>
-  </h5>
-  <h5 class="navbar-wagon-left">
-      <%= link_to new_project_path do%>
-        Start project
-      <% end %>
-  </h5>
-  <h5 class="navbar-wagon-left">
-      <%= link_to root_path do%>
-        About Screen family
-      <% end %>
-  </h5>
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-
-    <!-- Search form -->
-
-
-    <!-- Different navigation if login or not -->
-    <% if user_signed_in? %>
-
-      <!-- Notification -->
-
-      <!-- Profile picture and dropdown -->
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t ".profile", default: "Profile" %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to root_path do %>
-                <i class="fa fa-home"></i>  <%= t ".profile", default: "Home" %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Log out" %>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    <% else %>
-
-      <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
-    <% end %>
-
-    <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
-  </div>
-
-  <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
-      </ul>
+    <div class="navbar-header">
+      <!-- YOU LOGO HERE -->
+      <a class="navbar-brand">
+        <!-- IMAGE OR SIMPLE TEXT -->
+        <%= link_to root_path, class: "navbar-wagon-brand margin_right" do %>
+          <%= image_tag "logo.png" %>
+        <% end %>
+      </a>
     </div>
-  </div>
-</div>
 
+    <!-- /ICONS NAVBAR -->
+
+    <ul class="extra-navbar nav navbar-nav navbar-right">
+      <li>
+        <%= link_to root_path do%>
+          Home
+        <% end %>
+      </li>
+      <li>
+        <%= link_to projects_path do%>
+          Discover
+        <% end %>
+      </li>
+      <li>
+        <%= link_to new_project_path do%>
+          Start project
+        <% end %>
+      </li>
+      <li>
+      <!-- ICONS NAVBAR -->
+        <% if user_signed_in? %>
+          <div class="nav navbar-nav navbar-right">
+            <div class="dropdown">
+                <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li>
+                  <%= link_to "#" do %>
+                    <i class=""></i> <%= t ".profile", default: "Profile" %>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to destroy_user_session_path, method: :delete do %>
+                    <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Log out" %>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+          </div>
+        <% else %>
+          <!-- Login text link -->
+          <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "nav navbar-nav navbar-right" %>
+
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>
