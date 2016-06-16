@@ -13,4 +13,10 @@ class Project < ActiveRecord::Base
     authorize @project
     @project.status
   end
+  
+def start_time
+  proj = @project
+  self.my_related_model.proj.start_date ##Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
+    end
+
 end

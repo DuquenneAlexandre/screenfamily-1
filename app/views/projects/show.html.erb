@@ -180,3 +180,79 @@
       </div>
 
     </section>
+
+      <% end %>
+
+    <% end %>
+
+    <h2>Roles</h2>
+    <% @project.roles.each do |role| %>
+      <p>
+        <%= role.title %>
+      </p>
+    <% end %>
+
+    </div>
+
+<% # liste des membres du projet %>
+
+<h2> List of joiners </h2>
+<% @project.users.each do |user| %>
+<%= user.first_name %>
+<%= user.last_name %>
+<% end %>
+
+<% # reviews %>
+
+<h2>Reviews</h2>
+<% @project.reviews.each do |comment| %>
+  <p>
+    <b>Content:</b>
+    <%= comment.content %>
+  </p>
+ <% end %>
+
+</div>
+</div>
+
+ <h2>Add a review:</h2>
+<p>Add a review:</p>
+
+<%= form_for([@project, @project.reviews.build]) do |f| %>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Edit Post', edit_project_path(@project) %>
+<%= link_to 'Back to Posts', projects_path %>
+
+<% # mur de discussion %>
+
+<%= simple_form_for @message, url: project_messages_path(@project) do |f| %>
+<%= f.input :content %>
+<%= f.button :submit %>
+<% end %>
+
+<% @messages.each do |message| %>
+<strong><%= image_tag message.user.user_picture %> <%= message.user.first_name %> - </strong><%= message.content %>
+<br>
+<% end %>
+
+<br>
+
+<%= month_calendar(attribute: :start_at) do |date| %>
+
+  <%= date %>
+  <% if date == @project.start_date %>
+  <br>
+  <%= "Begin" %>
+  <% end %>
+
+<% end %>
+
+
