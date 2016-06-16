@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
     @roles = Role.all
     # @reviews = @project.reviews
     # @review = Review.new
-    @project_coordinates = { lat: @flat.lat, lng: @flat.lng }
+    @project_coordinates = { latitude: @project.latitude, longitude: @project.longitude }
     @alert_message = "You are viewing #{@project.name}"
     @marker_show = Gmaps4rails.build_markers(@project) do |project, marker|
       marker.lat project.latitude
