@@ -1,36 +1,186 @@
-<br>
-<div class="container" >
-  <div class="row">
-    <div class="card_projects">
-      <p class="project_movie_title"><%= @project.name %></p>
+<section class="module">
+
       <div class="container">
-        <div class="img-card-back" style="background: url('<%= @project.project_picture.url %>') no-repeat center center;background-size:cover;"></div>
+
+        <div class="row">
+
+          <!-- CONTENT -->
+          <div class="col-sm-9">
+
+            <article class="post post-single">
+
+              <!-- MEDIA -->
+              <div class="post-media">
+                <img src="assets/images/blog/blog-post-1.jpg" alt="">
+              </div>
+              <!-- /MEDIA -->
+
+              <!-- META -->
+              <div class="post-meta font-alt">
+                By <%#= proj.users.find(1).first_name %>/ Ville: <%= @project.city %>/ / Participants: <%= @project.number_of_participants %>.
+              </div>
+              <!-- /META -->
+
+              <!-- HEADER -->
+              <div class="post-header">
+                <h1 class="post-title font-alt">
+                  <%= @project.name %>
+                </h1>
+              </div>
+              <!-- /HEADER -->
+
+              <!-- POST CONTENT -->
+              <div class="post-entry">
+              <%= @project.synopsis %>
+              </div>
+              <!-- /POST CONTENT -->
+
+              <!-- TAGS -->
+              <div class="tags">
+                <a>Genre: "<%= @project.genre %>"</a>
+              </div>
+              <!-- /TAGS -->
+
+            </article>
+
+            <!-- COMMENTS -->
+            <div class="comments">
+              <h4 class="comment-title font-alt">Comments</h4>
+              <hr class="divider m-b-30">
+
+              <!-- COMMENT 1 -->
+              <% @project.reviews.each do |comment| %>
+                <div class="comment clearfix">
+                  <div class="comment-avatar">
+                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/ryanbattles/128.jpg" alt="">
+                  </div>
+                  <div class="comment-content clearfix">
+                    <h5 class="comment-author font-alt">
+                      <a href="#">John Doe</a>
+                    </h5>
+                    <div class="comment-body">
+                      <p>
+                        <%= comment.content %>
+                      </p>
+                    </div>
+                    <div class="comment-meta font-alt">Today, 14:55 - <a href="#">Reply</a></div>
+                  </div>
+                </div>
+               <% end %>
+              <!-- /COMMENT 1 -->
+            </div>
+            <!-- /COMMENTS -->
+
+            <!-- COMMENT FORM -->
+            <div class="comment-form">
+              <h4 class="comment-form-title font-alt">Leave a comment</h4>
+              <hr class="divider m-b-30">
+
+              <div class="row">
+                <%= simple_form_for([@project, @project.reviews.build]) do |f| %>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <%= f.input :content %>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <%= f.submit class:"btn btn-round btn-g"%>
+                  </div>
+
+                <% end %>
+              </div>
+
+            </div>
+            <!-- /COMMENT FORM -->
+
+          </div>
+          <!-- /CONTENT -->
+
+          <!-- SIDEBAR -->
+          <div class="col-sm-3 m-t-sm-60">
+
+            <!-- Choisir son role -->
+            <div class="widget">
+            <% if policy(@project).join_project? %>
+              <h5 class="widget-title font-alt">Choose your role</h5>
+                <%= simple_form_for([@project, @project.roles.build]) do |f| %>
+                  <div class="field">
+                    <%= f.input :title, collection: Role.roles_titles %>
+                  </div>
+                  <div class="actions">
+                    <%= f.submit %>
+                  </div>
+                <% end %>
+            <% end %>
+            <!-- /Choisir son role  -->
+            <!-- Son roles -->
+            <h5 class="widget-title font-alt">Roles</h5>
+              <% @project.roles.each do |role| %>
+                <p>
+                  <%= role.title %>
+                </p>
+              <% end %>
+            <!-- /Son roles  -->
+
+            <!-- les différents roles -->
+            <h5 class="widget-title font-alt">List of joiners</h5>
+                <% @project.users.each do |user| %>
+
+                <%= user.user_picture %>
+
+                <%= user.first_name %>
+                <%= user.last_name %>
+                <% end %>
+            <!-- /les différents roles  -->
+            </div>
+
+            <!-- WIDGET -->
+            <div class="widget">
+            <%@project.users.each do |user| %>
+              <h5 class="widget-title font-alt">List of joiners</h5>
+              <ul class="widget-posts">
+
+                <li class="clearfix">
+                  <div class="widget-posts-image">
+                    <a href="#">
+                      <%= user.user_picture %>
+                    </a>
+                  </div>
+                  <div class="widget-posts-body">
+                    <div class="widget-posts-meta">
+                      <%= user.first_name %> <%= user.last_name %>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <% end %>
+            </div>
+            <!-- /WIDGET -->
+
+
+          </div>
+          <!-- /SIDEBAR -->
+
+        </div>
+
+        <% # mur de discussion %>
+
+        <%= simple_form_for @message, url: project_messages_path(@project) do |f| %>
+          <%= f.input :content %>
+          <%= f.button :submit %>
+        <% end %>
+
+        <% @messages.each do |message| %>
+          <strong><%= image_tag message.user.user_picture %> <%= message.user.first_name %> - </strong><%= message.content %>
+          <br>
+        <% end %>
+        <br>
+        <%= link_to 'Edit Post', edit_project_path(@project) %>
+        <%= link_to 'Back to Posts', projects_path %>
       </div>
-      <p class="date">Du: <%= @project.start_date %>
-      Au: <%= @project.end_date %></p>
-      <p class="project_movie_city">Ville: <%= @project.city %></p>
-      <p class="project_movie_genre">Genre: "<%= @project.genre %>"</p>
-      <div class="project-percent-pledged" style="width: 100%"></div>
-      <p class="project_movie_synopsis">Synopsis: "<%= @project.synopsis %>"</p>
-      <p class="project_movie_scenario">Scenario: "<%= @project.scenario %>"</p>
-      <div class="project-percent-pledged" style="width: 100%"></div>
-      <p class="project_movie_participants">Participants: <%= @project.number_of_participants %></p>
-      <p class="project_movie_number_of_days"><%= @project.number_of_days_for_crowdfunding %></p>
-      <p class="project_movie_goal_for_crowd"><%= @project.goal_for_crowdfunding %></p>
-      <br>
 
-    <% # choisir son rôle et rejoindre le projet %>
+    </section>
 
-    <% if policy(@project).join_project? %>
-
-      <h2>Choose your role:</h2>
-      <%= simple_form_for([@project, @project.roles.build]) do |f| %>
-        <div class="field">
-          <%= f.input :title, collection: Role.roles_titles %>
-        </div>
-        <div class="actions">
-          <%= f.submit %>
-        </div>
       <% end %>
 
     <% end %>
@@ -104,4 +254,5 @@
   <% end %>
 
 <% end %>
+
 
