@@ -19,7 +19,7 @@
       <p class="project_movie_goal_for_crowd"><%= @project.goal_for_crowdfunding %></p>
       <br>
 
-      <!-- <%= link_to "Join the screeny", join_project_path(:user_id => current_user.id, :project_id => @project.id, :title => title), :method => :put %> -->
+    <% # choisir son rôle et rejoindre le projet %>
 
     <% if policy(@project).join_project? %>
 
@@ -33,22 +33,26 @@
         </div>
       <% end %>
 
-      <h2>Roles</h2>
-      <% @project.roles.each do |role| %>
-        <p>
-          <%= role.title %>
-        </p>
-      <% end %>
+    <% end %>
 
+    <h2>Roles</h2>
+    <% @project.roles.each do |role| %>
+      <p>
+        <%= role.title %>
+      </p>
     <% end %>
 
     </div>
+
+<% # liste des membres du projet %>
 
 <h2> List of joiners </h2>
 <% @project.users.each do |user| %>
 <%= user.first_name %>
 <%= user.last_name %>
 <% end %>
+
+<% # reviews %>
 
 <h2>Reviews</h2>
 <% @project.reviews.each do |comment| %>
@@ -85,11 +89,3 @@
 
 <%= link_to 'Edit Post', edit_project_path(@project) %>
 <%= link_to 'Back to Posts', projects_path %>
-
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    $(document).ready(function() {
-      alert('<%= j @alert_message %>');
-    });
-  <% end %>
-<% end %>
