@@ -13,6 +13,14 @@ class ProjectsController < ApplicationController
     if (params[:start_date].present?) && (params[:end_date].present?) && (params[:start_date].to_date < params[:end_date].to_date)
       @projects = @projects.where("start_date >= ? AND end_date <= ?", params[:start_date], params[:end_date])
     end
+    @projects = Project.all
+
+    # Let's DYNAMICALLY build the markers for the view.
+    @markers = Gmaps4rails.build_markers(@project) do |project, marker|
+      marker.lat flat.latitude
+      marker.lng flat.longitude
+    end
+
     # if @projects == []
     #   @markers = Gmaps4rails.build_markers(Project.all) do |project, marker|
     #     marker.lat project.latitude
@@ -34,10 +42,12 @@ class ProjectsController < ApplicationController
     @roles = Role.all
     # @reviews = @project.reviews
     # @review = Review.new
-    # @marker_show = Gmaps4rails.build_markers(@project) do |project, marker|
-    #   marker.lat project.latitude
-    #   marker.lng project.longitude
-    # end
+    @project_coordinates = { lat: @flat.lat, lng: @flat.lng }
+    @alert_message = "You are viewing #{@project.name}"
+    @marker_show = Gmaps4rails.build_markers(@project) do |project, marker|
+      marker.lat project.latitude
+      marker.lng project.longitude
+    end
   end
 
   def new

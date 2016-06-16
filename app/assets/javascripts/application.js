@@ -1,7 +1,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require_tree .
 //= require underscore
 //= require gmaps/google
 
@@ -9,7 +8,6 @@
 //= require appear
 //= require contact
 //= require custom
-//= require gmaps
 //= require imagesloaded.pkgd
 //= require isotope.pkgd
 //= require isotope.pkgd.min
@@ -33,3 +31,4 @@
 //= require smoothscroll
 //= require wow
 //= require wow.min
+//= require_tree .
