@@ -1,54 +1,77 @@
-<br>
-<%= render 'shared/form_projects' %>
-<br>
+<p class="margin_top"><%= render 'shared/form_projects' %></p>
 
-<!-- --------------------------------------------------------------- -->
-<div class="container">
-<div class="row">
- <%@projects.each do |proj|%>
- <div class="col-xs-4">
-    <div class="card_projects">
-	       <p class="project_movie_title"><%= proj.name %></p>
-    <div class="img-card-back" style="background: url('<%= proj.project_picture.url %>') no-repeat center center;background-size:cover;"></div>
-       <p class="date">Du: <%= proj.start_date %>
-      	  Au: <%= proj.end_date %></p>
-      	 <p class="project_movie_city">Ville: <%= proj.city %></p>
-      	 <p class="project_movie_genre">Genre: "<%= proj.genre %>"</p>
-         <div class="project-percent-pledged" style="width: 100%"></div>
-      	 <p class="project_movie_synopsis">Synopsis: "<%= proj.synopsis %>"</p>
-      	 <p class="project_movie_scenario">Scenario: "<%= proj.scenario %>"</p>
-         <div class="project-percent-pledged" style="width: 100%"></div>
-      	 <p class="project_movie_participants">Participants: <%= proj.number_of_participants %></p>
-      	 <p class="project_movie_number_of_days"><%= proj.number_of_days_for_crowdfunding %></p>
+<section class="module">
+      <div class="container">
+        <div class="row multi-columns-row">
+          <%@projects.each do |proj|%>
+            <!-- POST -->
+            <div class="col-sm-6 col-md-4 col-lg-4 m-b-60">
+              <div class="post">
+                <div class="post-media">
+                  <a href="blog-single.html">
+                    <img src="assets/images/blog/blog-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="post-meta font-alt">
+                  By <a href="#"><%#= proj.users.find(1).first_name %></a> / Du: <%= proj.start_date %> Au: <%= proj.end_date %> / Ville: <%= proj.city %> / Genre: "<%= proj.genre %>"/ Participants: <%= proj.number_of_participants %> / <%= proj.number_of_days_for_crowdfunding %> / <%= proj.goal_for_crowdfunding %>.
+                </div>
+                <div class="post-header">
+                  <h4 class="post-title font-alt">
+                    <a href="blog-single.html"><%= proj.name %></a>
+                  </h4>
+                </div>
+                <div class="post-entry">
+                  <p>Synopsis: "<%= proj.synopsis %></p>
+                </div>
+                <div class="post-more-link font-alt">
+                  <a href="blog-single.html">Read more</a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+  </section>
 
-      	 <p class="project_movie_goal_for_crowd"><%= proj.goal_for_crowdfunding %></p>
-         </div>
-         <br>
-         </div>
+ <!-- PAGINATION -->
+<!-- <div class="row">
 
-	     <% end %>
-       </div>
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    $(document).ready(function() {
-      var coord = <%= raw @project_coordinates %>;
-      alert('Project coordinates are ' + coord.lat + ', ' + coord.lng);
-    });
-  <% end %>
-<% end %>
-<div id="map" style="width: 100%; height: 600px;"></div>
+  <div class="col-sm-12 text-center m-t-60">
+    <ul class="pagination font-alt">
+      <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+      <li><a href="#">1</a></li>
+      <li class="active"><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+    </ul>
+  </div>
+
+</div> -->
+<!-- /PAGINATION -->
+
 
   <% content_for(:after_js) do %>
     <%= javascript_tag do %>
-      $(document).on('ready', function() {
-        handler = Gmaps.build('Google');
-        handler.buildMap({ internal: { id: 'map' } }, function(){
-          markers = handler.addMarkers(<%= raw @markers.to_json %>);
-          handler.bounds.extendWith(markers);
-          handler.fitMapToBounds();
-        });
-      })
+      $(document).ready(function() {
+        var coord = <%= raw @project_coordinates %>;
+        alert('Project coordinates are ' + coord.lat + ', ' + coord.lng);
+      });
     <% end %>
   <% end %>
+  <div id="map" style="width: 100%; height: 600px;">
+  </div>
+
+    <% content_for(:after_js) do %>
+      <%= javascript_tag do %>
+        $(document).on('ready', function() {
+          handler = Gmaps.build('Google');
+          handler.buildMap({ internal: { id: 'map' } }, function(){
+            markers = handler.addMarkers(<%= raw @markers.to_json %>);
+            handler.bounds.extendWith(markers);
+            handler.fitMapToBounds();
+          });
+        })
+      <% end %>
+    <% end %>
 
 </div>
