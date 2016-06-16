@@ -31,8 +31,8 @@
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
     $(document).ready(function() {
-      var coord = <%= raw @flat_coordinates %>;
-      alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
+      var coord = <%= raw @project_coordinates %>;
+      alert('Project coordinates are ' + coord.lat + ', ' + coord.lng);
     });
   <% end %>
 <% end %>
