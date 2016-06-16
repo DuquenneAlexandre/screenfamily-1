@@ -101,3 +101,16 @@
 <%= message.user.first_name %>
 <%= message.content %>
 <% end %>
+
+<br>
+
+<%= month_calendar(attribute: :start_at) do |date| %>
+
+  <%= date %>
+  <% if date == @project.start_date %>
+  <br>
+  <%= "Begin" %>
+  <% end %>
+
+<% end %>
+
