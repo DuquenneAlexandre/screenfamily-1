@@ -14,11 +14,11 @@
                 <%= date %>
                 <% if date == @project.start_date %>
                 <br>
-                <%= "Begin" %>
+                <div class="project-percent-pledged" style="width: 100%"></div>
                 <% a = 1 %>
                 <% end %>
                 <% if a != 0 && a <= i %>
-                <%= "EVENT" %>
+                <div class="project-percent-pledged" style="width: 100%">FOLLOW</div>
                 <% end %>
                 <% end %>
 
