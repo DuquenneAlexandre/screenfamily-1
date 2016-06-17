@@ -1,1 +1,45 @@
-<%= render 'form_users' %>
+<div class="container">
+  <h1 class="text-center">My profile <%= @user.first_name %>  <%= @user.last_name %></h1>
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-2">
+        <%= image_tag @user.user_picture, class:"avatar avatar-large" %>
+      </div>
+      <div class="col-xs-3">
+          <%= @user.first_name %><br>
+          <%= @user.last_name %><br>
+          <%= @user.birth_date %><br>
+      </div>
+      <div class="col-xs-3">
+          <%= @user.city %><br>
+          <%= @user.email %><br>
+          <%= @user.user_picture %><br>
+      </div>
+    </div>
+  <div class="btn btn-primary ">
+    <%= link_to "Back Home", root_path %>
+  </div>
+</div>
+
+<h2>Reviews</h2>
+<% @user.reviews.each do |comment| %>
+  <p>
+    <b>Content:</b>
+    <%= comment.content %>
+  </p>
+ <% end %>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<p>Add a review:</p>
+<%= form_for([@user, @user.reviews.build]) do |f| %>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
