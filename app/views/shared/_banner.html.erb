@@ -1,9 +1,11 @@
-<div class="banner banner-picture">
-  <div class="banner-wrapper">
-      <h1>Screen <span class = 'suite'> family</h2></h1>
-      <p>The beginning of your cinema</p>
-      <br>
-      <%= render 'shared/form_projects' %>
-  </div>
-</div>
+<section id="hero" class="module-hero module-parallax module-full-height bg-light-30" data-background="<%= image_path('banner1.jpg')%>" style="height: 652px; background-image: url(<%= image_path('banner1.jpg')%>); background-position: 50% -1px;">
+  <div class="hero-caption">
+    <div class="hero-text">
 
+      <h1 class="mh-line-size-1 font-alt m-b-50">Screen <span class = 'suite'> family</h1>
+      <h5 class="mh-line-size-4 font-alt">The beginning of your cinema</h5><br>
+
+       <%= render 'shared/form_projects' %>
+    </div>
+  </div>
+</section>

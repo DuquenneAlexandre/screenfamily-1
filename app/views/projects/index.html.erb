@@ -9,7 +9,9 @@
               <div class="post">
                 <div class="post-media">
                   <a href="blog-single.html">
-                    <img src="assets/images/blog/blog-1.jpg" alt="">
+                    <% link_to project_path(proj) do %>
+                      <%= proj.project_picture %>
+                    <%end%>
                   </a>
                 </div>
                 <div class="post-meta font-alt">
@@ -17,14 +19,18 @@
                 </div>
                 <div class="post-header">
                   <h4 class="post-title font-alt">
-                    <a href="blog-single.html"><%= proj.name %></a>
+                    <% link_to project_path(proj) do %>
+                      <%= proj.name %>
+                    <%end%>
                   </h4>
                 </div>
                 <div class="post-entry">
                   <p>Synopsis: "<%= proj.synopsis %></p>
                 </div>
                 <div class="post-more-link font-alt">
-                  <a href="blog-single.html">Read more</a>
+                  <%= link_to project_path(proj) do %>
+                    View Project
+                  <%end%>
                 </div>
               </div>
             </div>
