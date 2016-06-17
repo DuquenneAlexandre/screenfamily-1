@@ -1,0 +1,6 @@
+<div class="mess">        
+<%= simple_form_for @message, url: project_messages_path(@project), remote: true do |f| %>
+  <%= f.input :content %>
+  <%= f.button :submit %>
+<% end %>
+</div>
