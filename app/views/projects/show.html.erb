@@ -57,6 +57,7 @@
               <hr class="divider m-b-30">
 
               <!-- COMMENT 1 -->
+              <ul class="coin_mess2">
               <% @project.reviews.each do |comment| %>
                 <div class="comment clearfix">
                   <div class="comment-avatar">
@@ -68,19 +69,20 @@
                     </h5>
                     <div class="comment-body">
                       <p>
-                        <%= comment.content %>
+                       <li> <%= comment.content %> </li>
                       </p>
                     </div>
                     <div class="comment-meta font-alt">Today, 14:55 - <a href="#">Reply</a></div>
                   </div>
                 </div>
+                </ul>
                <% end %>
               <!-- /COMMENT 1 -->
             </div>
             <!-- /COMMENTS -->
 
             <!-- COMMENT FORM -->
-            <div class="comment-form">
+     <div class="comment-form" id="coin_mes">
               <h4 class="comment-form-title font-alt">Leave a comment</h4>
               <hr class="divider m-b-30">
 
@@ -97,10 +99,8 @@
 
                 <% end %>
               </div>
-
-            </div>
             <!-- /COMMENT FORM -->
-
+    </div>
           </div>
           <!-- /CONTENT -->
 

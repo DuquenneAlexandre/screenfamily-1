@@ -1,0 +1,18 @@
+ <div class="comment-form" id="coin_mes">
+              <h4 class="comment-form-title font-alt">Leave a comment</h4>
+              <hr class="divider m-b-30">
+
+              <div class="row">
+                <%= simple_form_for([@project, @project.reviews.build]) do |f| %>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <%= f.input :content %>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <%= f.submit class:"btn btn-round btn-g"%>
+                  </div>
+
+                <% end %>
+              </div>
+            </div>

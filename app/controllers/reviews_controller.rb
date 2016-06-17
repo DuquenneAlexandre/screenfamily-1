@@ -5,18 +5,20 @@ class ReviewsController < ApplicationController
   end
 
   def create
+     @project = Project.find(params[:project_id])
+       authorize @project
     @context = context
     @review = @context.reviews.new(review_params)
     authorize @review
-    respond_to do |format|
+ 
     if @review.save
-
-       format.html { redirect_to :back }
-          format.json
+   respond_to do |format|
+       format.html { redirect_to project_path(@project) }
           format.js
+        end
         else
-            format.html { redirect_to :back }
-          format.json
+             respond_to do |format|
+            format.html { redirect_to project_path(@project) }
           format.js
       # redirect_to context_url(context), notice: "The review has been successfully created."
     end
