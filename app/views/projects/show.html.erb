@@ -34,3 +34,15 @@
     </div>
 
 </div>
+
+<% if @project.status == true %>
+  <p>Ce projet n'est pas disabled</p>
+<% else %>
+  <p>Ce projet est disabled</p>
+<% end %>
+
+<% if @project.crowdvalidate == true %>
+  <p>Ce projet est pas crowdfunded</p>
+<% else %>
+  <p>Ce projet est pas crowdfunded</p>
+<% end %>
