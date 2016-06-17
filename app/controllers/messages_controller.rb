@@ -8,11 +8,21 @@ class MessagesController < ApplicationController
      def create
        @project = Project.find(params[:project_id])
        authorize @project
-       #@project.users << current_user
        @message = @project.messages.build(message_params)
        @message.user = current_user
-       @message.save
-     end
+       
+      if @message.save
+        respond_to do |format|
+          format.html { redirect_to project_path(@project) }
+          format.js
+        end
+      else
+        respond_to do |format|
+          format.html { redirect_to project_path(@project) }
+          format.js
+        end
+      end
+    end
 
      private
 

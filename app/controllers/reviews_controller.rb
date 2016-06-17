@@ -8,8 +8,18 @@ class ReviewsController < ApplicationController
     @context = context
     @review = @context.reviews.new(review_params)
     authorize @review
+    respond_to do |format|
     if @review.save
-      redirect_to context_url(context), notice: "The review has been successfully created."
+
+       format.html { redirect_to :back }
+          format.json
+          format.js
+        else
+            format.html { redirect_to :back }
+          format.json
+          format.js
+      # redirect_to context_url(context), notice: "The review has been successfully created."
+    end
     end
   end
 
