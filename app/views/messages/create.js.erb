@@ -1,5 +1,5 @@
 <% if @message.errors.any? %>
-  // Render new review form with errors
 <% else %>
 $('.coin_mess').prepend("<li><%= @message.content %></li>");
+
 <% end %>
