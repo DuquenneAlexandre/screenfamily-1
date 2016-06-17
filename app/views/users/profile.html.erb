@@ -24,7 +24,7 @@
 <% @user.reviews.each do |comment| %>
   <p>
     <b>Content:</b>
-    <%= comment.content %>
+    <%= comment.contents_prof %>
   </p>
  <% end %>
     </div>
@@ -36,8 +36,8 @@
 <p>Add a review:</p>
 <%= form_for([@user, @user.reviews.build]) do |f| %>
   <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
+    <%= f.label :contents_prof %><br />
+    <%= f.text_field :contents_prof %>
   </div>
   <div class="actions">
     <%= f.submit %>

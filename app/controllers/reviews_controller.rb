@@ -5,20 +5,20 @@ class ReviewsController < ApplicationController
   end
 
   def create
-     @project = Project.find(params[:project_id])
-       authorize @project
+     # @project = Project.find(params[:project_id])
+     #   authorize @project
     @context = context
     @review = @context.reviews.new(review_params)
     authorize @review
  
     if @review.save
    respond_to do |format|
-       format.html { redirect_to project_path(@project) }
+       format.html { redirect_to :back }
           format.js
         end
         else
              respond_to do |format|
-            format.html { redirect_to project_path(@project) }
+            format.html { redirect_to :back }
           format.js
       # redirect_to context_url(context), notice: "The review has been successfully created."
     end
@@ -27,7 +27,7 @@ class ReviewsController < ApplicationController
 
 private
   def review_params
-    params.require(:review).permit!
+    params.require(:review).permit(:content, :contents_prof)
   end
 
   def context
