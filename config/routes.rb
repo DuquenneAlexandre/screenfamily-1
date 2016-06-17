@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       get 'profile', to: 'users#profile'
       get 'profile/edit', to: 'users#edit'
       put 'profile/update', to: 'users#update'
+      get 'gocrowdfunding', to: 'projects#gocrowdfunding'
+      get 'disable', to: 'projects#disable'
     end
   end
 

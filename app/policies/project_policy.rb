@@ -23,11 +23,19 @@ class ProjectPolicy < ApplicationPolicy
   end
 
   def edit?
-    record.user == user # only the owner of the project can update it
+    true #TODO only the owner of the project can update it
+  end
+
+  def update?
+    true #TODO only the owner of the project can update it
   end
 
   def disable?
-    record.user == user # only the owner of the project can update it
+    true #TODO only the owner of the project can update it
+  end
+
+  def gocrowdfunding?
+    true
   end
 
   def search_project?

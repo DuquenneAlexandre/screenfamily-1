@@ -8,12 +8,6 @@ class Project < ActiveRecord::Base
   geocoded_by :city
   after_validation :geocode, if: :city_changed?
 
-  def is_disabled
-    @project = Project.find(params[:id])
-    authorize @project
-    @project.status
-  end
-  
 def start_time
   proj = @project
   self.my_related_model.proj.start_date ##Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship

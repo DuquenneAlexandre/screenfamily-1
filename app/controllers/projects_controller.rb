@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:my_projects, :show]
-  before_action :set_project, only: [:edit, :show, :update, :disable, :join_project]
+  before_action :set_project, only: [:edit, :show, :update, :disable, :join_project, :gocrowdfunding]
 
   def index
     @projects = policy_scope(Project)
@@ -78,22 +78,34 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    if project.update(project_params)
-      redirect_to project
+    if @project.update(project_params)
+      redirect_to project_path
       flash[:notice] = "Project updated!"
     else
       flash[:alert] = "Project not updated!"
+      render 'edit'
     end
   end
 
   def disable
-    if project.is_disabled?
+    if @project.status == true
       @project.status = false
       @project.save
       redirect_to projects_path
       flash[:notice] = "Project disabled!"
     else
       flash[:alert] = "Project not disabled!"
+    end
+  end
+
+  def gocrowdfunding
+    if @project.crowdvalidate == true
+      @project.crowdvalidate = false
+      @project.save
+      redirect_to project_path
+      flash[:notice] = "Project can be crowdfunded!"
+    else
+      flash[:alert] = "Project cannot be crowdfunded!"
     end
   end
 
