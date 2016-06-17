@@ -1,55 +1,26 @@
 <div class="container">
-  <h1 class="text-center">My profile <%= @user.first_name %>  <%= @user.last_name %></h1>
+    <h1 class="text-center">My profile
+        <%= @user.first_name %>
+        <%= @user.last_name %></h1>
     <div class="row">
-      <div class="col-xs-offset-1 col-xs-2">
-        <%= image_tag @user.user_picture, class:"avatar avatar-large" %>
-      </div>
-      <div class="col-xs-3">
-        <%= simple_form_for (@user) do |f| %>
-          <%= f.error_notification %>
-          <%= f.input :first_name %>
-          <%= f.input :last_name %>
-          <%= f.input :birth_date %>
-          <%= f.input :phone_number %>
-        <% end %>
-      </div>
-      <div class="col-xs-3">
-        <%= simple_form_for (@user) do |f| %>
-          <%= f.error_notification %>
-          <%= f.input :city %>
-          <%= f.input :phone_number %>
-          <%= f.input :email %>
-          <%= f.input :user_picture %>
-          <%= f.input :user_picture_cache, as: :hidden %>
-        <% end %>
-      </div>
+        <div class="col-xs-offset-1 col-xs-2">
+            <%= image_tag @user.user_picture, class:"avatar avatar-large" %>
+        </div>
+        <div class="col-xs-3">
+            <%= simple_form_for (@user) do |f| %>
+              <%= f.input :first_name %>
+              <%= f.input :last_name %>
+              <%= f.input :birth_date %>
+              <%= f.input :city %>
+              <%= f.input :phone_number %>
+              <%= f.input :email %>
+              <%= f.input :user_picture %>
+              <%= f.input :user_picture_cache, as: :hidden %>
+              <%= f.button :submit %>
+            <% end %>
+        </div>
     </div>
-  <div class="btn btn-primary ">
-    <%= link_to "Back Home", root_path %>
-  </div>
-</div>
-
-<h2>Reviews</h2>
-<% @user.reviews.each do |comment| %>
-  <p>
-    <b>Content:</b>
-    <%= comment.content %>
-  </p>
- <% end %>
+    <div class="btn btn-primary ">
+        <%= link_to "Back Home", root_path %>
     </div>
-  </div>
 </div>
-  </div>
-</div>
-
-<p>Add a review:</p>
-<%= form_for([@user, @user.reviews.build]) do |f| %>
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-

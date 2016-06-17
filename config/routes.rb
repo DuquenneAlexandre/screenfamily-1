@@ -10,13 +10,9 @@ Rails.application.routes.draw do
 
       get 'profile', to: 'users#profile'
       get 'profile/edit', to: 'users#edit'
+      put 'profile/update', to: 'users#update'
     end
   end
-
-  # get '/profile', to: 'pages#profile'
-  #
-  # resources :projects, only: [:index, :show, :new, :create, :edit, :update]
-  # get '/projects/:id/disable', to: 'users#disable'
 
   resources :projects do
     collection do
