@@ -1,0 +1,25 @@
+<section class="module">
+
+    <div class="container">
+
+        <div class="row">
+            <!-- CONTENT -->
+            <div class="col-sm-9">
+              <div class="tab-pane" id="discuss">
+                  <% # mur de discussion %>
+                  <%= render "shared/form_messages" %>
+                  <ul class="coin_mess">
+                    <% @messages.each do |message| %>
+                      <li><strong><%= image_tag message.user.user_picture %> <%= message.user.first_name %> - </strong><%= message.content %></li>
+                    <% end %>
+                  </ul>
+                  <br>
+                  <%= link_to 'Edit Post', edit_project_path(@project) %>
+                  <%= link_to 'Back to Posts', projects_path %>
+              </div>
+            </div>
+        </div>
+
+    </div>
+    
+</section>
