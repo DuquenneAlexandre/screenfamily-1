@@ -1,5 +1,4 @@
 <% if @message.errors.any? %>
 <% else %>
 $('.coin_mess').prepend("<li><%= @message.content %></li>");
-
 <% end %>

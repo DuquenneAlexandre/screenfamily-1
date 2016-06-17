@@ -186,14 +186,18 @@
     </section>
 
 
-
+<% i = @project.end_date - @project.start_sate %>
+<% a = 0 %>
 <%= month_calendar(attribute: :start_at) do |date| %>
 
   <%= date %>
   <% if date == @project.start_date %>
   <br>
   <%= "Begin" %>
+  <% a = 1 %>
   <% end %>
-
+<% if a != 0 && a <= i %>
+<%= "EVENT" %>
+<% end %>
 <% end %>
 

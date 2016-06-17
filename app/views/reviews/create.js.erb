@@ -1,0 +1,4 @@
+<% if @message.errors.any? %>
+<% else %>
+$('.coin_mess').prepend("<li><%= @review.content %></li>");
+<% end %>
