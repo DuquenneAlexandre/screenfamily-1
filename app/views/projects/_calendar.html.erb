@@ -1,0 +1,28 @@
+<section class="module">
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- CONTENT -->
+            <div class="col-sm-9">
+
+                <% i = @project.end_date - @project.start_date %>
+                <% a = 0 %>
+                <%= month_calendar(attribute: :start_at) do |date| %>
+
+                <%= date %>
+                <% if date == @project.start_date %>
+                <br>
+                <%= "Begin" %>
+                <% a = 1 %>
+                <% end %>
+                <% if a != 0 && a <= i %>
+                <%= "EVENT" %>
+                <% end %>
+                <% end %>
+
+            </div>
+        </div>
+    </div>
+</section>
