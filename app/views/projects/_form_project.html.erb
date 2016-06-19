@@ -24,9 +24,19 @@
             <% end %>
         </div>
     </div>
-    <div class="btn btn-primary ">
+    <div class="btn btn-primary">
         <%= link_to "Back Home", root_path %>
-        <%= link_to "Go Crowdfunding", gocrowdfunding_user_path %>
-        <%= link_to "Cancel Project", disable_user_path %>
+    </div>
+    <div class="btn btn-primary">
+      <%= link_to "Go Crowdfunding",set_crowdfunded_project_path %>
+    </div>
+    <div class="btn btn-primary">
+      <%= link_to "Set project in progress", set_inprogress_project_path %>
+    </div>
+    <div class="btn btn-primary">
+      <%= link_to "Set project finished", set_finished_project_path %>
+    </div>
+    <div class="btn btn-danger">
+      <%= link_to "Cancel Project", set_disabled_project_path %>
     </div>
 </div>

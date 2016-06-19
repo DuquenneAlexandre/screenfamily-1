@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:my_projects, :show]
-  before_action :set_project, only: [:edit, :show, :update, :disable, :join_project, :gocrowdfunding]
+  before_action :set_project, only: [:edit, :show, :update, :disable, :join_project, :set_disabled, :set_crowdfunded, :set_inprogress, :set_finished]
 
   def index
     @projects = policy_scope(Project)
@@ -87,25 +87,47 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def disable
-    if @project.status == true
-      @project.status = false
+  def set_disabled
+    if @project.disabled == false
+      @project.disabled = true
       @project.save
       redirect_to projects_path
       flash[:notice] = "Project disabled!"
     else
-      flash[:alert] = "Project not disabled!"
+      flash[:alert] = "Project already disabled!"
     end
   end
 
-  def gocrowdfunding
-    if @project.crowdvalidate == true
-      @project.crowdvalidate = false
+  def set_crowdfunded
+    if @project.validated_for_crowdfunding == false
+      @project.validated_for_crowdfunding = true
       @project.save
       redirect_to project_path
       flash[:notice] = "Project can be crowdfunded!"
     else
-      flash[:alert] = "Project cannot be crowdfunded!"
+      flash[:alert] = "Project already in crowdfunding!"
+    end
+  end
+
+  def set_inprogress
+    if @project.inprogress == false
+      @project.inprogress = true
+      @project.save
+      redirect_to projects_path
+      flash[:notice] = "Project in progress!"
+    else
+      flash[:alert] = "Project already in progress!"
+    end
+  end
+
+  def set_finished
+    if @project.finished == false
+      @project.finished = true
+      @project.save
+      redirect_to projects_path
+      flash[:notice] = "Project finished!"
+    else
+      flash[:alert] = "Project already finished!"
     end
   end
 
@@ -122,7 +144,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :city, :genre, :start_date, :end_date, :synopsis, :scenario, :number_of_participants, :number_of_days_for_crowdfunding, :project_picture, :project_picture_cache)
+    params.require(:project).permit(:name, :city, :genre, :start_date, :end_date, :synopsis, :scenario, :number_of_participants, :number_of_days_for_crowdfunding, :project_picture, :project_picture_cache, roles_attributes: [:id, :title, :_destroy])
   end
 
   def set_project
