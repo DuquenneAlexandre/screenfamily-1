@@ -30,11 +30,19 @@ class ProjectPolicy < ApplicationPolicy
     true #TODO only the owner of the project can update it
   end
 
-  def disable?
+  def set_disabled?
     true #TODO only the owner of the project can update it
   end
 
-  def gocrowdfunding?
+  def set_crowdfunded?
+    true
+  end
+
+  def set_inprogress?
+    true
+  end
+
+  def set_finished
     true
   end
 

@@ -35,14 +35,26 @@
 
 </div>
 
-<% if @project.status == true %>
+<% if @project.disabled == false %>
   <p>Ce projet n'est pas disabled</p>
 <% else %>
   <p>Ce projet est disabled</p>
 <% end %>
 
-<% if @project.crowdvalidate == true %>
-  <p>Ce projet est pas crowdfunded</p>
+<% if @project.validated_for_crowdfunding == false %>
+  <p>Ce projet n'est pas crowdfunded</p>
 <% else %>
-  <p>Ce projet est pas crowdfunded</p>
+  <p>Ce projet est crowdfunded</p>
+<% end %>
+
+<% if @project.inprogress == false %>
+  <p>Ce projet n'a pas commencé</p>
+<% else %>
+  <p>Ce projet a commencé et sortira plus tard</p>
+<% end %>
+
+<% if @project.finished == false %>
+  <p>Ce projet n'est pas terminé</p>
+<% else %>
+  <p>Ce projet est terminé</p>
 <% end %>

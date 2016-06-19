@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160617132646) do
+ActiveRecord::Schema.define(version: 20160618121900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,13 +73,15 @@ ActiveRecord::Schema.define(version: 20160617132646) do
     t.integer  "number_of_participants"
     t.integer  "number_of_days_for_crowdfunding"
     t.integer  "goal_for_crowdfunding"
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
-    t.boolean  "status",                          default: true
-    t.boolean  "crowdvalidate",                   default: true
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+    t.boolean  "disabled",                        default: false
+    t.boolean  "validated_for_crowdfunding",      default: false
     t.integer  "user_id"
     t.float    "latitude"
     t.float    "longitude"
+    t.boolean  "inprogress",                      default: false
+    t.boolean  "finished",                        default: false
   end
 
   create_table "reviews", force: :cascade do |t|
