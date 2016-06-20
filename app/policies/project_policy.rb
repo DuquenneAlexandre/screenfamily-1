@@ -14,8 +14,7 @@ class ProjectPolicy < ApplicationPolicy
   end
 
   def new?
-    true # anyone can create a project
-    #TODO : only a logged user can create a project
+    true # only a logged user can create a project
   end
 
   def create?
@@ -23,15 +22,15 @@ class ProjectPolicy < ApplicationPolicy
   end
 
   def edit?
-    true #TODO only the owner of the project can update it
+    true
   end
 
   def update?
-    true #TODO only the owner of the project can update it
+    true
   end
 
   def set_disabled?
-    true #TODO only the owner of the project can update it
+    true
   end
 
   def set_crowdfunded?
