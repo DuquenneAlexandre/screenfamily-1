@@ -4,7 +4,7 @@ project1 = Project.new(name: "Build Therapy", start_date: 30.days.from_now, end_
   scenario: "En 1975, Seyolo Zantoko, médecin fraichement diplômé originaire de Kinshasa, saisit l’opportunité d’un poste de médecin de campagne dans un petit village français.
 Arrivés à Marly-Gomont, Seyolo et sa famille déchantent. Les habitants ont peur, ils n’ont jamais vu de noirs de leur vie. Mais Seyolo est bien décidé à réussir son pari et va tout mettre en œuvre pour gagner la confiance des villageois...",
 number_of_participants: 7)
-
+project1.remote_project_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466427534/maxresdefault_r6gxq0.jpg'
 user1.save
 project1.save
 
@@ -16,6 +16,7 @@ project2 = Project.new(name: "Un Amour De Jaunisse", start_date: 30.days.from_no
   scenario: "En 1975, Seyolo Zantoko, médecin fraichement diplômé originaire de Kinshasa, saisit l’opportunité d’un poste de médecin de campagne dans un petit village français.
 Arrivés à Marly-Gomont, Seyolo et sa famille déchantent. Les habitants ont peur, ils n’ont jamais vu de noirs de leur vie. Mais Seyolo est bien décidé à réussir son pari et va tout mettre en œuvre pour gagner la confiance des villageois...",
 number_of_participants: 10)
+project2.remote_project_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466423425/newbxmqkudndobnllys0.jpg'
 
 user2.save
 project2.save
@@ -27,6 +28,7 @@ project3 = Project.new(name: "Out Of The Blue", start_date: 30.days.from_now, en
   scenario: "En 1975, Seyolo Zantoko, médecin fraichement diplômé originaire de Kinshasa, saisit l’opportunité d’un poste de médecin de campagne dans un petit village français.
 Arrivés à Marly-Gomont, Seyolo et sa famille déchantent. Les habitants ont peur, ils n’ont jamais vu de noirs de leur vie. Mais Seyolo est bien décidé à réussir son pari et va tout mettre en œuvre pour gagner la confiance des villageois...",
 number_of_participants: 4)
+project3.remote_project_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466427759/banner_oqo0kp.jpg'
 
 user3.save
 project3.save
@@ -39,6 +41,7 @@ project4 = Project.new(name: "Vie", start_date: 30.days.from_now, end_date: 65.d
   scenario: "En 1975, Seyolo Zantoko, médecin fraichement diplômé originaire de Kinshasa, saisit l’opportunité d’un poste de médecin de campagne dans un petit village français.
 Arrivés à Marly-Gomont, Seyolo et sa famille déchantent. Les habitants ont peur, ils n’ont jamais vu de noirs de leur vie. Mais Seyolo est bien décidé à réussir son pari et va tout mettre en œuvre pour gagner la confiance des villageois...",
 number_of_participants: 8)
+project4.remote_project_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466420162/szkngqlcsa8nmujj78nz.jpg'
 
 user4.save
 project4.save
@@ -51,6 +54,7 @@ project5 = Project.new(name: "Tango", start_date: 30.days.from_now, end_date: 65
   scenario: "En 1975, Seyolo Zantoko, médecin fraichement diplômé originaire de Kinshasa, saisit l’opportunité d’un poste de médecin de campagne dans un petit village français.
 Arrivés à Marly-Gomont, Seyolo et sa famille déchantent. Les habitants ont peur, ils n’ont jamais vu de noirs de leur vie. Mais Seyolo est bien décidé à réussir son pari et va tout mettre en œuvre pour gagner la confiance des villageois...",
 number_of_participants: 15)
+project5.remote_project_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466427852/ob_b9fb30_escrime-spectacle-garde-des-lys-14_xqhahc.jpg'
 
 user5.save
 project5.save
@@ -63,6 +67,7 @@ project6 = Project.new(name: "Hello Daddy", start_date: 30.days.from_now, end_da
   scenario: "En 1975, Seyolo Zantoko, médecin fraichement diplômé originaire de Kinshasa, saisit l’opportunité d’un poste de médecin de campagne dans un petit village français.
 Arrivés à Marly-Gomont, Seyolo et sa famille déchantent. Les habitants ont peur, ils n’ont jamais vu de noirs de leur vie. Mais Seyolo est bien décidé à réussir son pari et va tout mettre en œuvre pour gagner la confiance des villageois...",
 number_of_participants: 3)
+project6.remote_project_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466427535/maxpeoplefrthree669607_tboifm.jpg'
 
 user6.save
 project6.save
@@ -75,7 +80,7 @@ project7 = Project.new(name: "Un Homme Dangereux", start_date: 30.days.from_now,
   scenario: "En 1975, Seyolo Zantoko, médecin fraichement diplômé originaire de Kinshasa, saisit l’opportunité d’un poste de médecin de campagne dans un petit village français.
 Arrivés à Marly-Gomont, Seyolo et sa famille déchantent. Les habitants ont peur, ils n’ont jamais vu de noirs de leur vie. Mais Seyolo est bien décidé à réussir son pari et va tout mettre en œuvre pour gagner la confiance des villageois...",
 number_of_participants: 4)
-
+project7.remote_project_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466427534/tournage-film-1024x768_zlawxc.jpg'
 user7.save
 project7.save
 
@@ -87,6 +92,7 @@ project8 = Project.new(name: "Meurtries", start_date: 30.days.from_now, end_date
   scenario: "En 1975, Seyolo Zantoko, médecin fraichement diplômé originaire de Kinshasa, saisit l’opportunité d’un poste de médecin de campagne dans un petit village français.
 Arrivés à Marly-Gomont, Seyolo et sa famille déchantent. Les habitants ont peur, ils n’ont jamais vu de noirs de leur vie. Mais Seyolo est bien décidé à réussir son pari et va tout mettre en œuvre pour gagner la confiance des villageois...",
 number_of_participants: 10)
+project8.remote_project_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466427534/312161e78f410a0f7f66b5fa9d4336de_original_laiywa.png'
 
 user8.save
 project8.save
@@ -99,6 +105,7 @@ project9 = Project.new(name: "Deadly Forest", start_date: 30.days.from_now, end_
   scenario: "En 1975, Seyolo Zantoko, médecin fraichement diplômé originaire de Kinshasa, saisit l’opportunité d’un poste de médecin de campagne dans un petit village français.
 Arrivés à Marly-Gomont, Seyolo et sa famille déchantent. Les habitants ont peur, ils n’ont jamais vu de noirs de leur vie. Mais Seyolo est bien décidé à réussir son pari et va tout mettre en œuvre pour gagner la confiance des villageois...",
 number_of_participants: 7)
+project9.remote_project_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466427534/20272263_u8qaks.jpg'
 
 user9.save
 project9.save
@@ -111,6 +118,7 @@ project10 = Project.new(name: "L'Ouragan", start_date: 30.days.from_now, end_dat
   scenario: "En 1975, Seyolo Zantoko, médecin fraichement diplômé originaire de Kinshasa, saisit l’opportunité d’un poste de médecin de campagne dans un petit village français.
 Arrivés à Marly-Gomont, Seyolo et sa famille déchantent. Les habitants ont peur, ils n’ont jamais vu de noirs de leur vie. Mais Seyolo est bien décidé à réussir son pari et va tout mettre en œuvre pour gagner la confiance des villageois...",
 number_of_participants: 6)
+project10.remote_project_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466427535/108676771_o_wdwiif.jpg'
 
 user10.save
 project10.save

@@ -3,32 +3,28 @@
 <section class="module">
     <div class="container">
       <div class="row multi-columns-row">
-          <%@projects.first(9).each do |proj|%>
+          <%@projects.last(9).each do |proj|%>
             <!-- POST -->
             <div class="col-sm-6 col-md-4 col-lg-4 m-b-60">
               <div class="post">
-                <div class="post-media">
-                  <a href="blog-single.html">
-                    <% link_to project_path(proj) do %>
-                      <%= proj.project_picture %>
-                    <%end%>
-                  </a>
+                <div class="post-media-index">
+                <%= link_to project_path(proj) do %>
+                    <%= image_tag proj.project_picture %>
+                <%end%>
                 </div>
                 <div class="post-meta font-alt">
                   By <a href="#"><%#= proj.users.find(1).first_name %></a> / Du: <%= proj.start_date %> Au: <%= proj.end_date %> / Ville: <%= proj.city %> / Genre: "<%= proj.genre %>"/ Participants: <%= proj.number_of_participants %> / <%= proj.number_of_days_for_crowdfunding %> / <%= proj.goal_for_crowdfunding %>.
                 </div>
                 <div class="post-header">
                   <h4 class="post-title font-alt">
-                    <% link_to project_path(proj) do %>
                       <%= proj.name %>
-                    <%end%>
                   </h4>
                 </div>
                 <div class="post-entry">
                   <p>Synopsis: "<%= proj.synopsis[0..200] %>...</p>
                 </div>
-                <div class="post-more-link font-alt">
-                  <%= link_to project_path(proj) do %>
+                <div class="post-more-link font-alt btn btn col-xs-offset-2">
+                  <%= link_to project_path(proj), class:"btn btn-default btn-round btn-lg" do %>
                     View Project
                   <%end%>
                 </div>
