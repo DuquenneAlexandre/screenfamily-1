@@ -13,7 +13,7 @@ class Project < ActiveRecord::Base
   after_validation :geocode, if: :city_changed?
 
   monetize :price_cents
-  
+
 def start_time
   proj = @project
   self.my_related_model.proj.start_date ##Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship

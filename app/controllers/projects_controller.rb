@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:edit, :show, :update, :disable, :join_project, :set_disabled, :set_crowdfunded, :set_inprogress, :set_finished]
 
   def index
-    @projects = policy_scope(Project)
+    @projects = policy_scope(Project).paginate(:page => params[:page], per_page: 9).order('created_at DESC')
     if params[:city].present?
       @projects = @projects.where("city LIKE ?", params[:city])
     end
