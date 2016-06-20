@@ -3,7 +3,7 @@
 <section class="module">
     <div class="container">
       <div class="row multi-columns-row">
-          <%@projects.last(9).each do |proj|%>
+          <%@projects.each do |proj|%>
             <!-- POST -->
             <div class="col-sm-6 col-md-4 col-lg-4 m-b-60">
               <div class="post">
@@ -36,6 +36,8 @@
   </section>
 
  <!-- PAGINATION -->
+
+<%= will_paginate @projects, class:"text-center" %>
 <!-- <div class="row">
 
   <div class="col-sm-12 text-center m-t-60">
@@ -50,7 +52,10 @@
 
 </div> -->
 <!-- /PAGINATION -->
-<%= render 'shared/form_mappi' %>
+
+<!-- MAP -->
+
+<!-- <%= render 'shared/form_mappi' %>
 
   <% content_for(:after_js) do %>
     <%= javascript_tag do %>
@@ -75,6 +80,6 @@
           });
         })
       <% end %>
-    <% end %>
+    <% end %> -->
 
 </div>
