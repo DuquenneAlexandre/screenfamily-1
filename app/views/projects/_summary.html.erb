@@ -45,7 +45,7 @@
                     <!-- /TAGS -->
 
                 </article>
-
+                <% if @project.finished? %>
                 <!-- COMMENTS -->
                 <div class="comments">
                     <h4 class="comment-title font-alt">Comments</h4>
@@ -56,11 +56,11 @@
                         <% @project.reviews.each do |comment| %>
                         <div class="comment clearfix">
                             <div class="comment-avatar">
-                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/ryanbattles/128.jpg" alt="">
+                              <%= image_tag current_user.user_picture, class:"avatar avatar-large" %>
                             </div>
                             <div class="comment-content clearfix">
                                 <h5 class="comment-author font-alt">
-                                    <a href="#">John Doe</a>
+                                    <a href="#"><%= current_user.first_name %></a>
                                 </h5>
                                 <div class="comment-body">
                                     <p>
@@ -69,8 +69,7 @@
                                         </li>
                                     </p>
                                 </div>
-                                <div class="comment-meta font-alt">Today, 14:55 -
-                                    <a href="#">Reply</a>
+                                <div class="comment-meta font-alt"><%= Time.now.to_formatted_s(:short) %>
                                 </div>
                             </div>
                         </div>
@@ -80,6 +79,7 @@
                 </div>
                 <!-- /COMMENTS -->
 
+                <% if !policy(@project).join_project? %>
                 <!-- COMMENT FORM -->
                 <div class="comment-form" id="coin_mes">
                     <h4 class="comment-form-title font-alt">Leave a comment</h4>
@@ -100,7 +100,9 @@
                     </div>
                     <!-- /COMMENT FORM -->
                 </div>
+                <% end %>
             </div>
+            <% end %>
             <!-- /CONTENT -->
 
             <!-- SIDEBAR -->
@@ -150,9 +152,9 @@
 
                 <!-- WIDGET -->
                 <div class="widget">
-                    <%@project.users.each do |user| %>
                     <h5 class="widget-title font-alt">List of joiners</h5>
                     <ul class="widget-posts">
+                    <%@project.users.each do |user| %>
 
                         <li class="clearfix">
                             <div class="widget-posts-image">
@@ -167,8 +169,9 @@
                                 </div>
                             </div>
                         </li>
+                        <% end %>
                     </ul>
-                    <% end %>
+
                 </div>
                 <!-- /WIDGET -->
 
