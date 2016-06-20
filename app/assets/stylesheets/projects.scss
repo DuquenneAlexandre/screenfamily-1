@@ -73,6 +73,7 @@ text-align: center;
 .simple-calendar {
   .day {
   	height: 200px;
+    font-family: bold;
   }
 
   .wday-0 {}
@@ -89,7 +90,9 @@ text-align: center;
   .past {}
   .future {}
 
-  .start-date {}
+  .start-date {
+
+  }
 
   .prev-month {}
   .next-month { }
