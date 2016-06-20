@@ -1,22 +1,24 @@
-<div class="container">
+<div class="container margin_top">
   <h1 class="text-center">My profile <%= @user.first_name %>  <%= @user.last_name %></h1>
     <div class="row">
-      <div class="col-xs-offset-1 col-xs-2">
-        <%= image_tag @user.user_picture, class:"avatar avatar-large" %>
+      <div class="col-xs-offset-1 col-xs-3">
+        <%= image_tag @user.user_picture, class:"photoadroite_profile" %>
       </div>
       <div class="col-xs-3">
-          <%= @user.first_name %><br>
-          <%= @user.last_name %><br>
-          <%= @user.birth_date %><br>
+          Prenom : <%= @user.last_name %><br>
+          Non : <%= @user.first_name %><br>
+          Date de naissance :<%= @user.birth_date %><br>
       </div>
       <div class="col-xs-3">
-          <%= @user.city %><br>
-          <%= @user.email %><br>
-          <%= @user.user_picture %><br>
+          Ville : <%= @user.city %><br>
+          Email :<%= @user.email %><br>
       </div>
     </div>
-  <div class="btn btn-primary ">
+  <div class="btn btn-primary col-sm-3 col-sm-offset-4">
     <%= link_to "Back Home", root_path %>
+  </div>
+  <div class="btn btn-primary col-sm-3 col-sm-offset-4">
+    <%= link_to "Edit", profile_edit_user_path %>
   </div>
 </div>
 
