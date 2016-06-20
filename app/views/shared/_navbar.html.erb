@@ -1,3 +1,84 @@
+<!-- OVERLAY MENU -->
+<div id="overlay-menu" class="overlay-menu">
+
+  <a href="#" id="overlay-menu-hide" class="navigation-hide"><i class="ion-close-round"></i></a>
+
+    <div class="overlay-menu-inner">
+      <nav class="overlay-menu-nav">
+
+        <ul id="nav">
+
+          <li>
+            <%= link_to root_path do%>
+              Home
+            <% end %>
+          </li>
+
+          <li>
+          <%= link_to projects_path do%>
+            Discover
+          <% end %>
+          </li>
+
+          <li>
+          <%= link_to new_project_path do%>
+            Start project
+          <% end %>
+          </li>
+
+          <li class="slidedown">
+            <%= link_to do %>
+              <i></i> profile
+            <% end %>
+            <ul>
+            <% if user_signed_in? %>
+              <li>
+              <%= link_to do %>
+                <i class="fa fa-user"></i> profile
+              <% end %>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                  <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Log out" %>
+                <% end %>
+              </li>
+              <li>
+                <% else %>
+                  <!-- Login text link -->
+                  <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "nav navbar-nav navbar-right" %>
+
+                <% end %>
+              </li>
+            </ul>
+
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+    </div>
+
+  <div class="overlay-navigation-footer">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-xs-12 text-center">
+          <p class="copyright font-alt m-b-0">© 2016 screenfamily, All Rights Reserved.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+  <!-- /OVERLAY MENU -->
+
 <nav class="navbar navbar-custom navbar-light navbar-fixed-top navbar-transparent" style="opacity: 1; top: 0px;">
   <div class="container">
     <div class="navbar-header">
@@ -8,6 +89,16 @@
     </div>
 
     <!-- /ICONS NAVBAR -->
+
+    <ul id="icons-navbar" class="nav navbar-nav navbar-right visible-xs">
+      <li>
+        <a href="#" id="toggle-menu" class="show-overlay" title="Menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+      </li>
+    </ul>
 
     <ul class="extra-navbar nav navbar-nav navbar-right">
       <li>
@@ -53,15 +144,5 @@
     </ul>
   </div>
 </nav>
-
-
     <!-- ICONS NAVBAR -->
-    <!-- <ul id="icons-navbar" class="nav navbar-nav navbar-right">
-      <li>
-        <a href="#" id="toggle-menu" class="show-overlay" title="Menu">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-      </li>
-    </ul> -->
+
