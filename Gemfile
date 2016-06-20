@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+gem 'city-state'
 gem "nested_form"
 gem "simple_calendar", "~> 2.0"
 gem 'cloudinary'

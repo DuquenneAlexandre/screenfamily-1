@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :messages, only: [:create]
     resources :reviews, only: [:new, :create]
     resources :roles, only: [:index, :new, :create, :edit, :update]
+    resources :taken_roles, only: [:index, :new, :create, :edit, :update]
     resources :pledges, only: [:index, :new, :create]
     member do
       put 'join', to: 'projects#join_project'

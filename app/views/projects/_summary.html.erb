@@ -110,9 +110,9 @@
                 <div class="widget">
                     <% if policy(@project).join_project? %>
                     <h5 class="widget-title font-alt">Choose your role</h5>
-                    <%= simple_form_for([@project, @project.roles.build]) do |f| %>
+                    <%= simple_form_for([@project, @project.taken_roles.build]) do |f| %>
                     <div class="field">
-                        <%= f.input :title, collection: Role.roles_titles %>
+                        <%= f.input :title, collection: @project.roles %>
                     </div>
                     <div class="actions">
                         <%= f.submit %>
@@ -121,10 +121,17 @@
                     <% end %>
                     <!-- /Choisir son role  -->
                     <!-- Son roles -->
-                    <h5 class="widget-title font-alt">Roles</h5>
+                    <h5 class="widget-title font-alt">Tous les rôles</h5>
                     <% @project.roles.each do |role| %>
                     <p>
                         <%= role.title %>
+                    </p>
+                    <% end %>
+
+                    <h5 class="widget-title font-alt">Rôles déjà pris</h5>
+                    <% @project.taken_roles.each do |taken_role| %>
+                    <p>
+                        <%= taken_role.title %>
                     </p>
                     <% end %>
                     <!-- /Son roles  -->
