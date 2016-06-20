@@ -12,6 +12,9 @@
         <li>
             <a href="#calendar" data-target="#calendar" data-toggle="tab">Calendar</a>
         </li>
+        <li>
+            <a href="#crowdfunding" data-target="#crowdfunding" data-toggle="tab">Crowdfunding</a>
+        </li>
     </ul>
 </div>
 
@@ -31,6 +34,11 @@
 
     <div class="tab-pane" id="calendar">
       <%= render 'projects/calendar' %>
+    </div>
+
+
+    <div class="tab-pane" id="crowdfunding">
+      <%= render 'projects/crowdfunding' %>
     </div>
 
 </div>
@@ -57,12 +65,4 @@
   <p>Ce projet n'est pas terminé</p>
 <% else %>
   <p>Ce projet est terminé</p>
-<% end %>
-
-
-<p>Amount: <%= humanized_money_with_symbol(@project.price) %></p>
-
-<%= form_tag orders_path do %>
-  <%= hidden_field_tag 'project_id', @project.id %>
-  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
 <% end %>
