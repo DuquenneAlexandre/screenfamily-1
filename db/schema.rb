@@ -31,14 +31,6 @@ ActiveRecord::Schema.define(version: 20160620105305) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
-  create_table "events", force: :cascade do |t|
-    t.datetime "start_date"
-    t.datetime "end_date"
-    t.string   "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "messages", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -49,6 +41,15 @@ ActiveRecord::Schema.define(version: 20160620105305) do
 
   add_index "messages", ["project_id"], name: "index_messages_on_project_id", using: :btree
   add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "state"
+    t.string   "project_sku"
+    t.integer  "amount_cents", default: 0, null: false
+    t.json     "payment"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "pledges", force: :cascade do |t|
     t.integer  "amount"
@@ -82,6 +83,7 @@ ActiveRecord::Schema.define(version: 20160620105305) do
     t.float    "longitude"
     t.boolean  "inprogress",                      default: false
     t.boolean  "finished",                        default: false
+    t.integer  "price_cents",                     default: 0,     null: false
   end
 
   create_table "reviews", force: :cascade do |t|
