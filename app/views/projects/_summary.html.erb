@@ -11,7 +11,7 @@
 
                     <!-- MEDIA -->
                     <div class="post-media">
-                        <%= @project.project_picture %>
+                        <%= image_tag @project.project_picture %>
                     </div>
                     <!-- /MEDIA -->
 
@@ -133,7 +133,7 @@
                     <h5 class="widget-title font-alt">List of joiners</h5>
                     <% @project.users.each do |user| %>
 
-                    <%= user.user_picture %>
+                    <%= image_tag user.user_picture %>
 
                     <%= user.first_name %>
                     <%= user.last_name %>
@@ -150,7 +150,7 @@
                         <li class="clearfix">
                             <div class="widget-posts-image">
                                 <a href="#">
-                                    <%= user.user_picture %>
+                                    <%= image_tag user.user_picture %>
                                 </a>
                             </div>
                             <div class="widget-posts-body">
