@@ -58,3 +58,11 @@
 <% else %>
   <p>Ce projet est terminé</p>
 <% end %>
+
+
+<p>Amount: <%= humanized_money_with_symbol(@project.price) %></p>
+
+<%= form_tag orders_path do %>
+  <%= hidden_field_tag 'project_id', @project.id %>
+  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+<% end %>
