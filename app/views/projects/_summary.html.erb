@@ -124,13 +124,36 @@
                     <h5 class="widget-title font-alt">Tous les rôles</h5>
                     <% @project.roles.each do |role| %>
                     <p>
-                        <%= role.title %>
+                    <%= role.title %>
                     </p>
                     <% end %>
-
                     <h5 class="widget-title font-alt">Rôles déjà pris</h5>
                     <% @project.taken_roles.each do |taken_role| %>
                     <p>
+                    <% if taken_role.title == "1" %>
+                    <%= "Acteur 1er rôle" %>
+                    <% end %>
+                    <% if taken_role.title == "2" %>
+                    <%= "Acteur 2nd rôle" %>
+                    <% end %>
+                    <% if taken_role.title == "3" %>
+                    <%= "Figurant" %>
+                    <% end %>
+                    <% if taken_role.title == "4" %>
+                    <%= "Cadreur" %>
+                    <% end %>
+                    <% if taken_role.title == "5" %>
+                    <%= "Directeur de la Photographie" %>
+                    <% end %>
+                    <% if taken_role.title == "6" %>
+                    <%= "Monteur" %>
+                    <% end %>
+                    <% if taken_role.title == "7" %>
+                    <%= "Ingénieur Son" %>
+                    <% end %>
+                    <% if taken_role.title == "8" %>
+                    <%= "Chef Opérateur" %>
+                    <% end %>
                         <%= taken_role.title %>
                     </p>
                     <% end %>
