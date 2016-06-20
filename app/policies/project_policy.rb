@@ -42,7 +42,7 @@ class ProjectPolicy < ApplicationPolicy
     true
   end
 
-  def set_finished
+  def set_finished?
     true
   end
 
