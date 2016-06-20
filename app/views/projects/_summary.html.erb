@@ -159,6 +159,14 @@
                         <%= taken_role.title %>
                     </p>
                     <% end %>
+                    <h5 class="widget-title font-alt">Rôles disponibles</h5>
+                    <% @project.roles.each do |role| %>
+                    <% if !@project.taken_roles.include? role %>
+                    <p>
+                    <%= role.title %>
+                    </p>
+                    <% end %>
+                    <% end %>
                     <!-- /Son roles  -->
 
                     <!-- les différents roles -->

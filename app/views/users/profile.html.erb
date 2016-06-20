@@ -22,26 +22,55 @@
   </div>
 </div>
 
-<h2>Reviews</h2>
-<% @user.reviews.each do |comment| %>
-  <p>
-    <b>Content:</b>
-    <%= comment.contents_prof %>
-  </p>
- <% end %>
-    </div>
-  </div>
-</div>
-  </div>
-</div>
+<!-- COMMENTS -->
+<div class="comments">
+    <h4 class="comment-title font-alt">Comments</h4>
+    <hr class="divider m-b-30">
 
-<p>Add a review:</p>
-<%= form_for([@user, @user.reviews.build]) do |f| %>
-  <div class="field">
-    <%= f.label :contents_prof %><br />
-    <%= f.text_field :contents_prof %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+    <!-- COMMENT 1 -->
+    <ul class="coin_mess2">
+        <% @user.reviews.each do |comment| %>
+        <div class="comment clearfix">
+            <div class="comment-avatar">
+              <%= image_tag current_user.user_picture, class:"avatar avatar-large" %>
+            </div>
+            <div class="comment-content clearfix">
+                <h5 class="comment-author font-alt">
+                    <a href="#"><%= current_user.first_name %></a>
+                </h5>
+                <div class="comment-body">
+                    <p>
+                        <li>
+                            <%= comment.content %>
+                        </li>
+                    </p>
+                </div>
+                <div class="comment-meta font-alt"><%= Time.now.to_formatted_s(:short) %>
+                </div>
+            </div>
+        </div>
+    </ul>
+    <% end %>
+    <!-- /COMMENT 1 -->
+</div>
+<!-- /COMMENTS -->
+
+<!-- COMMENT FORM -->
+<div class="comment-form" id="coin_mes">
+    <h4 class="comment-form-title font-alt">Leave a comment</h4>
+    <hr class="divider m-b-30">
+
+    <div class="row">
+        <%= simple_form_for([@user, @user.reviews.build]) do |f| %>
+        <div class="col-md-12">
+            <div class="form-group">
+                <%= f.input :content %>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <%= f.submit class:"btn btn-round btn-g"%>
+        </div>
+        <% end %>
+
+    </div>
+    <!-- /COMMENT FORM -->
