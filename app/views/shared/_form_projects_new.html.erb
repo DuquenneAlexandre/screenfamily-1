@@ -19,6 +19,7 @@
       <%= f.input :synopsis %>
       <%= f.input :scenario %>
       <%= f.input :number_of_days_for_crowdfunding, input_html: { min: '5', step: 'any' } %>
+      <%= f.input :goal_for_crowdfunding %>
       <%= f.input :project_picture %>
       <%= f.input :project_picture_cache, as: :hidden %>
       <%= f.input :validated_for_crowdfunding, :as => :boolean, input_html: {checked: false} %>
