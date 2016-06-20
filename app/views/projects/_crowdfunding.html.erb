@@ -3,28 +3,37 @@
         <div class="row">
             <!-- CONTENT -->
             <div class="col-sm-9">
+              <% if !current_user.present? %>
+              <h1>Subscribe to support this movie!</h1>
+              <% end %>
             <h2>Participez dés aujourd'hui à l'aboutissement d'un projet.</h2>
 
               <h3>Première pallier de contribution.</h3>
-              <p>Bénéficiez des premiers retours, suivez l'évolution du projet.</p>
-				      <p>Amount: <%= humanized_money_with_symbol(@project.price) %></p>
+                <p>Bénéficiez des premiers retours, suivez l'évolution du projet.</p>
+  				      <p>Amount: <%= humanized_money_with_symbol(@project.price) %></p>
+                <% if current_user.present? %>
                 <%= form_tag orders_path do %>
                 <%= hidden_field_tag 'project_id', @project.id %>
                 <%= submit_tag 'Purshase', class: 'btn btn-primary' %>
+                <% end %>
                 <% end %>
               <h3>Deuxième pallier de contribution.</h3>
                 <p>Participez à la rélisation en consultant les investissement et le bisness plan de la réalisation.</p>
                 <p>Amount: <%= humanized_money_with_symbol(@project.price) %></p>
+                <% if current_user.present? %>
                 <%= form_tag orders_path do %>
                 <%= hidden_field_tag 'project_id', @project.id %>
                 <%= submit_tag 'Purshase', class: 'btn btn-primary' %>
                 <% end %>
+                <% end %>
             <h3>Troisième pallier de contribution.</h3>
             <p>Soyez le(s) premier(s) à découvrir le projet echevé.</p>
                 <p>Amount: <%= humanized_money_with_symbol(@project.price) %></p>
+                <% if current_user.present? %>
                 <%= form_tag orders_path do %>
                 <%= hidden_field_tag 'project_id', @project.id %>
                 <%= submit_tag 'Purshase', class: 'btn btn-primary' %>
+                <% end %>
                 <% end %>
             </div>
         </div>

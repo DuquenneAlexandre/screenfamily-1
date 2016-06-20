@@ -71,6 +71,7 @@
                         <%= taken_role.title %>
                     </p>
                     <% end %>
+
                   </div>
                         <!-- /Son roles  -->
                   <div class="col-sm-3 m-t-sm-60">
@@ -91,6 +92,19 @@
                     </div>
                   </div>
                 </div>
+                    <h5 class="widget-title font-alt">Rôles disponibles</h5>
+                    <% @project.roles.each do |role| %>
+                    <% if !@project.taken_roles.include? role %>
+                    <p>
+                    <%= role.title %>
+                    </p>
+                    <% end %>
+                    <% end %>
+                    <!-- /Son roles  -->
+
+                    <!-- les différents roles -->
+                    <h5 class="widget-title font-alt">List of joiners</h5>
+                    <% @project.users.each do |user| %>
 
                   </div>
                 </div>

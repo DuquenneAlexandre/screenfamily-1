@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:my_projects, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_filter :require_permission, only: [:edit, :update]
   before_action :set_project, only: [:edit, :show, :update, :disable, :join_project, :set_disabled, :set_crowdfunded, :set_inprogress, :set_finished]
 
   def index
@@ -151,4 +152,11 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     authorize @project
   end
-end
+
+  def require_permission
+    if current_user != Project.find(params[:id]).users.first
+      redirect_to root_path
+    end
+  end
+
+  end
