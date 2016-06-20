@@ -1,6 +1,6 @@
 <div class="mess">        
 <%= simple_form_for @message, url: project_messages_path(@project), remote: true do |f| %>
-  <%= f.input :content %>
+  <%= f.input :content, :as => :string, input_html: { maxlength: 250 }  %>
   <%= f.button :submit %>
 <% end %>
 </div>
