@@ -3,7 +3,7 @@
 <section class="module">
     <div class="container">
       <div class="row multi-columns-row">
-          <%@projects.each do |proj|%>
+          <%@projects.first(9).each do |proj|%>
             <!-- POST -->
             <div class="col-sm-6 col-md-4 col-lg-4 m-b-60">
               <div class="post">
@@ -25,7 +25,7 @@
                   </h4>
                 </div>
                 <div class="post-entry">
-                  <p>Synopsis: "<%= proj.synopsis %></p>
+                  <p>Synopsis: "<%= proj.synopsis[0..200] %>...</p>
                 </div>
                 <div class="post-more-link font-alt">
                   <%= link_to project_path(proj) do %>

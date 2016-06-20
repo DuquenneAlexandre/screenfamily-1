@@ -7,7 +7,7 @@
     </div>
     <div class="col-md-6">
       <p>
-      Screem family est une énorme communauté mondiale qui s'est construite autour de la créativité et des projets créatifs. Plus de 100 millions de personnes venues de tous les continents de la planète ont soutenu un projet Screem family.
+      Screen family est une énorme communauté mondiale qui s'est construite autour de la créativité et des projets créatifs. Plus de 100 millions de personnes venues de tous les continents de la planète ont soutenu un projet Screem family.
       </p>
       <p>
       Les projets sont pour la plupart réalisés par d'incroyables créateurs dont vous n'avez jamais entendu parler.
@@ -20,6 +20,44 @@
 </div>
 
 <section>
+  <div class="container">
+    <div class="row">
+        <% @projects.first(3).each do |proj| %>
+        <div class="col-sm-6 col-md-4 col-lg-4 m-b-60">
+          <div class="post">
+            <div class="post-media">
+              <a href="blog-single.html">
+                <% link_to project_path(proj) do %>
+                  <%= proj.project_picture %>
+                <%end%>
+              </a>
+            </div>
+            <div class="post-meta font-alt">
+              By <a href="#"><%#= proj.users.find(1).first_name %></a> / Du: <%= proj.start_date %> Au: <%= proj.end_date %> / Ville: <%= proj.city %> / Genre: "<%= proj.genre %>"/ Participants: <%= proj.number_of_participants %> / <%= proj.number_of_days_for_crowdfunding %> / <%= proj.goal_for_crowdfunding %>.
+            </div>
+            <div class="post-header">
+              <h4 class="post-title font-alt">
+                <% link_to project_path(proj) do %>
+                  <%= proj.name %>
+                <%end%>
+              </h4>
+            </div>
+            <div class="post-entry">
+              <p>Synopsis: "<%= proj.synopsis[0..200] %>...</p>
+            </div>
+            <div class="post-more-link font-alt">
+              <%= link_to project_path(proj) do %>
+                View Project
+              <%end%>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      </div>
+  </div>
+</section>
+
+<section>
 
   <div class="container">
 
@@ -27,7 +65,7 @@
     <div class="row m-t-70 text-center wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
       <div class="col-sm-12">
 
-        <button id="show-more" class="btn btn-block btn-lg btn-g show-more"><%= link_to projects_path do %> View Project
+        <button id="show-more" class="btn btn-block btn-lg btn-g show-more"><%= link_to projects_path do %> MORE PROJECTS
         <%end%></button>
 
       </div>

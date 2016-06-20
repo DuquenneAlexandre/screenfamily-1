@@ -3,6 +3,9 @@ class Project < ActiveRecord::Base
   has_many :roles
   accepts_nested_attributes_for :roles, :allow_destroy => true
   has_many :users, through: :roles
+  has_many :taken_roles
+  has_many :users, through: :taken_roles
+  has_many :roles, through: :taken_roles
   has_many :messages
   mount_uploader :project_picture, PhotoUploader
 
