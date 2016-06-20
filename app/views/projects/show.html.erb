@@ -3,6 +3,12 @@
         <li class="active">
             <a href="#summary" data-target="#summary" data-toggle="tab">Summary</a>
         </li>
+        <% if @project.validated_for_crowdfunding? %>
+        <li>
+            <a href="#crowdfunding" data-target="#crowdfunding" data-toggle="tab">Crowdfunding</a>
+        </li>
+        <% end %>
+        <% if !policy(@project).join_project? %>
         <li>
             <a href="#scenario" data-target="#scenario" data-toggle="tab">Scenario</a>
         </li>
@@ -12,9 +18,7 @@
         <li>
             <a href="#calendar" data-target="#calendar" data-toggle="tab">Calendar</a>
         </li>
-        <li>
-            <a href="#crowdfunding" data-target="#crowdfunding" data-toggle="tab">Crowdfunding</a>
-        </li>
+        <% end %>
     </ul>
 </div>
 
