@@ -120,7 +120,7 @@
       <!-- ICONS NAVBAR -->
         <% if user_signed_in? %>
           <div class="dropdown">
-              <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+              <%= image_tag current_user.user_picture, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
             <ul class="dropdown-menu dropdown-menu-right">
               <li>
                 <%= link_to do %>
