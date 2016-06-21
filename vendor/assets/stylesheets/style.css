@@ -3,7 +3,7 @@ Project: Vortex
 Version: 1.0.3
 ------------------------------------------------------------------ */
 
-@import url("http://fonts.googleapis.com/css?family=Dosis");
+@import url("http://fonts.googleapis.com/css?family=Doris");
 @import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400italic");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700");
 
@@ -174,8 +174,8 @@ blockquote.serif-quote {
 }
 
 .font-alt {
-	font-family: "Dosis", sans-serif;
-	text-transform: uppercase;
+	font-family: "Doris", sans-serif;
+	/*text-transform: uppercase;*/
 	letter-spacing: 3px;
 }
 
@@ -196,8 +196,8 @@ Forms
 .form-control {
 	border: 2px solid #eee;
 	height: 33px;
-	font-family: "Dosis", sans-serif;
-	text-transform: uppercase;
+	font-family: "Doris", sans-serif;
+	/*text-transform: uppercase;*/
 	letter-spacing: 2px;
 	font-size: 11px;
 	-webkit-border-radius: 2px;
@@ -233,7 +233,7 @@ Buttons
 ------------------------------------------------------------------- */
 
 .btn {
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	letter-spacing: 2px;
 	font-size: 11px;
 	padding: 8px 37px;
@@ -1080,7 +1080,7 @@ Navigation
 	border: 0;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	letter-spacing: 2px;
 	font-size: 10px;
 }
@@ -1269,8 +1269,8 @@ Navigation
 }
 
 #nav > li > a {
-	font-family: "Dosis", sans-serif;
-	text-transform: uppercase;
+	font-family: "Doris", sans-serif;
+	/*text-transform: uppercase;*/
 	letter-spacing: 3px;
 	font-size: 24px;
 	color: #FDFDFD;
@@ -1289,7 +1289,7 @@ Navigation
 #nav li ul li a {
 	display: inline-block;
 	padding: 6px 0;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	letter-spacing: 2px;
 	font-size: 11px;
 	color: #666;
@@ -1411,7 +1411,7 @@ Modules
 /* Module titles */
 
 .module-title {
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	letter-spacing: 10px;
 	text-align: center;
 	font-size: 18px;
@@ -1576,7 +1576,7 @@ Portfolio Filter
 }
 
 .filters > li > a {
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	color: #111;
 }
 

@@ -114,7 +114,7 @@
     </div>
 
     <div class="post-entry margin-bottom col-sx-12 col-sm-10 col-sm-offset-1">
-      <% if @project.synopsis != "" %>
+      <% if @project.description != "" %>
       <%= @project.description %>
       <% end %>
     </div>
@@ -178,7 +178,6 @@
   <!-- /CONTENT -->
 
   <section class="module">
-    <% @project.users.each do |user| %>
       <div class="container">
 
 
@@ -190,8 +189,9 @@
         <!-- /MODULE TITLE -->
 
         <!-- WORKS GRID -->
-        <div class="row">
+        <div class="row col-sm-3">
 
+              <% @project.users.each do |user| %>
           <div id="works-grid" class="works-grid works-hover-w" style="position: relative; height: 230px;">
 
             <!-- DO NOT DELETE THIS DIV -->
