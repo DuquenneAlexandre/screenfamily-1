@@ -9,7 +9,7 @@ class RolesController < ApplicationController
 
   def create
     @project = Project.find(params[:project_id])
-    #@project.users << current_user
+    @project.users << current_user
     @role = @project.roles.build(role_params)
     @role.user = current_user
     authorize @project

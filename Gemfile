@@ -3,7 +3,6 @@ ruby '2.3.0'
 
 gem 'paperclip'
 gem 'ckeditor'
-gem 'wysiwyg-rails'
 gem 'will_paginate', '~> 3.1.0'
 gem 'city-state'
 gem 'stripe'
