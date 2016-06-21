@@ -85,22 +85,30 @@
 </section>
 
 <!-- POST CONTENT -->
-<div class="post-entry margin-bottom col-sx-12 col-sm-10 col-sm-offset-1">
-  <% if @project.synopsis != "" %>
-  <%= @project.synopsis %>
-  <% end %>
+<div class="container">
+  <div class="post-entry margin-bottom col-sx-12 col-sm-9">
+  <h2>Synopsis</h2>
+    <% if @project.synopsis != "" %>
+    <%= @project.synopsis %>
+    <% end %>
+  </div>
 </div>
 
-<div class="post-entry margin-bottom col-sx-12 col-sm-10 col-sm-offset-1">
+<div class="post-entry margin-bottom col-sx-12 col-sm-9">
   <% if @project.description != "" %>
   <%= @project.description %>
   <% end %>
 </div>
 <!-- /POST CONTENT -->
 
+<!-- joiner -->
+
+<%= render 'projects/joiner' %>
+<!-- /joiner -->
+
 <!-- COMMENTS -->
 <% if @project.finished? %>
-  <div class="comments margin-bottom col-sx-12 col-sm-10 col-sm-offset-1">
+  <div class="comments margin-bottom col-sx-12 col-sm-9">
     <h4 class="comment-title font-alt">Comments</h4>
     <hr class="divider m-b-30">
       <ul class="coin_mess2">
@@ -155,44 +163,3 @@
 <% end %>
 <!-- /CONTENT -->
 
-  <section class="module">
-      <div class="container">
-
-
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-3">
-            <h2 class="module-title font-alt">List of joiners</h2>
-          </div>
-        </div>
-        <!-- /MODULE TITLE -->
-
-        <!-- WORKS GRID -->
-        <div class="row col-sm-3">
-
-              <% @project.users.each do |user| %>
-          <div id="works-grid" class="works-grid works-hover-w" style="position: relative; height: 230px;">
-
-            <!-- DO NOT DELETE THIS DIV -->
-            <div class="grid-sizer"></div>
-
-            <!-- PORTFOLIO ITEM -->
-            <div class="work-item design" style="height: 230px; position: absolute; left: 0px; top: 0px;">
-              <a href="portfolio-single-1.html">
-                <%= image_tag user.user_picture %>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title"><%= user.first_name %> <%= user.last_name %></h3>
-                  <div class="work-descr">
-                    Role de l'user
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- /PORTFOLIO ITEM -->
-          </div>
-
-        </div>
-        <!-- /WORKS GRID -->
-
-      </div>
-    <% end %>
-  </section>

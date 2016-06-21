@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   get 'payments/new'
 
   get 'orders/show'
@@ -34,6 +35,9 @@ Rails.application.routes.draw do
       get 'set_disabled', to: 'projects#set_disabled'
       get 'set_inprogress', to: 'projects#set_inprogress'
       get 'set_finished', to: 'projects#set_finished'
+      get 'edit_synopsis', to: 'projects#edit_synopsis', as: 'edit_synopsis'
+      get 'edit_scenario', to: 'projects#edit_scenario', as: 'edit_scenario'
+      get 'edit_description', to: 'projects#edit_description', as: 'edit_description'
     end
   end
 
