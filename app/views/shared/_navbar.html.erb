@@ -124,7 +124,7 @@
               <%= image_tag current_user.user_picture, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
             <ul class="dropdown-menu dropdown-menu-right">
               <li>
-                <%= link_to do %>
+                <%= link_to profile_user_path(current_user) do %>
                   <i class="fa fa-user"></i> profile
                 <% end %>
               </li>
