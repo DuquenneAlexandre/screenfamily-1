@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_filter :require_permission, only: [:edit, :update]
-  before_action :set_project, only: [:edit, :show, :update, :disable, :join_project, :set_disabled, :set_crowdfunded, :set_inprogress, :set_finished]
+  before_action :set_project, only: [:edit, :show, :update, :disable, :join_project, :set_disabled, :set_crowdfunded, :set_inprogress, :set_finished, :edit_scenario, :edit_synopsis, :edit_description]
 
   def index
     @projects = policy_scope(Project).paginate(:page => params[:page], per_page: 9).order('created_at DESC')
@@ -130,6 +130,15 @@ class ProjectsController < ApplicationController
     else
       flash[:alert] = "Project already finished!"
     end
+  end
+
+  def edit_scenario
+  end
+
+  def edit_synopsis
+  end
+
+  def edit_description
   end
 
   # def join_project
