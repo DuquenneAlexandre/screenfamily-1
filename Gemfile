@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+
+gem 'sidekiq_status'
 gem 'paperclip'
 gem 'ckeditor'
 gem 'will_paginate', '~> 3.1.0'

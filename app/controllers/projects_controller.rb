@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_filter :require_permission, only: [:edit, :update]
-  before_action :set_project, only: [:edit, :show, :update, :disable, :join_project, :set_disabled, :set_crowdfunded, :set_inprogress, :set_finished, :edit_scenario, :edit_synopsis, :edit_description]
+  before_action :set_project, only: [:edit, :show, :update, :disable, :join_project, :set_disabled, :set_crowdfunded, :set_inprogress, :set_finished, :edit_scenario, :edit_synopsis, :edit_description, :progress]
 
   def index
     @projects = policy_scope(Project).paginate(:page => params[:page], per_page: 9).order('created_at DESC')
@@ -154,7 +154,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :city, :genre, :start_date, :end_date, :synopsis, :scenario, :description, :number_of_participants, :number_of_days_for_crowdfunding, :validated_for_crowdfunding, :disabled, :inprogress, :finished, :project_picture, :project_picture_cache, roles_attributes: [:id, :title, :_destroy])
+    params.require(:project).permit(:name, :city, :genre, :start_date, :end_date, :synopsis, :scenario, :description, :number_of_participants, :number_of_days_for_crowdfunding, :goal_for_crowdfunding, :validated_for_crowdfunding, :disabled, :inprogress, :finished, :project_picture, :project_picture_cache, :pledged, roles_attributes: [:id, :title, :_destroy])
   end
 
   def set_project

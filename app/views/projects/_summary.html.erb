@@ -30,6 +30,8 @@
         <!-- MEDIA -->
         <div class="post-media">
           <%= image_tag @project.project_picture %>
+
+
     <!-- POST CONTENT -->
         <h2>Synopsis</h2>
           <% if @project.synopsis != "" %>
@@ -139,9 +141,8 @@
 </section>
 
 
-
-<!-- COMMENTS -->
 <% if @project.finished? %>
+<!-- COMMENTS -->
   <div class="comments margin-bottom col-sx-12 col-md-9">
     <h4 class="comment-title font-alt">Comments</h4>
     <hr class="divider m-b-30">
@@ -170,7 +171,6 @@
         <% end %>
       </ul>
   </div>
-<% end %>
 <!-- /COMMENTS -->
 
   <!-- COMMENT FORM -->
@@ -193,7 +193,7 @@
       <% end %>
     </div>
     <!-- /COMMENT FORM -->
+    <% end %>
   </div>
 <% end %>
 <!-- /CONTENT -->
-

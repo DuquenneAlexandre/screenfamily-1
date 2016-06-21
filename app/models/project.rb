@@ -14,9 +14,9 @@ class Project < ActiveRecord::Base
 
   monetize :price_cents
 
-def start_time
-  proj = @project
-  self.my_related_model.proj.start_date ##Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
-    end
+  def start_time
+    proj = @project
+    self.my_related_model.proj.start_date ##Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
+  end
 
 end
