@@ -4,7 +4,6 @@ Version: 1.0.3
 ------------------------------------------------------------------ */
 
 @import url("http://fonts.googleapis.com/css?family=Doris");
-@import url("http://fonts.googleapis.com/css?family=PT+Serif");
 @import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400italic");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700");
 
@@ -175,7 +174,7 @@ blockquote.serif-quote {
 }
 
 .font-alt {
-	font-family: "PT+Serif", sans-serif;
+	font-family: "Doris", sans-serif;
 	/*text-transform: uppercase;*/
 	letter-spacing: 3px;
 }
@@ -197,7 +196,7 @@ Forms
 .form-control {
 	border: 2px solid #eee;
 	height: 33px;
-	font-family: "PT+Serif", sans-serif;
+	font-family: "Doris", sans-serif;
 	/*text-transform: uppercase;*/
 	letter-spacing: 2px;
 	font-size: 11px;
@@ -1270,7 +1269,7 @@ Navigation
 }
 
 #nav > li > a {
-	font-family: "PT+Serif", sans-serif;
+	font-family: "Doris", sans-serif;
 	/*text-transform: uppercase;*/
 	letter-spacing: 3px;
 	font-size: 24px;
