@@ -22,6 +22,14 @@ class RolesController < ApplicationController
     end
   end
 
+  def decrease(role_id)
+    @role = @project.roles.find(params[:project_id])
+    if @role > 1
+      @role.quantity -= 1
+    end
+    @role
+  end
+
   private
 
   def role_params

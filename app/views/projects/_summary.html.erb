@@ -1,5 +1,27 @@
 <section class="module">
   <div class="container">
+
+    <div class="col-sm-6 m-t-sm-60">
+      <!-- HEADER -->
+      <div class="post-header">
+        <h1 class="post-title font-alt">
+          <%= @project.name %>
+        </h1>
+      </div>
+      <!-- TAGS -->
+      <div class="tags">
+        <a>Genre: "<%= @project.genre %>"</a>
+      </div>
+      <!-- /TAGS -->
+    </div>
+    <!-- /HEADER -->
+
+    <!-- META -->
+    <div class="post-meta font-alt">
+      City: <%= @project.city %> / Screeners Wanted: <%= @project.number_of_participants %>
+    </div>
+    <!-- /META -->
+
     <div class="row">
       <!-- CONTENT -->
       <div class="col-sm-10 col-sm-offset-1">
@@ -10,29 +32,8 @@
           </div>
           <!-- /MEDIA -->
 
-          <!-- META -->
-          <div class="post-meta font-alt">
-            By
-            <%#= proj.users.find(1).first_name %>/ Ville:
-            <%= @project.city %>/ / Participants:
-            <%= @project.number_of_participants %>.
-          </div>
-          <!-- /META -->
           <div class="container margin-bottom">
-            <div class="col-sm-3 m-t-sm-60">
-              <!-- HEADER -->
-              <div class="post-header">
-                <h1 class="post-title font-alt">
-                  <%= @project.name %>
-                </h1>
-              </div>
-              <!-- TAGS -->
-              <div class="tags">
-                <a>Genre: "<%= @project.genre %>"</a>
-              </div>
-              <!-- /TAGS -->
-            </div>
-            <!-- /HEADER -->
+
             <div class="col-sm-3 m-t-sm-60">
               <!-- Son roles -->
               <h5 class="widget-title font-alt">Tous les rôles</h5>
@@ -41,7 +42,7 @@
                 <%= role.title %>
               </p>
               <% end %>
-              <h5 class="widget-title font-alt">Rôles déjà pris</h5>
+              <!-- <h5 class="widget-title font-alt">Rôles déjà pris</h5>
               <% @project.taken_roles.each do |taken_role| %>
               <p>
                 <% if taken_role.title == "1" %>
@@ -70,7 +71,7 @@
                 <% end %>
                 <%= taken_role.title %>
               </p>
-              <% end %>
+              <% end %> -->
 
             </div>
             <!-- /Son roles  -->
@@ -79,7 +80,7 @@
               <div class="widget">
                 <% if policy(@project).join_project? %>
                   <h5 class="widget-title font-alt">Choose your role</h5>
-                  <%= simple_form_for([@project, @project.taken_roles.build]) do |f| %>
+                  <%= simple_form_for([@project, @project.roles.build]) do |f| %>
                   <div class="field">
                     <%= f.input :title, collection: @project.roles %>
                   </div>
@@ -92,14 +93,11 @@
               </div>
             </div>
           </div>
-          <h5 class="widget-title font-alt">Rôles disponibles</h5>
-          <% @project.roles.each do |role| %>
-            <% if !@project.taken_roles.include? role %>
-            <p>
-              <%= role.title %>
-            </p>
-            <% end %>
+
+          <% if @project.validated_for_crowdfunding? %>
+          <%= render 'projects/crowdfunding' %>
           <% end %>
+
           <!-- /Son roles  -->
 
         </article>
@@ -110,7 +108,15 @@
 
     <!-- POST CONTENT -->
     <div class="post-entry margin-bottom col-sx-12 col-sm-10 col-sm-offset-1">
+      <% if @project.synopsis != "" %>
       <%= @project.synopsis %>
+      <% end %>
+    </div>
+
+    <div class="post-entry margin-bottom col-sx-12 col-sm-10 col-sm-offset-1">
+      <% if @project.description != "" %>
+      <%= @project.description %>
+      <% end %>
     </div>
     <!-- /POST CONTENT -->
 
@@ -212,4 +218,3 @@
       </div>
     <% end %>
   </section>
-
