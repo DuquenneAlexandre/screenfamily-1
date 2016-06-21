@@ -30,15 +30,19 @@
         <!-- MEDIA -->
         <div class="post-media">
           <%= image_tag @project.project_picture %>
-      <!-- POST CONTENT -->
-          <h2>Synopsis</h2>
-            <% if @project.synopsis != "" %>
-            <%= @project.synopsis %>
-            <% end %>
-            <% if @project.description != "" %>
-            <%= @project.description %>
-            <% end %>
-      <!-- /POST CONTENT -->
+    <!-- POST CONTENT -->
+        <h2>Synopsis</h2>
+          <% if @project.synopsis != "" %>
+          <%= @project.synopsis %>
+          <% end %>
+          <% if @project.description != "" %>
+          <%= @project.description %>
+          <% end %>
+    <!-- /POST CONTENT -->
+          <!-- joiner -->
+          <h2>Our Team</h2>
+          <%= render 'projects/joiner' %>
+          <!-- /joiner -->
         </div>
         <!-- /MEDIA -->
       </div>
@@ -89,6 +93,36 @@
         </div>
           <!-- /Son roles  -->
       </div>
+        <!-- map -->
+      <div class="col-xs-12 col-md-3">
+        <div class="widget">
+          <% case @project.city %>
+          <% when "Anaheim" %>
+            <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Anaheim_hkxc8d.png' %>
+          <% when "Bakersfield" %>
+            <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529971/Bakersfield_woohat.png' %>
+          <% when "Fresno" %>
+              <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529971/Fresno_dlzqdh.png' %>
+          <% when "Long Beach" %>
+            <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Long_Beach_uasbkr.png' %>
+          <% when "Los Angeles" %>
+            <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Los_Angeles_ivqrnc.png' %>
+          <% when "Oakland" %>
+            <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Oakland_ttxstj.png' %>
+          <% when "Sacramento" %>
+            <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Sacramento_t0k521.png' %>
+          <% when "San Diego" %>
+            <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529973/San_Diego_dzx81r.png' %>
+          <% when "San Francisco" %>
+            <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529974/San_Francisco_ohbn37.png' %>
+          <% when "San Jose" %>
+            <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529973/San_Jose%CC%81_r4v8fp.png' %>
+          <% else %>
+            <% %>
+        <% end %>
+        </div>
+      </div>
+          <!-- /map -->
       <!-- /Choisir son role  -->
 
       <div class="col-xs-12 col-md-3">
@@ -105,10 +139,6 @@
 </section>
 
 
-
-<!-- joiner -->
-<%= render 'projects/joiner' %>
-<!-- /joiner -->
 
 <!-- COMMENTS -->
 <% if @project.finished? %>
@@ -167,35 +197,3 @@
 <% end %>
 <!-- /CONTENT -->
 
-<!-- MAP -->
-
-<div class="container">
-
-  <div class="col-xs-3">
-
-    <% case @project.city %>
-     <% when "Anaheim" %>
-       <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Anaheim_hkxc8d.png' %>
-      <% when "Bakersfield" %>
-        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529971/Bakersfield_woohat.png' %>
-      <% when "Fresno" %>
-          <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529971/Fresno_dlzqdh.png' %>
-      <% when "Long Beach" %>
-        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Long_Beach_uasbkr.png' %>
-      <% when "Los Angeles" %>
-        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Los_Angeles_ivqrnc.png' %>
-      <% when "Oakland" %>
-        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Oakland_ttxstj.png' %>
-      <% when "Sacramento" %>
-        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Sacramento_t0k521.png' %>
-      <% when "San Diego" %>
-        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529973/San_Diego_dzx81r.png' %>
-      <% when "San Francisco" %>
-        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529974/San_Francisco_ohbn37.png' %>
-      <% else %>
-        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529973/San_Jose%CC%81_r4v8fp.png' %>
-    <% end %>
-
-  </div>
-
-</div>
