@@ -22,6 +22,7 @@ scenario: "",
 number_of_participants: 5
 )
 project1.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466499224/naz_maalik_massimadi_3_vgqoub.jpg'
+user1.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523566/j4wo3gvbyc9jsd57hvuo.jpg'
 user1.save
 project1.save
 project1.users << user1
@@ -54,6 +55,7 @@ scenario: "",
 number_of_participants: 7
 )
 project2.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466499225/CHUG_vkftdt.jpg'
+user2.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466524034/11222145_10207231487968456_5608086083271334069_o_m80qjq.jpg'
 user2.save
 project2.save
 project2.users << user2
@@ -82,6 +84,7 @@ scenario: "",
 number_of_participants: 4
 )
 project3.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466499229/Little.Witch.Academia.full.1921675_f0zvkp.jpg'
+user3.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466524034/13086735_10154011257583654_3491722265380897872_o_hnktph.jpg'
 user3.save
 project3.save
 project3.users << user3
@@ -114,10 +117,11 @@ After I saw the incredible way “Veronica Mars” fans rallied around Kristen B
 Financing an independent film the traditional way often means having to give away your right to “the final cut,” casting choices, location choices and cutting down your script to make it shoot-able on the cheapest budget possible.
 
 What if there is a different way?",
-scenario: "",
+scenario: "http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523566/j4wo3gvbyc9jsd57hvuo.jpg",
 number_of_participants: 5
 )
 project4.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466499225/maxdogmovie_p9l4tq.jpg'
+user4.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523525/gzeedhgu9vcfw4yblfyr.jpg'
 user4.save
 project4.save
 project4.users << user4
@@ -154,6 +158,7 @@ description: "",
 number_of_participants: 4
 )
 project5.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466499227/for-the-love-of-spock_czjkcz.png'
+user5.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523595/pjwhgh8grg1j1aas73nh.jpg'
 user5.save
 project5.save
 project5.users << user5
