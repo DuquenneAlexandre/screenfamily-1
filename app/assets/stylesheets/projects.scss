@@ -101,7 +101,17 @@ text-align: center;
   .has-events {}
 }
 
-.project-percent-pledged {
-      background-color: #2BDE73;
-    height: 10%;
+.carousel,.item,.active {
+width: 100%;
+
+}
+
+#myCarousel {
+  height:500px;
+    width: 1175px;
+}
+
+.carousel-inner {
+    height:500px;
+    width: 1175px;
 }
