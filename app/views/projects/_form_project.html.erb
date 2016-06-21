@@ -11,7 +11,7 @@
               <%= f.input :name %>
               <%= f.input :start_date %>
               <%= f.input :end_date %>
-              <%= f.input :city %>
+              <%= f.input :city, collection: ['Anaheim','Bakersfield','Fresno','Long Beach','Los Angeles','Oakland','Sacramento','San Diego','San Francisco','San Jose'] %>
               <%= f.input :genre %>
               <%= f.fields_for :roles do |role_form| %>
                 <%= role_form.select :title, collection: Role.roles_titles %>
