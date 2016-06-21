@@ -64,18 +64,18 @@
             <h5 class="widget-title font-alt">Choose your role</h5>
             <%= simple_nested_form_for([@project, @project.roles.build]) do |f| %>
             <div class="field">
-            
+
               <%= f.input :title, collection: @project.roles %>
             </div>
             <div class="actions">
               <%= f.submit %>
             </div>
             <% end %>
-         
+
           <% end %>
           <!-- /Choisir son role  -->
         </div>
-    
+
           <!-- /Son roles  -->
 
       <% if @project.validated_for_crowdfunding? %>
@@ -165,3 +165,35 @@
 <% end %>
 <!-- /CONTENT -->
 
+<!-- MAP -->
+
+<div class="container">
+
+  <div class="col-xs-3">
+
+    <% case @project.city %>
+     <% when "Anaheim" %>
+       <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Anaheim_hkxc8d.png' %>
+      <% when "Bakersfield" %>
+        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529971/Bakersfield_woohat.png' %>
+      <% when "Fresno" %>
+          <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529971/Fresno_dlzqdh.png' %>
+      <% when "Long Beach" %>
+        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Long_Beach_uasbkr.png' %>
+      <% when "Los Angeles" %>
+        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Los_Angeles_ivqrnc.png' %>
+      <% when "Oakland" %>
+        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Oakland_ttxstj.png' %>
+      <% when "Sacramento" %>
+        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529972/Sacramento_t0k521.png' %>
+      <% when "San Diego" %>
+        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529973/San_Diego_dzx81r.png' %>
+      <% when "San Francisco" %>
+        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529974/San_Francisco_ohbn37.png' %>
+      <% else %>
+        <%= image_tag 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466529973/San_Jose%CC%81_r4v8fp.png' %>
+    <% end %>
+
+  </div>
+
+</div>
