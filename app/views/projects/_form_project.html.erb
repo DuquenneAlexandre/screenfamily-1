@@ -7,16 +7,22 @@
             <%= image_tag @project.project_picture, class:"photoadroite" %>
         </div>
          <div class="col-sm-3">
-            <%= simple_form_for (@project) do |f| %>
+            <%= simple_nested_form_for @project do |f| %>
               <%= f.input :name %>
               <%= f.input :start_date %>
               <%= f.input :end_date %>
               <%= f.input :city %>
               <%= f.input :genre %>
+              <%= f.fields_for :roles do |role_form| %>
+                <%= role_form.select :title, collection: Role.roles_titles %>
+                <%= role_form.link_to_remove "Remove this role" %>
+              <% end %>
+              <p><%= f.link_to_add "Add a role", :roles %></p>
           </div>
           <div class="col-sm-4">
               <%= f.input :synopsis %>
               <%= f.input :scenario %>
+              <%= f.input :description %>
               <%= f.input :number_of_participants %>
               <%= f.input :number_of_days_for_crowdfunding %>
               <%= f.input :goal_for_crowdfunding %>

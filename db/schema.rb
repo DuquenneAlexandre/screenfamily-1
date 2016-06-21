@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160620105305) do
+ActiveRecord::Schema.define(version: 20160621100304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,6 +92,7 @@ ActiveRecord::Schema.define(version: 20160620105305) do
     t.boolean  "inprogress",                      default: false
     t.boolean  "finished",                        default: false
     t.integer  "price_cents",                     default: 0,     null: false
+    t.text     "description"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -111,6 +112,7 @@ ActiveRecord::Schema.define(version: 20160620105305) do
     t.integer  "project_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "quantity"
   end
 
   add_index "roles", ["project_id"], name: "index_roles_on_project_id", using: :btree

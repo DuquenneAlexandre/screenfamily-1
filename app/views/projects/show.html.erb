@@ -3,11 +3,6 @@
         <li class="active">
             <a href="#summary" data-target="#summary" data-toggle="tab">Summary</a>
         </li>
-        <% if @project.validated_for_crowdfunding? %>
-        <li>
-            <a href="#crowdfunding" data-target="#crowdfunding" data-toggle="tab">Crowdfunding</a>
-        </li>
-        <% end %>
         <% if !policy(@project).join_project? %>
         <li>
             <a href="#scenario" data-target="#scenario" data-toggle="tab">Scenario</a>
@@ -38,11 +33,6 @@
 
     <div class="tab-pane" id="calendar">
       <%= render 'projects/calendar' %>
-    </div>
-
-
-    <div class="tab-pane" id="crowdfunding">
-      <%= render 'projects/crowdfunding' %>
     </div>
 
 </div>

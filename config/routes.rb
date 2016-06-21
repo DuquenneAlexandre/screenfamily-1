@@ -23,7 +23,9 @@ Rails.application.routes.draw do
     end
     resources :messages, only: [:create]
     resources :reviews, only: [:new, :create]
-    resources :roles, only: [:index, :new, :create, :edit, :update]
+    resources :roles, only: [:index, :new, :create, :edit, :update] do
+      put 'decrease', on: :member
+      end
     resources :taken_roles, only: [:index, :new, :create, :edit, :update]
     resources :pledges, only: [:index, :new, :create]
     member do
