@@ -18,6 +18,7 @@
 //= require isotope.pkgd
 //= require isotope.pkgd.min
 
+//= require ckeditor/init
 
 //= require jquery.easing.1.3
 //= require jquery.fitvids
@@ -37,6 +38,3 @@
 //= require contact
 //= require custom
 //= require_tree .
-
-
-

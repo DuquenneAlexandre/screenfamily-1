@@ -20,9 +20,6 @@
               <p><%= f.link_to_add "Add a role", :roles %></p>
           </div>
           <div class="col-sm-4">
-              <%= f.input :synopsis %>
-              <%= f.input :scenario %>
-              <%= f.input :description %>
               <%= f.input :number_of_participants %>
               <%= f.input :number_of_days_for_crowdfunding %>
               <%= f.input :goal_for_crowdfunding %>
@@ -35,6 +32,15 @@
 
     <div class="btn btn-primary">
       <%= link_to "Back Home", root_path %>
+    </div>
+    <div class="btn btn-primary">
+      <%= link_to "Edit synopsis", edit_synopsis_project_path %>
+    </div>
+    <div class="btn btn-primary">
+      <%= link_to "Edit scenario", edit_scenario_project_path %>
+    </div>
+    <div class="btn btn-primary">
+      <%= link_to "Edit description", edit_description_project_path %>
     </div>
     <div class="btn btn-primary">
       <%= link_to "Go Crowdfunding",set_crowdfunded_project_path %>

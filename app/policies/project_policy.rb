@@ -45,6 +45,18 @@ class ProjectPolicy < ApplicationPolicy
     true
   end
 
+  def edit_synopsis?
+    true
+  end
+
+  def edit_scenario?
+    true
+  end
+
+  def edit_description?
+    true
+  end
+
   def search_project?
     true
   end
