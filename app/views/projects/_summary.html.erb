@@ -1,221 +1,215 @@
 <section class="module">
   <div class="container">
     <div class="row">
-        <!-- CONTENT -->
-        <div class="col-sm-10 col-sm-offset-1">
-            <article class="post post-single">
-                <!-- MEDIA -->
-                <div class="post-media">
-                    <%= image_tag @project.project_picture %>
-                </div>
-                <!-- /MEDIA -->
-
-                <!-- META -->
-                <div class="post-meta font-alt">
-                    By
-                    <%#= proj.users.find(1).first_name %>/ Ville:
-                    <%= @project.city %>/ / Participants:
-                    <%= @project.number_of_participants %>.
-                </div>
-                <!-- /META -->
-                <div class="container margin-bottom">
-                  <div class="col-sm-3 m-t-sm-60">
-                    <!-- HEADER -->
-                    <div class="post-header">
-                        <h1 class="post-title font-alt">
-                            <%= @project.name %>
-                        </h1>
-                    </div>
-                    <!-- TAGS -->
-                    <div class="tags">
-                        <a>Genre: "<%= @project.genre %>"</a>
-                    </div>
-                    <!-- /TAGS -->
-                  </div>
-                    <!-- /HEADER -->
-                  <div class="col-sm-3 m-t-sm-60">
-                    <!-- Son roles -->
-                    <h5 class="widget-title font-alt">Tous les rôles</h5>
-                    <% @project.roles.each do |role| %>
-                    <p>
-                    <%= role.title %>
-                    </p>
-                    <% end %>
-                    <h5 class="widget-title font-alt">Rôles déjà pris</h5>
-                    <% @project.taken_roles.each do |taken_role| %>
-                    <p>
-                    <% if taken_role.title == "1" %>
-                    <%= "Acteur 1er rôle" %>
-                    <% end %>
-                    <% if taken_role.title == "2" %>
-                    <%= "Acteur 2nd rôle" %>
-                    <% end %>
-                    <% if taken_role.title == "3" %>
-                    <%= "Figurant" %>
-                    <% end %>
-                    <% if taken_role.title == "4" %>
-                    <%= "Cadreur" %>
-                    <% end %>
-                    <% if taken_role.title == "5" %>
-                    <%= "Directeur de la Photographie" %>
-                    <% end %>
-                    <% if taken_role.title == "6" %>
-                    <%= "Monteur" %>
-                    <% end %>
-                    <% if taken_role.title == "7" %>
-                    <%= "Ingénieur Son" %>
-                    <% end %>
-                    <% if taken_role.title == "8" %>
-                    <%= "Chef Opérateur" %>
-                    <% end %>
-                        <%= taken_role.title %>
-                    </p>
-                    <% end %>
-
-                  </div>
-                        <!-- /Son roles  -->
-                  <div class="col-sm-3 m-t-sm-60">
-                    <!-- Choisir son role -->
-                    <div class="widget">
-                      <% if policy(@project).join_project? %>
-                      <h5 class="widget-title font-alt">Choose your role</h5>
-                      <%= simple_form_for([@project, @project.taken_roles.build]) do |f| %>
-                      <div class="field">
-                          <%= f.input :title, collection: @project.roles %>
-                      </div>
-                      <div class="actions">
-                          <%= f.submit %>
-                      </div>
-                      <% end %>
-                      <% end %>
-                      <!-- /Choisir son role  -->
-                    </div>
-                  </div>
-                </div>
-                    <h5 class="widget-title font-alt">Rôles disponibles</h5>
-                    <% @project.roles.each do |role| %>
-                    <% if !@project.taken_roles.include? role %>
-                    <p>
-                    <%= role.title %>
-                    </p>
-                    <% end %>
-                    <% end %>
-                    <!-- /Son roles  -->
-
-                    <!-- les différents roles -->
-                    <h5 class="widget-title font-alt">List of joiners</h5>
-                    <% @project.users.each do |user| %>
-
-                  </div>
-                </div>
-                <!-- POST CONTENT -->
-                <div class="post-entry margin-bottom col-sx-12 col-sm-10 col-sm-offset-1">
-                    <%= @project.synopsis %>
-                </div>
-                <!-- /POST CONTENT -->
-
-            </article>
-            <% if @project.finished? %>
-            <!-- COMMENTS -->
-            <div class="comments margin-bottom col-sx-12 col-sm-10 col-sm-offset-1">
-                <h4 class="comment-title font-alt">Comments</h4>
-                <hr class="divider m-b-30">
-
-                <!-- COMMENT 1 -->
-                <ul class="coin_mess2">
-                    <% @project.reviews.each do |comment| %>
-                    <div class="comment clearfix">
-                        <div class="comment-avatar">
-                          <%= image_tag current_user.user_picture, class:"avatar avatar-large" %>
-                        </div>
-                        <div class="comment-content clearfix">
-                            <h5 class="comment-author font-alt">
-                                <a href="#"><%= current_user.first_name %></a>
-                            </h5>
-                            <div class="comment-body">
-                                <p>
-                                    <li>
-                                        <%= comment.content %>
-                                    </li>
-                                </p>
-                            </div>
-                            <div class="comment-meta font-alt"><%= Time.now.to_formatted_s(:short) %>
-                            </div>
-                        </div>
-                    </div>
-                </ul>
-                <% end %>
-                <!-- /COMMENT 1 -->
-            </div>
-            <!-- /COMMENTS -->
-
-            <% if !policy(@project).join_project? %>
-            <!-- COMMENT FORM -->
-            <div class="comment-form" id="coin_mes">
-                <h4 class="comment-form-title font-alt">Leave a comment</h4>
-                <hr class="divider m-b-30">
-
-                <div class="row">
-                    <%= simple_form_for([@project, @project.reviews.build]) do |f| %>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <%= f.input :content %>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <%= f.submit class:"btn btn-round btn-g"%>
-                    </div>
-
-                    <% end %>
-                </div>
-                <!-- /COMMENT FORM -->
-            </div>
-            <% end %>
-        </div>
-        <% end %>
-        <!-- /CONTENT -->
-
-    <section class="module">
-      <% @project.users.each do |user| %>
-        <div class="container">
-
-          <!-- MODULE TITLE -->
-          <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-              <h2 class="module-title font-alt">List of joiners</h2>
-            </div>
+      <!-- CONTENT -->
+      <div class="col-sm-10 col-sm-offset-1">
+        <article class="post post-single">
+          <!-- MEDIA -->
+          <div class="post-media">
+            <%= image_tag @project.project_picture %>
           </div>
-          <!-- /MODULE TITLE -->
+          <!-- /MEDIA -->
 
-          <!-- WORKS GRID -->
-          <div class="row">
-
-            <div id="works-grid" class="works-grid works-hover-w" style="position: relative; height: 230px;">
-
-              <!-- DO NOT DELETE THIS DIV -->
-              <div class="grid-sizer"></div>
-
-              <!-- PORTFOLIO ITEM -->
-              <div class="work-item design" style="height: 230px; position: absolute; left: 0px; top: 0px;">
-                <a href="portfolio-single-1.html">
-                  <%= image_tag user.user_picture %>
-                  <div class="work-caption font-alt">
-                    <h3 class="work-title"><%= user.first_name %> <%= user.last_name %></h3>
-                    <div class="work-descr">
-                      Role de l'user
-                    </div>
-                  </div>
-                </a>
+          <!-- META -->
+          <div class="post-meta font-alt">
+            By
+            <%#= proj.users.find(1).first_name %>/ Ville:
+            <%= @project.city %>/ / Participants:
+            <%= @project.number_of_participants %>.
+          </div>
+          <!-- /META -->
+          <div class="container margin-bottom">
+            <div class="col-sm-3 m-t-sm-60">
+              <!-- HEADER -->
+              <div class="post-header">
+                <h1 class="post-title font-alt">
+                  <%= @project.name %>
+                </h1>
               </div>
-              <!-- /PORTFOLIO ITEM -->
+              <!-- TAGS -->
+              <div class="tags">
+                <a>Genre: "<%= @project.genre %>"</a>
+              </div>
+              <!-- /TAGS -->
             </div>
+            <!-- /HEADER -->
+            <div class="col-sm-3 m-t-sm-60">
+              <!-- Son roles -->
+              <h5 class="widget-title font-alt">Tous les rôles</h5>
+              <% @project.roles.each do |role| %>
+              <p>
+                <%= role.title %>
+              </p>
+              <% end %>
+              <h5 class="widget-title font-alt">Rôles déjà pris</h5>
+              <% @project.taken_roles.each do |taken_role| %>
+              <p>
+                <% if taken_role.title == "1" %>
+                <%= "Acteur 1er rôle" %>
+                <% end %>
+                <% if taken_role.title == "2" %>
+                <%= "Acteur 2nd rôle" %>
+                <% end %>
+                <% if taken_role.title == "3" %>
+                <%= "Figurant" %>
+                <% end %>
+                <% if taken_role.title == "4" %>
+                <%= "Cadreur" %>
+                <% end %>
+                <% if taken_role.title == "5" %>
+                <%= "Directeur de la Photographie" %>
+                <% end %>
+                <% if taken_role.title == "6" %>
+                <%= "Monteur" %>
+                <% end %>
+                <% if taken_role.title == "7" %>
+                <%= "Ingénieur Son" %>
+                <% end %>
+                <% if taken_role.title == "8" %>
+                <%= "Chef Opérateur" %>
+                <% end %>
+                <%= taken_role.title %>
+              </p>
+              <% end %>
 
+            </div>
+            <!-- /Son roles  -->
+            <div class="col-sm-3 m-t-sm-60">
+              <!-- Choisir son role -->
+              <div class="widget">
+                <% if policy(@project).join_project? %>
+                  <h5 class="widget-title font-alt">Choose your role</h5>
+                  <%= simple_form_for([@project, @project.taken_roles.build]) do |f| %>
+                  <div class="field">
+                    <%= f.input :title, collection: @project.roles %>
+                  </div>
+                  <div class="actions">
+                    <%= f.submit %>
+                  </div>
+                  <% end %>
+                <% end %>
+                <!-- /Choisir son role  -->
+              </div>
+            </div>
           </div>
-          <!-- /WORKS GRID -->
+          <h5 class="widget-title font-alt">Rôles disponibles</h5>
+          <% @project.roles.each do |role| %>
+            <% if !@project.taken_roles.include? role %>
+            <p>
+              <%= role.title %>
+            </p>
+            <% end %>
+          <% end %>
+          <!-- /Son roles  -->
 
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- POST CONTENT -->
+    <div class="post-entry margin-bottom col-sx-12 col-sm-10 col-sm-offset-1">
+      <%= @project.synopsis %>
+    </div>
+    <!-- /POST CONTENT -->
+
+      <% if @project.finished? %>
+      <!-- COMMENTS -->
+        <div class="comments margin-bottom col-sx-12 col-sm-10 col-sm-offset-1">
+          <h4 class="comment-title font-alt">Comments</h4>
+          <hr class="divider m-b-30">
+            <ul class="coin_mess2">
+              <% @project.reviews.each do |comment| %>
+                <div class="comment clearfix">
+                  <div class="comment-avatar">
+                    <%= image_tag current_user.user_picture, class:"avatar avatar-large" %>
+                  </div>
+                  <div class="comment-content clearfix">
+                    <h5 class="comment-author font-alt">
+                      <a href="#"><%= current_user.first_name %></a>
+                    </h5>
+                    <div class="comment-body">
+                      <p>
+                        <li>
+                          <%= comment.content %>
+                        </li>
+                      </p>
+                    </div>
+                    <div class="comment-meta font-alt">
+                      <%= Time.now.to_formatted_s(:short) %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </ul>
         </div>
       <% end %>
-    </section>
-        <!-- /participant -->
-    </div>
-</section>
+      <!-- /COMMENTS -->
+
+      <% if !policy(@project).join_project? %>
+        <!-- COMMENT FORM -->
+        <div class="comment-form margin-bottom col-sx-12 col-sm-10 col-sm-offset-3" id="coin_mes">
+          <h4 class="comment-form-title font-alt">Leave a comment</h4>
+          <hr class="divider m-b-30">
+
+          <div class="row">
+            <%= simple_form_for([@project, @project.reviews.build]) do |f| %>
+            <div class="col-md-12">
+              <div class="form-group">
+                <%= f.input :content %>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <%= f.submit class:"btn btn-round btn-g"%>
+            </div>
+
+            <% end %>
+          </div>
+          <!-- /COMMENT FORM -->
+        </div>
+      <% end %>
+  <!-- /CONTENT -->
+
+  <section class="module">
+    <% @project.users.each do |user| %>
+      <div class="container">
+
+
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+            <h2 class="module-title font-alt">List of joiners</h2>
+          </div>
+        </div>
+        <!-- /MODULE TITLE -->
+
+        <!-- WORKS GRID -->
+        <div class="row">
+
+          <div id="works-grid" class="works-grid works-hover-w" style="position: relative; height: 230px;">
+
+            <!-- DO NOT DELETE THIS DIV -->
+            <div class="grid-sizer"></div>
+
+            <!-- PORTFOLIO ITEM -->
+            <div class="work-item design" style="height: 230px; position: absolute; left: 0px; top: 0px;">
+              <a href="portfolio-single-1.html">
+                <%= image_tag user.user_picture %>
+                <div class="work-caption font-alt">
+                  <h3 class="work-title"><%= user.first_name %> <%= user.last_name %></h3>
+                  <div class="work-descr">
+                    Role de l'user
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- /PORTFOLIO ITEM -->
+          </div>
+
+        </div>
+        <!-- /WORKS GRID -->
+
+      </div>
+    <% end %>
+  </section>
+
