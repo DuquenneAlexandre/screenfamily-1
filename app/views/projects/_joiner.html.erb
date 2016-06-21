@@ -1,40 +1,26 @@
 <section id="team" class="module">
 
-  <div class="container">
-
-    <!-- MODULE TITLE -->
-    <div class="row">
-      <div class="col-sm-6 col-sm-offset-3">
-        <h2 class="module-title font-alt">Our Team</h2>
-      </div>
-    </div>
-    <!-- /MODULE TITLE -->
-
-    <div class="row">
-      <% @project.users.each do |user| %>
-        <!-- TEAM MEMBER -->
-        <div class="col-sm-6 col-md-3 m-b-md-20">
-          <div class="team-item">
-            <div class="team-image">
-              <%= image_tag user.user_picture %>
-              <div class="team-detail text-center">
-                <ul class="social-icon-links socicon-circle">
-                  <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                  <li><a href="#"><i class="ion-social-dribbble"></i></a></li>
-                  <li><a href="#"><i class="ion-social-octocat"></i></a></li>
-                </ul>
+      <div class="row">
+        <% @project.users.each do |user| %>
+          <!-- TEAM MEMBER -->
+          <div class="col-xs-6 col-md-4">
+            <div class="team-item">
+              <div class="team-image">
+                <%= image_tag user.user_picture %>
+                <div class="team-detail text-center">
+                  <ul class="social-icon-links socicon-circle">
+                    <li><a href="#"><i class=""></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="team-descr">
+                <h5 class="team-name font-alt"><%= user.first_name %> <%= user.last_name %></h5>
+                <div class="team-role font-serif"> Role de l'user</div>
               </div>
             </div>
-            <div class="team-descr">
-              <h5 class="team-name font-alt"><%= user.first_name %> <%= user.last_name %></h5>
-              <div class="team-role font-serif"> Role de l'user</div>
-            </div>
           </div>
-        </div>
-      <!-- /TEAM MEMBER -->
-      <%end%>
-    </div>
-
-  </div>
+        <!-- /TEAM MEMBER -->
+        <%end%>
+      </div>
 
 </section>
