@@ -1,20 +1,12 @@
 <%= render 'shared/banner' %>
-<br>
+
 <div class="container wow fadeIn animated ">
   <div class="row">
-    <div class="col-sx-12 col-md-6">
-    <h1>Notre communauté.</h1>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h2 class="module-title font-alt">coup coeur</h2>
     </div>
-    <div class="col-sx-12 col-md-6">
-      <p>
-      Screen family est une énorme communauté mondiale qui s'est construite autour de la créativité et des projets créatifs. Plus de 100 millions de personnes venues de tous les continents de la planète ont soutenu un projet Screem family.
-      </p>
-      <p>
-      Les projets sont pour la plupart réalisés par d'incroyables créateurs dont vous n'avez jamais entendu parler.
-      </p>
-      <p>
-      Chaque artiste, réalisateur, comedien deScreem family conserve le plein contrôle créatif de son travail et propose son projet à toute une communauté de contributeurs dynamiques.
-      </p>
+    <div>
+      <%= render 'shared/slider_home' %>
     </div>
   </div>
 </div>
@@ -33,8 +25,8 @@
         </div>
         <!-- /MODULE TITLE -->
 
-        <div class="row">
-          <% @projects.last(3).each do |proj| %>
+        <div class="row col-xs-10 col-xs-offset-1">
+          <% @projects.last(6).each do |proj| %>
           <!-- TEAM MEMBER -->
             <div class="col-xs-12 col-sm-6 col-md-4 m-b-md-20">
               <div class="team-item">
@@ -63,17 +55,19 @@
     <!-- /TEAM -->
 
 
-  <div class="container margin-bottom">
+  <div class="container margin-bottom ">
 
     <!-- SHOW MORE -->
     <div class="row m-t-70 text-center wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-      <div class="col-xs-12">
+      <div class="col-xs-10 col-xs-offset-1">
 
 
             <button id="show-more" class="btn btn-block btn-lg btn-g show-more hidden">
             <%= link_to projects_path do %>
               MORE PROJECTS
-            <%end%></button>
+            <%end%>
+
+            </button>
 
 
             <button id="show-more" class="btn btn-block btn-lg btn-g show-more">
@@ -85,6 +79,4 @@
 
       </div>
     </div>
-    <!-- /SHOW MORE -->
-
-  </div>
+</div>
