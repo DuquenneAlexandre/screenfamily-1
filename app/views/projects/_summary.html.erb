@@ -42,7 +42,7 @@
               <% tab << role.title %>
             </p>
           <% end %>
-<% if current_user != nil %>
+            <% if current_user != nil %>
           <% current_user.roles.each do |role| %>
             <% inte = role.title.to_i %>
               <% if inte == Role.all.find(inte).id %>
