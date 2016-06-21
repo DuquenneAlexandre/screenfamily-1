@@ -47,7 +47,7 @@ city: "",
 genre: "Comedy",
 synopsis: "CHUG! is the latest travel show from Zane Lamprey! All Kickstarter backers of $25 or more will receive a digital download of the entire season! Not one episode, but six (or more)! When this show is funded, backers will get a new half-hour episode every week for six weeks! With your pledge, you're not donating. You're pre-buying six amazing episodes.
 
-If you liked Three Sheets, Zane's previous show that aired on MojoHD, Fine Living Network, Travel and Spike, the you're going to LOVE "Chug"!
+If you liked Three Sheets, Zane's previous show that aired on MojoHD, Fine Living Network, Travel and Spike, the you're going to LOVE Chug!
 
 Chug is not a show about Zane chugging beer, as the title may infer. That's the clever double entendre. The chugging refers to Zane's primary mode of transportation-- trains! Chug will follow Zane's journeys as he travels the world exploring the greatest drinking destinations as well as the customs and cultures that they have inspired. Arriving by train, Zane will imbibe with the locals as he gives you a first-hand look at what it's like to drink in unique locations around the world.",
 scenario: "",
