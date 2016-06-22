@@ -37,8 +37,9 @@
           <% if @project.synopsis != "" %>
           <%= @project.synopsis %>
           <% end %>
+        <h2>A few words...</h2>
           <% if @project.description != "" %>
-          <%= @project.description %>
+          <%= raw @project.description %>
           <% end %>
     <!-- /POST CONTENT -->
           <!-- joiner -->
