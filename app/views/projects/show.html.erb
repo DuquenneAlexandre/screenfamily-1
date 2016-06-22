@@ -44,10 +44,12 @@
     <div class="tab-pane" id="calendar">
       <%= render 'projects/calendar' %>
     </div>
-
-</div>
-
+    <% if current_user.id == @project.users.ids.reduce(:+) %>
+    <%= link_to "Edit my project", edit_project_path(@project), class:"btn btn-primary btn-block"%>
 <% end %>
+</div>
+<% end %>
+
 <% a = 1 %>
 <% if a > 5 %>
 <% if Order.find(1).amount_cents != 0 %>
