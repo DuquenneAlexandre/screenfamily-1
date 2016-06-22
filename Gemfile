@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
-
+gem 'bootstrap_progressbar'
 gem 'sidekiq_status'
 gem 'paperclip'
 gem 'ckeditor'
