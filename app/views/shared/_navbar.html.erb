@@ -1,7 +1,7 @@
 <!-- OVERLAY MENU -->
 <div id="overlay-menu" class="overlay-menu">
 
-  <a href="#" id="overlay-menu-hide" class="navigation-hide"><i class="ion-close-round"></i></a>
+  <a href="#" id="overlay-menu-hide" class="navigation-hide"><i class="fa-times"></i></a>
 
     <div class="overlay-menu-inner">
       <nav class="overlay-menu-nav">
@@ -33,7 +33,7 @@
             <ul>
             <% if user_signed_in? %>
               <li>
-              <%= link_to do %>
+              <%= link_to profile_user_path(current_user) do %>
                 <i class="fa fa-user"></i> profile
               <% end %>
               </li>

@@ -9,7 +9,11 @@
                 <%= image_tag user.user_picture %>
                 <div class="team-detail text-center">
                   <ul class="social-icon-links socicon-circle">
-                    <li><a href="#"><i class=""></i></a></li>
+                    <li>
+                      <%= link_to profile_user_path(current_user) do %>
+                        <i class="fa-eye"></i>
+                      <%end %>
+                    </li>
                   </ul>
                 </div>
               </div>
