@@ -47,7 +47,6 @@
       </div>
 
 
-
       <!-- Son roles -->
       <div class="col-xs-12 col-md-3">
         <h5 class="widget-title font-alt">What's needed?</h5>
@@ -69,9 +68,25 @@
               <% end %>
             <% end %>
           <% end %>
-          <%= tab.reduce(:+) %>
+          <ul>
+          <% tab.each do |role| %>
+            <li><%= role %></li>
+          <% end %>
+          </ul>
+      </div>
+
+      <div class="col-xs-12 col-md-3">
+        <h5 class="widget-title font-alt">Who's already in?</h5>
+        <% available = [] %>
+        <% @project.roles.each do |role| %>
+        <% available << role.title if !tab.include? role.title %>
+        <% end %>
+        <%= available.each do |role| %>
+          <li><%= role %></li>
+        <% end %>
       </div>
       <!-- /Son roles  -->
+
 
       <div class="col-xs-12 col-md-3">
         <!-- Choisir son role -->
@@ -125,12 +140,12 @@
       <!-- /Choisir son role  -->
 
       <div class="col-xs-12 col-md-3">
-      <h5 class="widget-title font-alt">Crowdfonding</h5>
+        <% if @project.validated_for_crowdfunding? %>
+      <h5 class="widget-title font-alt">Crowdfunding</h5>
         <div class="widget">
-          <% if @project.validated_for_crowdfunding? %>
           <%= render 'projects/crowdfunding' %>
-          <% end %>
         </div>
+        <% end %>
       </div>
 
       <div class="col-xs-12 col-md-3">

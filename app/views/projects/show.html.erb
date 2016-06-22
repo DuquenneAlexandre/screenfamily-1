@@ -1,5 +1,12 @@
 
-
+<% if @project.disabled? %>
+<div class="margin_top margin-bottom">
+    <h1 class="text-center">Sorry, this project is no longer available.</h1>
+  <div class="col-xs-offset-3">
+    <%= image_tag @project.project_picture.url(:photo_home_project_show) %>
+  </div>
+</div>
+<% else %>
 
 <div class="container margin_top">
     <ul class="nav nav-tabs" id="dashboard_project">
@@ -40,30 +47,6 @@
 
 </div>
 
-<% if @project.disabled == false %>
-  <p>Ce projet n'est pas disabled</p>
-<% else %>
-  <p>Ce projet est disabled</p>
-<% end %>
-
-<% if @project.validated_for_crowdfunding == false %>
-  <p>Ce projet n'est pas crowdfunded</p>
-<% else %>
-  <p>Ce projet est crowdfunded</p>
-<% end %>
-
-<% if @project.inprogress == false %>
-  <p>Ce projet n'a pas commencé</p>
-<% else %>
-  <p>Ce projet a commencé et sortira plus tard</p>
-<% end %>
-
-<% if @project.finished == false %>
-  <p>Ce projet n'est pas terminé</p>
-<% else %>
-  <p>Ce projet est terminé</p>
-<% end %>
-
 
 
 
@@ -79,3 +62,4 @@
 
 <%= render 'projects/caroussel2' %>
 
+<% end %>
