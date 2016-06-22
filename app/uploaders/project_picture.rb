@@ -2,4 +2,7 @@
 
 class ProjectPictureUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
+
+
+
 end

@@ -6,7 +6,7 @@
 
     <div class="col-sm-12 col-md-12 col-lg-12">
       <p>
-        <%= image_tag @projects.find(1).project_picture, class:"photo_home hidden-xs"%>
+        <%= image_tag @projects.find(1).project_picture.url(:photo_home_project_best_lg)%>
         <%= image_tag @projects.find(1).project_picture, class:"visible-xs"%>
       </p>
     </div>
@@ -17,7 +17,7 @@
 
     <div class="col-sm-6 col-md-6 col-lg-6">
       <p>
-        <%= image_tag @projects.find(5).project_picture, class:"photo_home_lg hidden-xs"%>
+        <%= image_tag @projects.find(5).project_picture.url(:photo_home_project_best)%>
         <%= image_tag @projects.find(5).project_picture, class:"visible-xs" %>
       </p>
     </div>
@@ -25,7 +25,7 @@
     <div class="col-sm-6 col-md-6 col-lg-6">
       <p>
 
-          <%= image_tag @projects.find(2).project_picture, class:"photo_home_lg hidden-xs"%>
+          <%= image_tag @projects.find(2).project_picture.url(:photo_home_project_best)%>
           <%= image_tag @projects.find(2).project_picture, class:"visible-xs" %>
       </p>
     </div>
