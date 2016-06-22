@@ -154,7 +154,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :city, :genre, :start_date, :end_date, :synopsis, :scenario, :description, :number_of_participants, :number_of_days_for_crowdfunding, :goal_for_crowdfunding, :validated_for_crowdfunding, :disabled, :inprogress, :finished, :project_picture, :project_picture_cache, :pledged, roles_attributes: [:id, :title, :_destroy])
+    params.require(:project).permit(:name, :city, :genre, :start_date, :end_date, :synopsis, :scenario, :description, :number_of_participants, :number_of_days_for_crowdfunding, :goal_for_crowdfunding, :validated_for_crowdfunding, :disabled, :inprogress, :finished, :project_picture, :project_picture_cache, :pledged, :price_cents, roles_attributes: [:id, :title, :_destroy])
   end
 
   def set_project

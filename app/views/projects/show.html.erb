@@ -64,18 +64,10 @@
   <p>Ce projet est terminé</p>
 <% end %>
 
-
-
-
 <% a = 10 %>
 <% if a > 20 %>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="<%= @project.pledged %>" aria-valuemin="0" aria-valuemax="100"
-    style="width: 100%">
-    <%= @project.pledged / @project.goal_for_crowdfunding * 100 %>
-  </div>
-</div>
+<%= progress_bar @project.pledged / @project.goal_for_crowdfunding * 100 %>
+<%= progress_bar 0.06 %>
 <% end %>
 
-<%= render 'projects/caroussel2' %>
-
+</div>
