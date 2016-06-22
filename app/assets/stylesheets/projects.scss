@@ -113,9 +113,6 @@ text-align: center;
   height:100px;
 }
 
-.carousel-inner2 {
-    height:100px;
-}
 
 #price {
   text-align: center;
@@ -132,4 +129,13 @@ text-align: center;
 #price3 {
   text-align: center;
   font-family: bold;
+}
+
+#cam1 {
+  height: 300px;
+  width: 400px;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
