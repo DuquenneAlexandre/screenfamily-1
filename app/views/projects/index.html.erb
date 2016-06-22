@@ -4,6 +4,11 @@
   <%= render 'projects/caroussel' %>
   <% end %>
 
+
+
+
+
+
 <section class="module">
     <div class="container">
       <div class="row multi-columns-row">
@@ -13,7 +18,7 @@
               <div class="post">
                 <div class="post-media-index">
                 <%= link_to project_path(proj) do %>
-                    <%= image_tag proj.project_picture %>
+                    <%= image_tag proj.project_picture.url(:photo_home_project_index) %>
                 <%end%>
                 </div>
                 <div class="post-meta font-alt">
@@ -38,6 +43,10 @@
       </div>
     </div>
   </section>
+
+
+
+
 
  <!-- PAGINATION -->
 
@@ -88,4 +97,4 @@
 
 </div>
 
-<%= render 'projects/caroussel2' %>
+  <%= render 'projects/caroussel2' %>

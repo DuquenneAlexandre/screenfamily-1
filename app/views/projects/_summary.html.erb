@@ -29,7 +29,7 @@
       <div class="col-xs-12 col-md-9">
         <!-- MEDIA -->
         <div class="post-media">
-          <%= image_tag @project.project_picture %>
+          <%= image_tag @project.project_picture.url(:photo_home_project_show) %>
 
 
     <!-- POST CONTENT -->
@@ -42,10 +42,6 @@
         <%= raw @project.description %>
       <% end %>
     <!-- /POST CONTENT -->
-          <!-- joiner -->
-          <h2>Our Team</h2>
-          <%= render 'projects/joiner' %>
-          <!-- /joiner -->
         </div>
         <!-- /MEDIA -->
       </div>
@@ -137,6 +133,9 @@
         </div>
       </div>
 
+      <div class="col-xs-12 col-md-3">
+<%= render 'projects/caroussel2' %>
+</div>
     </div>
   </div>
 </section>

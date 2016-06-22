@@ -32,7 +32,7 @@
               <div class="team-item">
                 <div class="post-media-index">
                   <%= link_to project_path(proj) do %>
-                    <%= image_tag proj.project_picture %>
+                    <%= image_tag proj.project_picture.url(:photo_home_project) %>
                   <%end%>
                 </div>
                 <div class="team-descr">
