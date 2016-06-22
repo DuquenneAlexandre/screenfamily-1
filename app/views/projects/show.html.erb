@@ -49,6 +49,7 @@
 
 <% end %>
 <% a = 1 %>
+<% if a > 5 %>
 <% if Order.find(1).amount_cents != 0 %>
   <% Order.all.each do |o| %>
     <% a = a + o.payment["amount"] %>
@@ -57,4 +58,5 @@
 <% @project.goal_for_crowdfunding  / a %>
   <% z = " 0.0" + (@project.goal_for_crowdfunding  / a).to_s %>
 <%= progress_bar z.to_f, alternative: 'success', striped: true %>
+<% end %>
 <% end %>

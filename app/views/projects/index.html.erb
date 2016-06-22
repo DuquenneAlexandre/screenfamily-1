@@ -29,9 +29,11 @@
                       <%= proj.name %>
                   </h4>
                 </div>
+                <% if proj.synopsis.present?  %>
                 <div class="post-entry">
                   <p><%= proj.synopsis[0..200] %>...</p>
                 </div>
+                <% end %>
                 <div class="post-more-link font-alt btn btn col-xs-offset-2">
                   <%= link_to project_path(proj), class:"btn btn-default btn-round btn-lg" do %>
                     View Project
@@ -94,5 +96,3 @@
         })
       <% end %>
     <% end %> -->
-
-
