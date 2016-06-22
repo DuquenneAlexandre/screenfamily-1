@@ -18,7 +18,7 @@
 
     <!-- META -->
     <div class="post-meta font-alt">
-      City: <%= @project.city %> / Screeners Wanted: <%= @project.number_of_participants %>
+      CITY: <%= @project.city %>, USA / WANTED SCREENERS: <%= @project.number_of_participants %>
     </div>
     <!-- /META -->
   </div>
@@ -34,13 +34,13 @@
 
     <!-- POST CONTENT -->
       <% if @project.synopsis != "" %>
-        <h2>Synopsis</h2>
+        <h2>SYNOPSIS</h2>
         <%= raw @project.synopsis %>
       <% end %>
-      <h2>Ours team</h2>
+      <h1>TEAM</h1>
       <%= render 'joiner' %>
-      <% if @project.description != "" %>
-        <h2>A few words...</h2>
+      <% if @project.description.present? %>
+        <h1>A FEW WORDS...</h1>
         <%= raw @project.description %>
       <% end %>
     <!-- /POST CONTENT -->
