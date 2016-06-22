@@ -30,7 +30,11 @@ class PhotoUploader < CarrierWave::Uploader::Base
     cloudinary_transformation width: 1000, height: 400, crop: :thumb
   end
 
+  version :photo_home_portfolio do
+    cloudinary_transformation width: 600, height: 400, crop: :thumb
+  end
+
   version :photo_home_project_best do
-    cloudinary_transformation width: 600, height: 300, crop: :thumb
+    cloudinary_transformation width: 400, height: 400, crop: :thumb
   end
 end
