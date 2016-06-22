@@ -33,14 +33,14 @@
 
 
     <!-- POST CONTENT -->
+      <% if @project.synopsis != "" %>
         <h2>Synopsis</h2>
-          <% if @project.synopsis != "" %>
-          <%= @project.synopsis %>
-          <% end %>
+        <%= raw @project.synopsis %>
+      <% end %>
+      <% if @project.description != "" %>
         <h2>A few words...</h2>
-          <% if @project.description != "" %>
-          <%= raw @project.description %>
-          <% end %>
+        <%= raw @project.description %>
+      <% end %>
     <!-- /POST CONTENT -->
           <!-- joiner -->
           <h2>Our Team</h2>
@@ -54,7 +54,7 @@
 
       <!-- Son roles -->
       <div class="col-xs-12 col-md-3">
-        <h5 class="widget-title font-alt">Tous les rôles</h5>
+        <h5 class="widget-title font-alt">What's needed?</h5>
           <% tab = [] %>
           <% @project.roles.each do |role| %>
             <p>
@@ -81,7 +81,7 @@
         <!-- Choisir son role -->
         <div class="widget">
           <% if policy(@project).join_project? %>
-            <h5 class="widget-title font-alt">Choose your role</h5>
+            <h5 class="widget-title font-alt">Join the project!</h5>
             <%= simple_nested_form_for([@project, @project.roles.build]) do |f| %>
             <div class="field">
 
