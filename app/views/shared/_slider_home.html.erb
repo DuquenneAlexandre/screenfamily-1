@@ -6,8 +6,10 @@
 
     <div class="col-sm-12 col-md-12 col-lg-12">
       <p>
-        <%= image_tag @projects.find(1).project_picture.url(:photo_home_project_best_lg)%>
-        <%= image_tag @projects.find(1).project_picture, class:"visible-xs"%>
+        <%= link_to @projects.find(2) do %>
+          <%= image_tag @projects.find(2).project_picture.url(:photo_home_project_best_lg)%>
+          <%= image_tag @projects.find(2).project_picture, class:"visible-xs"%>
+        <%end%>
       </p>
     </div>
 
@@ -17,16 +19,19 @@
 
     <div class="col-sm-6 col-md-6 col-lg-6">
       <p>
-        <%= image_tag @projects.find(5).project_picture.url(:photo_home_project_best)%>
-        <%= image_tag @projects.find(5).project_picture, class:"visible-xs" %>
+      <%= link_to @projects.find(7) do %>
+        <%= image_tag @projects.find(7).project_picture.url(:photo_home_project_best)%>
+        <%= image_tag @projects.find(7).project_picture, class:"visible-xs" %>
+      <%end%>
       </p>
     </div>
 
     <div class="col-sm-6 col-md-6 col-lg-6">
       <p>
-
-          <%= image_tag @projects.find(2).project_picture.url(:photo_home_project_best)%>
-          <%= image_tag @projects.find(2).project_picture, class:"visible-xs" %>
+        <%= link_to @projects.find(1) do %>
+          <%= image_tag @projects.find(1).project_picture.url(:photo_home_project_best)%>
+          <%= image_tag @projects.find(1).project_picture, class:"visible-xs" %>
+        <%end %>
       </p>
     </div>
   </div>
