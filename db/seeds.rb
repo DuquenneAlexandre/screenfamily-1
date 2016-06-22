@@ -11,7 +11,7 @@ password_confirmation: '12345678'
 
 project1 = Project.new(
 name: "The Main Street Entrepreneur",
-start_date: 20.days.from_now,
+start_date: 8.days.from_now,
 end_date: 35.days.from_now,
 city: "Anaheim",
 genre: "Documentary",
@@ -508,8 +508,8 @@ password_confirmation: "12345678"
 
 project2 = Project.new(
 name: "Chug",
-start_date: 34.days.from_now,
-end_date: 59.days.from_now,
+start_date: 3.days.from_now,
+end_date: 11.days.from_now,
 city: "Bakersfield",
 genre: "Comedy",
 
@@ -1005,8 +1005,8 @@ password_confirmation: '12345678'
 
 project3 = Project.new(
 name: "Little Witch Academia",
-start_date: 19.days.from_now,
-end_date: 67.days.from_now,
+start_date: 8.days.from_now,
+end_date: 19.days.from_now,
 city: "Fresno",
 genre: "Animation",
 
@@ -1502,8 +1502,8 @@ password_confirmation: '12345678'
 
 project4 = Project.new(
 name: "Wish I Was Here",
-start_date: 40.days.from_now,
-end_date: 65.days.from_now,
+start_date: 2.days.from_now,
+end_date: 12.days.from_now,
 city: "Long Beach",
 genre: "Drama",
 
@@ -2001,8 +2001,8 @@ password_confirmation: '12345678'
 
 project5 = Project.new(
 name: "For The Love Of Spock",
-start_date: 15.days.from_now,
-end_date: 45.days.from_now,
+start_date: 3.days.from_now,
+end_date: 34.days.from_now,
 city: "Los Angeles",
 genre: "Documentary",
 
@@ -2500,8 +2500,8 @@ password_confirmation: '12345678'
 
 project6 = Project.new(
 name: "Oakland Central Station",
-start_date: 37.days.from_now,
-end_date: 49.days.from_now,
+start_date: 5.days.from_now,
+end_date: 25.days.from_now,
 city: "Oakland",
 genre: "Drama",
 
@@ -2999,8 +2999,8 @@ password_confirmation: '12345678'
 
 project7 = Project.new(
 name: "Do You Take This Man",
-start_date: 17.days.from_now,
-end_date: 22.days.from_now,
+start_date: 2.days.from_now,
+end_date: 19.days.from_now,
 city: "Sacramento",
 genre: "Drama",
 
@@ -3993,8 +3993,8 @@ password_confirmation: '12345678'
 
 project9 = Project.new(
 name: "Muck",
-start_date: 21.days.from_now,
-end_date: 32.days.from_now,
+start_date: 5.days.from_now,
+end_date: 18.days.from_now,
 city: "San Francisco",
 genre: "Horror",
 
@@ -4476,3 +4476,2991 @@ project9.save
 project9.users << user9
 
 #----------------------------------------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------------------------------------
+
+user10 = User.new(
+first_name: "James",
+last_name: "Hock",
+birth_date: 57.years.ago,
+city: "San Jose",
+phone_number: "(321) 800-8244",
+email: "user10@toto.com",
+password: '12345678',
+password_confirmation: '12345678'
+)
+
+project10 = Project.new(
+name: "Roche Musique: Inside The Wave",
+start_date: 6.days.from_now,
+end_date: 19.days.from_now,
+city: "San Jose",
+genre: "Documentary",
+
+synopsis: "In Paris and all around the world, artists, friends and label team converge to spend some precious moments that makes Roche Musique a unique experience.
+
+To share those moments with our fans, we met 4 young talented producers keen to live new experiences too.",
+
+scenario: "<div>
+<p><strong>EXT. QUIET HILLS RECOVERY CENTER - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting in a wheelchair and grumpy as hell, FRANK NICHOLS (89), angrily works skeletal fingers in a vain attempt to remove a thick electronic BRACELET from his left arm.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s a damned invasion of my personal privacy is what it is.</p>
+
+<p>&nbsp;</p>
+
+<p>Readouts blink steadily. Frank stares at them, rapt.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I don&rsquo;t want to see my heart beat.</p>
+
+<p>&nbsp;</p>
+
+<p>Standing behind Frank, BILL (60), Frank&rsquo;s son, places a calm hand on Frank&rsquo;s shoulder.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>BILL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>You need to be monitored, Dad. Mary and I live too far away to help if something should happen. It&rsquo;s either the bracelet or a home companion. Your choice.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank stews in his juices, then smacks the bracelet hard on the arm of his wheelchair.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. FRANK&rsquo;S HOUSE - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>A scratch at the door. The doorbell rings. More scratching.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m coming, I&rsquo;m coming. Hold your horses.</p>
+
+<p>&nbsp;</p>
+
+<p>Relying heavily on a walker, Frank shuffles towards the door.</p>
+
+<p>&nbsp;</p>
+
+<p>Arthritic hands struggle with the doorknob and finally succeed. The door opens, revealing -</p>
+
+<p>&nbsp;</p>
+
+<p>A large, handsome, alert GERMAN SHEPARD.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks at the pooch. Leans out. Looks around. Shrugs.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Who rang the bell?</p>
+
+<p>&nbsp;</p>
+
+<p>The dog, CARL, looks up at Frank with soulful eyes.</p>
+</div>
+
+<p>&nbsp;
+<div>
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I did, Frank. My name is Carl.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank gawks at the talking dog, then stumbles backwards. Carl follows and closes the door behind him.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. KITCHEN - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Carl sits alert while Frank nervously makes coffee.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>They didn&rsquo;t say anything about my companion being a talking dog.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl looks Frank up and down. Says nothing.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I mean, I&rsquo;m allergic to dogs.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank snatches a Kleenex from the counter, wipes his nose.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Don&rsquo;t worry, Frank. I&rsquo;m not a real dog. I&rsquo;m a Complex, Artificial, Realistic, Lifeform. C.A.R.L. Carl. And totally non-allergenic.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank crumples the snot rag, sniffs the air, grimaces.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. LIVING ROOM - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Frank scoots his walker to a comfy chair and falls into it.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Rules. Gotta follow the rules. And my landlord won&rsquo;t allow Complex, Realistic, uh, dogs in his -</p>
+
+<p>&nbsp;</p>
+
+<p>Carl taps his head with his left paw.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s all in my noggin, Frank. Your entire portfolio. I know that you&rsquo;ve owned this home free and clear for over twenty years.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank&rsquo;s eyes crinkle in a scowl.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>EXT. BATHROOM DOOR - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Carl sits patiently outside the bathroom door.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<div>
+<p style='margin-left:144.0pt;'><strong>FRANK (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>What about food? I can barely remember to feed myself.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl stands on his hind legs and opens the bathroom door.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. BATHROOM - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting on the toilet, Frank jerks in surprise, letting out a SQUEAKY FART, as Carl enters.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl remains upright as a hatch on his belly opens, revealing all sorts of high tech components.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Cold fusion powered. A little water each week and I&rsquo;m good. And between you and me, I kinda prefer toilet water. The porcelain adds a certain something -</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Do you mind? I&rsquo;m trying to, er...</p>
+
+<p>&nbsp;</p>
+
+<p>Carl&rsquo;s brown eyes widen, his tail droops and he backs out, closing the door behind him.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Sorry. I should have knocked.</p>
+
+<p>&nbsp;</p>
+
+<p>Frustrated, Frank&rsquo;s hands clench into gnarled fists. Then, his eyebrows raise with a thought.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>You sound like a pretty high tech pup, alright. What if something happens to those computers and gadgets and stuff inside you? I can&rsquo;t afford those kind of repairs.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Bumper to bumper warranty, Frank.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:101.0pt;'><strong>FRANK (under his breath)</strong></p>
+
+<p style='margin-left:101.0pt;'>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Dang it.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank eyes search the room for inspiration - and find it.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m in no condition to take you for walkees when you need to, you know, do what I&rsquo;m doing right now.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<div>
+<p>A pause, then a knock on the door. Frank rolls his eyes.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>For goodness sake. Come in!</p>
+
+<p>&nbsp;</p>
+
+<p>The door swings open slowly. Carl faces Frank, tail wagging.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m totally self contained. You don&rsquo;t have to worry about a thing. In fact, I&rsquo;ll clean up after you. Plus, I cook, do the laundry and can administer all of your necessary medications.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank stares at Carl, words not coming, and reaches for the toilet paper. Carl gets the hint and turns to leave.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. BEDROOM - NIGHT</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting on the edge of his bed, Frank pulls on a nightshirt.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Sounds to me like you&rsquo;re nothing more than a flea bitten nursemaid. I suppose you&rsquo;re gonna report my every move to my doctors and family, too.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl gazes up at Frank with sad, brown doggy eyes.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s not like that at all, Frank. I&rsquo;m here to help you. I&rsquo;ll be by your side day and night. If you need something, I&rsquo;ll fetch it.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks dubious, then turns his attention to his night stand, searching.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Where&rsquo;s the darned TV remote?</p>
+
+<p>&nbsp;</p>
+
+<p>Carl sniffs around and retrieves the remote from under the bed. He sets it gently next to Frank&rsquo;s hand.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I don&rsquo;t need a nurse maid. I don&rsquo;t need a dog, neither. I don&rsquo;t need nothin&rsquo;. Nothin&rsquo; at all.</p>
+
+<p>&nbsp;</p>
+
+<p>He clicks the remote. Nothing happens. Nothing at all.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>&lsquo;Cept maybe some batteries.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl stares at the TV and blinks. The TV comes to life.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks at Carl, then the TV. He smiles slightly.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Nice trick.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Thanks. But I&rsquo;m not here to do tricks, Frank.</p>
+
+<p>&nbsp;</p>
+
+<p>Tail wagging with joy, Carl jumps onto the bed next to Frank.</p>
+
+<p>&nbsp;</p>
+
+<p>He leans his muzzle in close to Frank&rsquo;s face.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m here to be your best friend.</p>
+
+<p>&nbsp;</p>
+
+<p>And with that, Carl licks the entire side of Frank&rsquo;s face, jumps down and curls into a furry ball next to the bed.</p>
+
+<p>&nbsp;</p>
+
+<p>As Frank slowly wipes the very realistic slobber from his cheek, he looks down at Carl and considers.</p>
+
+<p>&nbsp;</p>
+
+<p>His face softens. He reaches down and pats Carl on the head.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl lets out a contented sigh.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I guess having a dog won&rsquo;t be so bad. Always wanted a dog, in fact.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks up at the TV, which shows an informercial. He frowns.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Hey, um, Carl... would you mind switching to ESPN. The ball game&rsquo;s on in a few minutes.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl&rsquo;s tail wags a little as the TV channel switches over.</p>
+",
+
+number_of_participants: 8
+)
+project10.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466611008/header-logo-rm-31-tt-width-604-height-403-crop-0-bgcolor-000000-nozoom_default-1-lazyload-0_dzlx4q.jpg'
+user10.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
+user10.save
+project10.save
+project10.users << user10
+
+#----------------------------------------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------------------------------------
+
+user11 = User.new(
+first_name: "Paul",
+last_name: "Ottman",
+birth_date: 20.years.ago,
+city: "Anaheim",
+phone_number: "(321) 800-8244",
+email: "user11@toto.com",
+password: '12345678',
+password_confirmation: '12345678'
+)
+
+project11 = Project.new(
+name: "Darkness Reigns",
+start_date: 4.days.from_now,
+end_date: 27.days.from_now,
+city: "Anaheim",
+genre: "Horror",
+
+synopsis: "Darkness Reigns is a feature film about a filmmaker, Daniel Whitaker, who always thought he would hit it big in Hollywood, but was never able to fulfill his dream.  Instead, he's been relegated to shooting behind the scenes documentaries for other filmmakers.  But that all changes when he captures footage of unfathomable evil while shooting on the set of a horror film -- inside a reportedly haunted location -- where suddenly the entire crew, including the film's star, Casper Van Dien, is brutally attacked in front of the unblinking lens of Daniel's camera.",
+
+scenario: "<div>
+<p><strong>EXT. QUIET HILLS RECOVERY CENTER - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting in a wheelchair and grumpy as hell, FRANK NICHOLS (89), angrily works skeletal fingers in a vain attempt to remove a thick electronic BRACELET from his left arm.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s a damned invasion of my personal privacy is what it is.</p>
+
+<p>&nbsp;</p>
+
+<p>Readouts blink steadily. Frank stares at them, rapt.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I don&rsquo;t want to see my heart beat.</p>
+
+<p>&nbsp;</p>
+
+<p>Standing behind Frank, BILL (60), Frank&rsquo;s son, places a calm hand on Frank&rsquo;s shoulder.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>BILL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>You need to be monitored, Dad. Mary and I live too far away to help if something should happen. It&rsquo;s either the bracelet or a home companion. Your choice.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank stews in his juices, then smacks the bracelet hard on the arm of his wheelchair.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. FRANK&rsquo;S HOUSE - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>A scratch at the door. The doorbell rings. More scratching.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m coming, I&rsquo;m coming. Hold your horses.</p>
+
+<p>&nbsp;</p>
+
+<p>Relying heavily on a walker, Frank shuffles towards the door.</p>
+
+<p>&nbsp;</p>
+
+<p>Arthritic hands struggle with the doorknob and finally succeed. The door opens, revealing -</p>
+
+<p>&nbsp;</p>
+
+<p>A large, handsome, alert GERMAN SHEPARD.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks at the pooch. Leans out. Looks around. Shrugs.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Who rang the bell?</p>
+
+<p>&nbsp;</p>
+
+<p>The dog, CARL, looks up at Frank with soulful eyes.</p>
+</div>
+
+<p>&nbsp;
+<div>
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I did, Frank. My name is Carl.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank gawks at the talking dog, then stumbles backwards. Carl follows and closes the door behind him.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. KITCHEN - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Carl sits alert while Frank nervously makes coffee.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>They didn&rsquo;t say anything about my companion being a talking dog.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl looks Frank up and down. Says nothing.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I mean, I&rsquo;m allergic to dogs.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank snatches a Kleenex from the counter, wipes his nose.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Don&rsquo;t worry, Frank. I&rsquo;m not a real dog. I&rsquo;m a Complex, Artificial, Realistic, Lifeform. C.A.R.L. Carl. And totally non-allergenic.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank crumples the snot rag, sniffs the air, grimaces.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. LIVING ROOM - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Frank scoots his walker to a comfy chair and falls into it.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Rules. Gotta follow the rules. And my landlord won&rsquo;t allow Complex, Realistic, uh, dogs in his -</p>
+
+<p>&nbsp;</p>
+
+<p>Carl taps his head with his left paw.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s all in my noggin, Frank. Your entire portfolio. I know that you&rsquo;ve owned this home free and clear for over twenty years.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank&rsquo;s eyes crinkle in a scowl.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>EXT. BATHROOM DOOR - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Carl sits patiently outside the bathroom door.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<div>
+<p style='margin-left:144.0pt;'><strong>FRANK (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>What about food? I can barely remember to feed myself.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl stands on his hind legs and opens the bathroom door.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. BATHROOM - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting on the toilet, Frank jerks in surprise, letting out a SQUEAKY FART, as Carl enters.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl remains upright as a hatch on his belly opens, revealing all sorts of high tech components.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Cold fusion powered. A little water each week and I&rsquo;m good. And between you and me, I kinda prefer toilet water. The porcelain adds a certain something -</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Do you mind? I&rsquo;m trying to, er...</p>
+
+<p>&nbsp;</p>
+
+<p>Carl&rsquo;s brown eyes widen, his tail droops and he backs out, closing the door behind him.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Sorry. I should have knocked.</p>
+
+<p>&nbsp;</p>
+
+<p>Frustrated, Frank&rsquo;s hands clench into gnarled fists. Then, his eyebrows raise with a thought.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>You sound like a pretty high tech pup, alright. What if something happens to those computers and gadgets and stuff inside you? I can&rsquo;t afford those kind of repairs.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Bumper to bumper warranty, Frank.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:101.0pt;'><strong>FRANK (under his breath)</strong></p>
+
+<p style='margin-left:101.0pt;'>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Dang it.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank eyes search the room for inspiration - and find it.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m in no condition to take you for walkees when you need to, you know, do what I&rsquo;m doing right now.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<div>
+<p>A pause, then a knock on the door. Frank rolls his eyes.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>For goodness sake. Come in!</p>
+
+<p>&nbsp;</p>
+
+<p>The door swings open slowly. Carl faces Frank, tail wagging.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m totally self contained. You don&rsquo;t have to worry about a thing. In fact, I&rsquo;ll clean up after you. Plus, I cook, do the laundry and can administer all of your necessary medications.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank stares at Carl, words not coming, and reaches for the toilet paper. Carl gets the hint and turns to leave.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. BEDROOM - NIGHT</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting on the edge of his bed, Frank pulls on a nightshirt.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Sounds to me like you&rsquo;re nothing more than a flea bitten nursemaid. I suppose you&rsquo;re gonna report my every move to my doctors and family, too.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl gazes up at Frank with sad, brown doggy eyes.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s not like that at all, Frank. I&rsquo;m here to help you. I&rsquo;ll be by your side day and night. If you need something, I&rsquo;ll fetch it.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks dubious, then turns his attention to his night stand, searching.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Where&rsquo;s the darned TV remote?</p>
+
+<p>&nbsp;</p>
+
+<p>Carl sniffs around and retrieves the remote from under the bed. He sets it gently next to Frank&rsquo;s hand.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I don&rsquo;t need a nurse maid. I don&rsquo;t need a dog, neither. I don&rsquo;t need nothin&rsquo;. Nothin&rsquo; at all.</p>
+
+<p>&nbsp;</p>
+
+<p>He clicks the remote. Nothing happens. Nothing at all.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>&lsquo;Cept maybe some batteries.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl stares at the TV and blinks. The TV comes to life.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks at Carl, then the TV. He smiles slightly.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Nice trick.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Thanks. But I&rsquo;m not here to do tricks, Frank.</p>
+
+<p>&nbsp;</p>
+
+<p>Tail wagging with joy, Carl jumps onto the bed next to Frank.</p>
+
+<p>&nbsp;</p>
+
+<p>He leans his muzzle in close to Frank&rsquo;s face.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m here to be your best friend.</p>
+
+<p>&nbsp;</p>
+
+<p>And with that, Carl licks the entire side of Frank&rsquo;s face, jumps down and curls into a furry ball next to the bed.</p>
+
+<p>&nbsp;</p>
+
+<p>As Frank slowly wipes the very realistic slobber from his cheek, he looks down at Carl and considers.</p>
+
+<p>&nbsp;</p>
+
+<p>His face softens. He reaches down and pats Carl on the head.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl lets out a contented sigh.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I guess having a dog won&rsquo;t be so bad. Always wanted a dog, in fact.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks up at the TV, which shows an informercial. He frowns.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Hey, um, Carl... would you mind switching to ESPN. The ball game&rsquo;s on in a few minutes.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl&rsquo;s tail wags a little as the TV channel switches over.</p>
+",
+
+number_of_participants: 3
+)
+project11.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466611243/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_18.00.06_wb8nmn.png'
+user11.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
+user11.save
+project11.save
+project11.users << user11
+
+#----------------------------------------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------------------------------------
+
+user12 = User.new(
+first_name: "Amanda",
+last_name: "Tekel",
+birth_date: 33.years.ago,
+city: "Bakersfield",
+phone_number: "(321) 800-8244",
+email: "user12@toto.com",
+password: '12345678',
+password_confirmation: '12345678'
+)
+
+project12 = Project.new(
+name: "AutoQuartz",
+start_date: 4.days.from_now,
+end_date: 19.days.from_now,
+city: "Bakersfield",
+genre: "Action",
+
+synopsis: "At night, a man escapes the depths of the Quartz mine he works in by climbing up its cliff, his body camouflaged with sparkly patterns.",
+
+scenario: "<div>
+<p><strong>EXT. QUIET HILLS RECOVERY CENTER - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting in a wheelchair and grumpy as hell, FRANK NICHOLS (89), angrily works skeletal fingers in a vain attempt to remove a thick electronic BRACELET from his left arm.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s a damned invasion of my personal privacy is what it is.</p>
+
+<p>&nbsp;</p>
+
+<p>Readouts blink steadily. Frank stares at them, rapt.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I don&rsquo;t want to see my heart beat.</p>
+
+<p>&nbsp;</p>
+
+<p>Standing behind Frank, BILL (60), Frank&rsquo;s son, places a calm hand on Frank&rsquo;s shoulder.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>BILL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>You need to be monitored, Dad. Mary and I live too far away to help if something should happen. It&rsquo;s either the bracelet or a home companion. Your choice.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank stews in his juices, then smacks the bracelet hard on the arm of his wheelchair.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. FRANK&rsquo;S HOUSE - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>A scratch at the door. The doorbell rings. More scratching.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m coming, I&rsquo;m coming. Hold your horses.</p>
+
+<p>&nbsp;</p>
+
+<p>Relying heavily on a walker, Frank shuffles towards the door.</p>
+
+<p>&nbsp;</p>
+
+<p>Arthritic hands struggle with the doorknob and finally succeed. The door opens, revealing -</p>
+
+<p>&nbsp;</p>
+
+<p>A large, handsome, alert GERMAN SHEPARD.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks at the pooch. Leans out. Looks around. Shrugs.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Who rang the bell?</p>
+
+<p>&nbsp;</p>
+
+<p>The dog, CARL, looks up at Frank with soulful eyes.</p>
+</div>
+
+<p>&nbsp;
+<div>
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I did, Frank. My name is Carl.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank gawks at the talking dog, then stumbles backwards. Carl follows and closes the door behind him.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. KITCHEN - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Carl sits alert while Frank nervously makes coffee.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>They didn&rsquo;t say anything about my companion being a talking dog.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl looks Frank up and down. Says nothing.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I mean, I&rsquo;m allergic to dogs.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank snatches a Kleenex from the counter, wipes his nose.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Don&rsquo;t worry, Frank. I&rsquo;m not a real dog. I&rsquo;m a Complex, Artificial, Realistic, Lifeform. C.A.R.L. Carl. And totally non-allergenic.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank crumples the snot rag, sniffs the air, grimaces.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. LIVING ROOM - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Frank scoots his walker to a comfy chair and falls into it.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Rules. Gotta follow the rules. And my landlord won&rsquo;t allow Complex, Realistic, uh, dogs in his -</p>
+
+<p>&nbsp;</p>
+
+<p>Carl taps his head with his left paw.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s all in my noggin, Frank. Your entire portfolio. I know that you&rsquo;ve owned this home free and clear for over twenty years.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank&rsquo;s eyes crinkle in a scowl.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>EXT. BATHROOM DOOR - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Carl sits patiently outside the bathroom door.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<div>
+<p style='margin-left:144.0pt;'><strong>FRANK (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>What about food? I can barely remember to feed myself.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl stands on his hind legs and opens the bathroom door.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. BATHROOM - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting on the toilet, Frank jerks in surprise, letting out a SQUEAKY FART, as Carl enters.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl remains upright as a hatch on his belly opens, revealing all sorts of high tech components.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Cold fusion powered. A little water each week and I&rsquo;m good. And between you and me, I kinda prefer toilet water. The porcelain adds a certain something -</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Do you mind? I&rsquo;m trying to, er...</p>
+
+<p>&nbsp;</p>
+
+<p>Carl&rsquo;s brown eyes widen, his tail droops and he backs out, closing the door behind him.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Sorry. I should have knocked.</p>
+
+<p>&nbsp;</p>
+
+<p>Frustrated, Frank&rsquo;s hands clench into gnarled fists. Then, his eyebrows raise with a thought.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>You sound like a pretty high tech pup, alright. What if something happens to those computers and gadgets and stuff inside you? I can&rsquo;t afford those kind of repairs.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Bumper to bumper warranty, Frank.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:101.0pt;'><strong>FRANK (under his breath)</strong></p>
+
+<p style='margin-left:101.0pt;'>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Dang it.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank eyes search the room for inspiration - and find it.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m in no condition to take you for walkees when you need to, you know, do what I&rsquo;m doing right now.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<div>
+<p>A pause, then a knock on the door. Frank rolls his eyes.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>For goodness sake. Come in!</p>
+
+<p>&nbsp;</p>
+
+<p>The door swings open slowly. Carl faces Frank, tail wagging.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m totally self contained. You don&rsquo;t have to worry about a thing. In fact, I&rsquo;ll clean up after you. Plus, I cook, do the laundry and can administer all of your necessary medications.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank stares at Carl, words not coming, and reaches for the toilet paper. Carl gets the hint and turns to leave.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. BEDROOM - NIGHT</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting on the edge of his bed, Frank pulls on a nightshirt.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Sounds to me like you&rsquo;re nothing more than a flea bitten nursemaid. I suppose you&rsquo;re gonna report my every move to my doctors and family, too.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl gazes up at Frank with sad, brown doggy eyes.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s not like that at all, Frank. I&rsquo;m here to help you. I&rsquo;ll be by your side day and night. If you need something, I&rsquo;ll fetch it.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks dubious, then turns his attention to his night stand, searching.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Where&rsquo;s the darned TV remote?</p>
+
+<p>&nbsp;</p>
+
+<p>Carl sniffs around and retrieves the remote from under the bed. He sets it gently next to Frank&rsquo;s hand.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I don&rsquo;t need a nurse maid. I don&rsquo;t need a dog, neither. I don&rsquo;t need nothin&rsquo;. Nothin&rsquo; at all.</p>
+
+<p>&nbsp;</p>
+
+<p>He clicks the remote. Nothing happens. Nothing at all.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>&lsquo;Cept maybe some batteries.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl stares at the TV and blinks. The TV comes to life.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks at Carl, then the TV. He smiles slightly.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Nice trick.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Thanks. But I&rsquo;m not here to do tricks, Frank.</p>
+
+<p>&nbsp;</p>
+
+<p>Tail wagging with joy, Carl jumps onto the bed next to Frank.</p>
+
+<p>&nbsp;</p>
+
+<p>He leans his muzzle in close to Frank&rsquo;s face.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m here to be your best friend.</p>
+
+<p>&nbsp;</p>
+
+<p>And with that, Carl licks the entire side of Frank&rsquo;s face, jumps down and curls into a furry ball next to the bed.</p>
+
+<p>&nbsp;</p>
+
+<p>As Frank slowly wipes the very realistic slobber from his cheek, he looks down at Carl and considers.</p>
+
+<p>&nbsp;</p>
+
+<p>His face softens. He reaches down and pats Carl on the head.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl lets out a contented sigh.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I guess having a dog won&rsquo;t be so bad. Always wanted a dog, in fact.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks up at the TV, which shows an informercial. He frowns.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Hey, um, Carl... would you mind switching to ESPN. The ball game&rsquo;s on in a few minutes.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl&rsquo;s tail wags a little as the TV channel switches over.</p>
+",
+
+number_of_participants: 9
+)
+project12.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466612930/24a9a4039c272c1cab0053c044e1cf5b_original_rxfoml.png'
+user12.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
+user12.save
+project12.save
+project12.users << user12
+
+#----------------------------------------------------------------------------------------------------------------------------------
+
+user13 = User.new(
+first_name: "Evan",
+last_name: "Connors",
+birth_date: 37.years.ago,
+city: "Fresno",
+phone_number: "(321) 800-8244",
+email: "user13@toto.com",
+password: '12345678',
+password_confirmation: '12345678'
+)
+
+project13 = Project.new(
+name: "Novela: An Animated Short Film",
+start_date: 10.days.from_now,
+end_date: 40.days.from_now,
+city: "Fresno",
+genre: "Animation",
+
+synopsis: "The film tells the story of Julia, a woman who realizes her life is not like the life of Jasmine Rose, her favorite soap opera protagonist. In an effort to “fix” herself, Julia tries to be more like the woman on the screen.",
+
+scenario: "<div>
+<p><strong>EXT. QUIET HILLS RECOVERY CENTER - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting in a wheelchair and grumpy as hell, FRANK NICHOLS (89), angrily works skeletal fingers in a vain attempt to remove a thick electronic BRACELET from his left arm.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s a damned invasion of my personal privacy is what it is.</p>
+
+<p>&nbsp;</p>
+
+<p>Readouts blink steadily. Frank stares at them, rapt.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I don&rsquo;t want to see my heart beat.</p>
+
+<p>&nbsp;</p>
+
+<p>Standing behind Frank, BILL (60), Frank&rsquo;s son, places a calm hand on Frank&rsquo;s shoulder.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>BILL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>You need to be monitored, Dad. Mary and I live too far away to help if something should happen. It&rsquo;s either the bracelet or a home companion. Your choice.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank stews in his juices, then smacks the bracelet hard on the arm of his wheelchair.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. FRANK&rsquo;S HOUSE - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>A scratch at the door. The doorbell rings. More scratching.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m coming, I&rsquo;m coming. Hold your horses.</p>
+
+<p>&nbsp;</p>
+
+<p>Relying heavily on a walker, Frank shuffles towards the door.</p>
+
+<p>&nbsp;</p>
+
+<p>Arthritic hands struggle with the doorknob and finally succeed. The door opens, revealing -</p>
+
+<p>&nbsp;</p>
+
+<p>A large, handsome, alert GERMAN SHEPARD.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks at the pooch. Leans out. Looks around. Shrugs.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Who rang the bell?</p>
+
+<p>&nbsp;</p>
+
+<p>The dog, CARL, looks up at Frank with soulful eyes.</p>
+</div>
+
+<p>&nbsp;
+<div>
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I did, Frank. My name is Carl.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank gawks at the talking dog, then stumbles backwards. Carl follows and closes the door behind him.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. KITCHEN - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Carl sits alert while Frank nervously makes coffee.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>They didn&rsquo;t say anything about my companion being a talking dog.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl looks Frank up and down. Says nothing.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I mean, I&rsquo;m allergic to dogs.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank snatches a Kleenex from the counter, wipes his nose.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Don&rsquo;t worry, Frank. I&rsquo;m not a real dog. I&rsquo;m a Complex, Artificial, Realistic, Lifeform. C.A.R.L. Carl. And totally non-allergenic.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank crumples the snot rag, sniffs the air, grimaces.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. LIVING ROOM - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Frank scoots his walker to a comfy chair and falls into it.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Rules. Gotta follow the rules. And my landlord won&rsquo;t allow Complex, Realistic, uh, dogs in his -</p>
+
+<p>&nbsp;</p>
+
+<p>Carl taps his head with his left paw.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s all in my noggin, Frank. Your entire portfolio. I know that you&rsquo;ve owned this home free and clear for over twenty years.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank&rsquo;s eyes crinkle in a scowl.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>EXT. BATHROOM DOOR - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Carl sits patiently outside the bathroom door.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<div>
+<p style='margin-left:144.0pt;'><strong>FRANK (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>What about food? I can barely remember to feed myself.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl stands on his hind legs and opens the bathroom door.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. BATHROOM - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting on the toilet, Frank jerks in surprise, letting out a SQUEAKY FART, as Carl enters.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl remains upright as a hatch on his belly opens, revealing all sorts of high tech components.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Cold fusion powered. A little water each week and I&rsquo;m good. And between you and me, I kinda prefer toilet water. The porcelain adds a certain something -</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Do you mind? I&rsquo;m trying to, er...</p>
+
+<p>&nbsp;</p>
+
+<p>Carl&rsquo;s brown eyes widen, his tail droops and he backs out, closing the door behind him.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Sorry. I should have knocked.</p>
+
+<p>&nbsp;</p>
+
+<p>Frustrated, Frank&rsquo;s hands clench into gnarled fists. Then, his eyebrows raise with a thought.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>You sound like a pretty high tech pup, alright. What if something happens to those computers and gadgets and stuff inside you? I can&rsquo;t afford those kind of repairs.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Bumper to bumper warranty, Frank.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:101.0pt;'><strong>FRANK (under his breath)</strong></p>
+
+<p style='margin-left:101.0pt;'>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Dang it.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank eyes search the room for inspiration - and find it.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m in no condition to take you for walkees when you need to, you know, do what I&rsquo;m doing right now.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<div>
+<p>A pause, then a knock on the door. Frank rolls his eyes.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>For goodness sake. Come in!</p>
+
+<p>&nbsp;</p>
+
+<p>The door swings open slowly. Carl faces Frank, tail wagging.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m totally self contained. You don&rsquo;t have to worry about a thing. In fact, I&rsquo;ll clean up after you. Plus, I cook, do the laundry and can administer all of your necessary medications.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank stares at Carl, words not coming, and reaches for the toilet paper. Carl gets the hint and turns to leave.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. BEDROOM - NIGHT</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting on the edge of his bed, Frank pulls on a nightshirt.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Sounds to me like you&rsquo;re nothing more than a flea bitten nursemaid. I suppose you&rsquo;re gonna report my every move to my doctors and family, too.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl gazes up at Frank with sad, brown doggy eyes.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s not like that at all, Frank. I&rsquo;m here to help you. I&rsquo;ll be by your side day and night. If you need something, I&rsquo;ll fetch it.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks dubious, then turns his attention to his night stand, searching.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Where&rsquo;s the darned TV remote?</p>
+
+<p>&nbsp;</p>
+
+<p>Carl sniffs around and retrieves the remote from under the bed. He sets it gently next to Frank&rsquo;s hand.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I don&rsquo;t need a nurse maid. I don&rsquo;t need a dog, neither. I don&rsquo;t need nothin&rsquo;. Nothin&rsquo; at all.</p>
+
+<p>&nbsp;</p>
+
+<p>He clicks the remote. Nothing happens. Nothing at all.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>&lsquo;Cept maybe some batteries.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl stares at the TV and blinks. The TV comes to life.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks at Carl, then the TV. He smiles slightly.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Nice trick.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Thanks. But I&rsquo;m not here to do tricks, Frank.</p>
+
+<p>&nbsp;</p>
+
+<p>Tail wagging with joy, Carl jumps onto the bed next to Frank.</p>
+
+<p>&nbsp;</p>
+
+<p>He leans his muzzle in close to Frank&rsquo;s face.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m here to be your best friend.</p>
+
+<p>&nbsp;</p>
+
+<p>And with that, Carl licks the entire side of Frank&rsquo;s face, jumps down and curls into a furry ball next to the bed.</p>
+
+<p>&nbsp;</p>
+
+<p>As Frank slowly wipes the very realistic slobber from his cheek, he looks down at Carl and considers.</p>
+
+<p>&nbsp;</p>
+
+<p>His face softens. He reaches down and pats Carl on the head.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl lets out a contented sigh.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I guess having a dog won&rsquo;t be so bad. Always wanted a dog, in fact.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks up at the TV, which shows an informercial. He frowns.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Hey, um, Carl... would you mind switching to ESPN. The ball game&rsquo;s on in a few minutes.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl&rsquo;s tail wags a little as the TV channel switches over.</p>
+",
+
+number_of_participants: 6
+)
+project13.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466613560/966cf00de95b807f0733d7e954e4af52_original_qx4gdr.jpg'
+user13.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
+user13.save
+project13.save
+project13.users << user13
+
+#----------------------------------------------------------------------------------------------------------------------------------
+
+user14 = User.new(
+first_name: "Evan",
+last_name: "Connors",
+birth_date: 21.years.ago,
+city: "Long Beach",
+phone_number: "(321) 800-8244",
+email: "user14@toto.com",
+password: '12345678',
+password_confirmation: '12345678'
+)
+
+project14 = Project.new(
+name: "Cradle",
+start_date: 3.days.from_now,
+end_date: 28.days.from_now,
+city: "Long Beach",
+genre: "Animation",
+
+synopsis: "The film tells the story of Julia, a woman who realizes her life is not like the life of Jasmine Rose, her favorite soap opera protagonist. In an effort to “fix” herself, Julia tries to be more like the woman on the screen.",
+
+scenario: "<div>
+<p><strong>EXT. QUIET HILLS RECOVERY CENTER - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting in a wheelchair and grumpy as hell, FRANK NICHOLS (89), angrily works skeletal fingers in a vain attempt to remove a thick electronic BRACELET from his left arm.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s a damned invasion of my personal privacy is what it is.</p>
+
+<p>&nbsp;</p>
+
+<p>Readouts blink steadily. Frank stares at them, rapt.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I don&rsquo;t want to see my heart beat.</p>
+
+<p>&nbsp;</p>
+
+<p>Standing behind Frank, BILL (60), Frank&rsquo;s son, places a calm hand on Frank&rsquo;s shoulder.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>BILL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>You need to be monitored, Dad. Mary and I live too far away to help if something should happen. It&rsquo;s either the bracelet or a home companion. Your choice.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank stews in his juices, then smacks the bracelet hard on the arm of his wheelchair.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. FRANK&rsquo;S HOUSE - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>A scratch at the door. The doorbell rings. More scratching.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m coming, I&rsquo;m coming. Hold your horses.</p>
+
+<p>&nbsp;</p>
+
+<p>Relying heavily on a walker, Frank shuffles towards the door.</p>
+
+<p>&nbsp;</p>
+
+<p>Arthritic hands struggle with the doorknob and finally succeed. The door opens, revealing -</p>
+
+<p>&nbsp;</p>
+
+<p>A large, handsome, alert GERMAN SHEPARD.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks at the pooch. Leans out. Looks around. Shrugs.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Who rang the bell?</p>
+
+<p>&nbsp;</p>
+
+<p>The dog, CARL, looks up at Frank with soulful eyes.</p>
+</div>
+
+<p>&nbsp;
+<div>
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I did, Frank. My name is Carl.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank gawks at the talking dog, then stumbles backwards. Carl follows and closes the door behind him.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. KITCHEN - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Carl sits alert while Frank nervously makes coffee.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>They didn&rsquo;t say anything about my companion being a talking dog.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl looks Frank up and down. Says nothing.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I mean, I&rsquo;m allergic to dogs.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank snatches a Kleenex from the counter, wipes his nose.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Don&rsquo;t worry, Frank. I&rsquo;m not a real dog. I&rsquo;m a Complex, Artificial, Realistic, Lifeform. C.A.R.L. Carl. And totally non-allergenic.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank crumples the snot rag, sniffs the air, grimaces.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. LIVING ROOM - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Frank scoots his walker to a comfy chair and falls into it.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Rules. Gotta follow the rules. And my landlord won&rsquo;t allow Complex, Realistic, uh, dogs in his -</p>
+
+<p>&nbsp;</p>
+
+<p>Carl taps his head with his left paw.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s all in my noggin, Frank. Your entire portfolio. I know that you&rsquo;ve owned this home free and clear for over twenty years.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank&rsquo;s eyes crinkle in a scowl.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>EXT. BATHROOM DOOR - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Carl sits patiently outside the bathroom door.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<div>
+<p style='margin-left:144.0pt;'><strong>FRANK (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>What about food? I can barely remember to feed myself.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl stands on his hind legs and opens the bathroom door.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. BATHROOM - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting on the toilet, Frank jerks in surprise, letting out a SQUEAKY FART, as Carl enters.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl remains upright as a hatch on his belly opens, revealing all sorts of high tech components.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Cold fusion powered. A little water each week and I&rsquo;m good. And between you and me, I kinda prefer toilet water. The porcelain adds a certain something -</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Do you mind? I&rsquo;m trying to, er...</p>
+
+<p>&nbsp;</p>
+
+<p>Carl&rsquo;s brown eyes widen, his tail droops and he backs out, closing the door behind him.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Sorry. I should have knocked.</p>
+
+<p>&nbsp;</p>
+
+<p>Frustrated, Frank&rsquo;s hands clench into gnarled fists. Then, his eyebrows raise with a thought.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>You sound like a pretty high tech pup, alright. What if something happens to those computers and gadgets and stuff inside you? I can&rsquo;t afford those kind of repairs.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Bumper to bumper warranty, Frank.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:101.0pt;'><strong>FRANK (under his breath)</strong></p>
+
+<p style='margin-left:101.0pt;'>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Dang it.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank eyes search the room for inspiration - and find it.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m in no condition to take you for walkees when you need to, you know, do what I&rsquo;m doing right now.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<div>
+<p>A pause, then a knock on the door. Frank rolls his eyes.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>For goodness sake. Come in!</p>
+
+<p>&nbsp;</p>
+
+<p>The door swings open slowly. Carl faces Frank, tail wagging.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m totally self contained. You don&rsquo;t have to worry about a thing. In fact, I&rsquo;ll clean up after you. Plus, I cook, do the laundry and can administer all of your necessary medications.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank stares at Carl, words not coming, and reaches for the toilet paper. Carl gets the hint and turns to leave.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. BEDROOM - NIGHT</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting on the edge of his bed, Frank pulls on a nightshirt.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Sounds to me like you&rsquo;re nothing more than a flea bitten nursemaid. I suppose you&rsquo;re gonna report my every move to my doctors and family, too.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl gazes up at Frank with sad, brown doggy eyes.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s not like that at all, Frank. I&rsquo;m here to help you. I&rsquo;ll be by your side day and night. If you need something, I&rsquo;ll fetch it.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks dubious, then turns his attention to his night stand, searching.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Where&rsquo;s the darned TV remote?</p>
+
+<p>&nbsp;</p>
+
+<p>Carl sniffs around and retrieves the remote from under the bed. He sets it gently next to Frank&rsquo;s hand.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I don&rsquo;t need a nurse maid. I don&rsquo;t need a dog, neither. I don&rsquo;t need nothin&rsquo;. Nothin&rsquo; at all.</p>
+
+<p>&nbsp;</p>
+
+<p>He clicks the remote. Nothing happens. Nothing at all.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>&lsquo;Cept maybe some batteries.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl stares at the TV and blinks. The TV comes to life.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks at Carl, then the TV. He smiles slightly.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Nice trick.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Thanks. But I&rsquo;m not here to do tricks, Frank.</p>
+
+<p>&nbsp;</p>
+
+<p>Tail wagging with joy, Carl jumps onto the bed next to Frank.</p>
+
+<p>&nbsp;</p>
+
+<p>He leans his muzzle in close to Frank&rsquo;s face.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m here to be your best friend.</p>
+
+<p>&nbsp;</p>
+
+<p>And with that, Carl licks the entire side of Frank&rsquo;s face, jumps down and curls into a furry ball next to the bed.</p>
+
+<p>&nbsp;</p>
+
+<p>As Frank slowly wipes the very realistic slobber from his cheek, he looks down at Carl and considers.</p>
+
+<p>&nbsp;</p>
+
+<p>His face softens. He reaches down and pats Carl on the head.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl lets out a contented sigh.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I guess having a dog won&rsquo;t be so bad. Always wanted a dog, in fact.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks up at the TV, which shows an informercial. He frowns.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Hey, um, Carl... would you mind switching to ESPN. The ball game&rsquo;s on in a few minutes.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl&rsquo;s tail wags a little as the TV channel switches over.</p>
+",
+
+number_of_participants: 4
+)
+project14.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466613860/8f7ca15bb79241240f0c145ac229fa0f_original_nzzunl.png'
+user14.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
+user14.save
+project14.save
+project14.users << user14
+
+#----------------------------------------------------------------------------------------------------------------------------------
+
+user15 = User.new(
+first_name: "Sarah",
+last_name: "Mako",
+birth_date: 19.years.ago,
+city: "Los Angeles",
+phone_number: "(321) 800-8244",
+email: "user15@toto.com",
+password: '12345678',
+password_confirmation: '12345678'
+)
+
+project15 = Project.new(
+name: "Us Funny",
+start_date: 6.days.from_now,
+end_date: 24.days.from_now,
+city: "Los Angeles",
+genre: "Drama",
+
+synopsis: "Jim and Julia spend their day on a wonderful date in Los Angeles; they are very much in love. Interspersed, are scenes of Jim at Julia's funeral.",
+
+scenario: "<div>
+<p><strong>EXT. QUIET HILLS RECOVERY CENTER - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting in a wheelchair and grumpy as hell, FRANK NICHOLS (89), angrily works skeletal fingers in a vain attempt to remove a thick electronic BRACELET from his left arm.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s a damned invasion of my personal privacy is what it is.</p>
+
+<p>&nbsp;</p>
+
+<p>Readouts blink steadily. Frank stares at them, rapt.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I don&rsquo;t want to see my heart beat.</p>
+
+<p>&nbsp;</p>
+
+<p>Standing behind Frank, BILL (60), Frank&rsquo;s son, places a calm hand on Frank&rsquo;s shoulder.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>BILL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>You need to be monitored, Dad. Mary and I live too far away to help if something should happen. It&rsquo;s either the bracelet or a home companion. Your choice.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank stews in his juices, then smacks the bracelet hard on the arm of his wheelchair.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. FRANK&rsquo;S HOUSE - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>A scratch at the door. The doorbell rings. More scratching.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m coming, I&rsquo;m coming. Hold your horses.</p>
+
+<p>&nbsp;</p>
+
+<p>Relying heavily on a walker, Frank shuffles towards the door.</p>
+
+<p>&nbsp;</p>
+
+<p>Arthritic hands struggle with the doorknob and finally succeed. The door opens, revealing -</p>
+
+<p>&nbsp;</p>
+
+<p>A large, handsome, alert GERMAN SHEPARD.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks at the pooch. Leans out. Looks around. Shrugs.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Who rang the bell?</p>
+
+<p>&nbsp;</p>
+
+<p>The dog, CARL, looks up at Frank with soulful eyes.</p>
+</div>
+
+<p>&nbsp;
+<div>
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I did, Frank. My name is Carl.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank gawks at the talking dog, then stumbles backwards. Carl follows and closes the door behind him.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. KITCHEN - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Carl sits alert while Frank nervously makes coffee.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>They didn&rsquo;t say anything about my companion being a talking dog.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl looks Frank up and down. Says nothing.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I mean, I&rsquo;m allergic to dogs.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank snatches a Kleenex from the counter, wipes his nose.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Don&rsquo;t worry, Frank. I&rsquo;m not a real dog. I&rsquo;m a Complex, Artificial, Realistic, Lifeform. C.A.R.L. Carl. And totally non-allergenic.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank crumples the snot rag, sniffs the air, grimaces.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. LIVING ROOM - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Frank scoots his walker to a comfy chair and falls into it.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Rules. Gotta follow the rules. And my landlord won&rsquo;t allow Complex, Realistic, uh, dogs in his -</p>
+
+<p>&nbsp;</p>
+
+<p>Carl taps his head with his left paw.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s all in my noggin, Frank. Your entire portfolio. I know that you&rsquo;ve owned this home free and clear for over twenty years.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank&rsquo;s eyes crinkle in a scowl.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>EXT. BATHROOM DOOR - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Carl sits patiently outside the bathroom door.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<div>
+<p style='margin-left:144.0pt;'><strong>FRANK (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>What about food? I can barely remember to feed myself.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl stands on his hind legs and opens the bathroom door.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. BATHROOM - DAY</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting on the toilet, Frank jerks in surprise, letting out a SQUEAKY FART, as Carl enters.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl remains upright as a hatch on his belly opens, revealing all sorts of high tech components.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Cold fusion powered. A little water each week and I&rsquo;m good. And between you and me, I kinda prefer toilet water. The porcelain adds a certain something -</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Do you mind? I&rsquo;m trying to, er...</p>
+
+<p>&nbsp;</p>
+
+<p>Carl&rsquo;s brown eyes widen, his tail droops and he backs out, closing the door behind him.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Sorry. I should have knocked.</p>
+
+<p>&nbsp;</p>
+
+<p>Frustrated, Frank&rsquo;s hands clench into gnarled fists. Then, his eyebrows raise with a thought.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>You sound like a pretty high tech pup, alright. What if something happens to those computers and gadgets and stuff inside you? I can&rsquo;t afford those kind of repairs.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL (O.S.)</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Bumper to bumper warranty, Frank.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:101.0pt;'><strong>FRANK (under his breath)</strong></p>
+
+<p style='margin-left:101.0pt;'>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Dang it.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank eyes search the room for inspiration - and find it.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m in no condition to take you for walkees when you need to, you know, do what I&rsquo;m doing right now.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<div>
+<p>A pause, then a knock on the door. Frank rolls his eyes.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>For goodness sake. Come in!</p>
+
+<p>&nbsp;</p>
+
+<p>The door swings open slowly. Carl faces Frank, tail wagging.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m totally self contained. You don&rsquo;t have to worry about a thing. In fact, I&rsquo;ll clean up after you. Plus, I cook, do the laundry and can administer all of your necessary medications.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank stares at Carl, words not coming, and reaches for the toilet paper. Carl gets the hint and turns to leave.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>INT. BEDROOM - NIGHT</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sitting on the edge of his bed, Frank pulls on a nightshirt.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Sounds to me like you&rsquo;re nothing more than a flea bitten nursemaid. I suppose you&rsquo;re gonna report my every move to my doctors and family, too.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl gazes up at Frank with sad, brown doggy eyes.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>It&rsquo;s not like that at all, Frank. I&rsquo;m here to help you. I&rsquo;ll be by your side day and night. If you need something, I&rsquo;ll fetch it.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks dubious, then turns his attention to his night stand, searching.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Where&rsquo;s the darned TV remote?</p>
+
+<p>&nbsp;</p>
+
+<p>Carl sniffs around and retrieves the remote from under the bed. He sets it gently next to Frank&rsquo;s hand.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I don&rsquo;t need a nurse maid. I don&rsquo;t need a dog, neither. I don&rsquo;t need nothin&rsquo;. Nothin&rsquo; at all.</p>
+
+<p>&nbsp;</p>
+
+<p>He clicks the remote. Nothing happens. Nothing at all.</p>
+</div>
+</p>
+
+<p>&nbsp;
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>&lsquo;Cept maybe some batteries.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl stares at the TV and blinks. The TV comes to life.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks at Carl, then the TV. He smiles slightly.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Nice trick.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Thanks. But I&rsquo;m not here to do tricks, Frank.</p>
+
+<p>&nbsp;</p>
+
+<p>Tail wagging with joy, Carl jumps onto the bed next to Frank.</p>
+
+<p>&nbsp;</p>
+
+<p>He leans his muzzle in close to Frank&rsquo;s face.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>CARL</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I&rsquo;m here to be your best friend.</p>
+
+<p>&nbsp;</p>
+
+<p>And with that, Carl licks the entire side of Frank&rsquo;s face, jumps down and curls into a furry ball next to the bed.</p>
+
+<p>&nbsp;</p>
+
+<p>As Frank slowly wipes the very realistic slobber from his cheek, he looks down at Carl and considers.</p>
+
+<p>&nbsp;</p>
+
+<p>His face softens. He reaches down and pats Carl on the head.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl lets out a contented sigh.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>I guess having a dog won&rsquo;t be so bad. Always wanted a dog, in fact.</p>
+
+<p>&nbsp;</p>
+
+<p>Frank looks up at the TV, which shows an informercial. He frowns.</p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:144.0pt;'><strong>FRANK</strong></p>
+
+<p>&nbsp;</p>
+
+<p style='margin-left:72.0pt;'>Hey, um, Carl... would you mind switching to ESPN. The ball game&rsquo;s on in a few minutes.</p>
+
+<p>&nbsp;</p>
+
+<p>Carl&rsquo;s tail wags a little as the TV channel switches over.</p>
+",
+
+number_of_participants: 7
+)
+project15.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466614414/1d684fc1207d41f800ec95642a9dea96_original_io1ets.jpg'
+user15.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
+user15.save
+project15.save
+project15.users << user15
