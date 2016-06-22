@@ -9,8 +9,10 @@
                   <% # mur de discussion %>
                   <ul class="coin_mess">
                     <% @messages.last(5).each do |message| %>
+                    <% if @project.id == message.project_id %>
                       <li><strong><%= image_tag message.user.user_picture, class:"avatar avatar-large" %> <%= message.user.first_name %> - </strong><%= message.content %></li>
                       <br>
+                      <% end %>
                     <% end %>
                   </ul>
                   <br>
