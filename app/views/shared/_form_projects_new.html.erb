@@ -4,8 +4,10 @@
       <%= simple_nested_form_for @project do |f| %>
       <%= f.error_notification %>
       <%= f.input :name %>
+      <%= f.input :price_cents %>
       <%= f.input :start_date %>
       <%= f.input :end_date %>
+
       <%= f.input :city, collection: ['Anaheim','Bakersfield','Fresno','Long Beach','Los Angeles','Oakland','Sacramento','San Diego','San Francisco','San Jose'] %>
       <%= f.input :number_of_participants, input_html: { min: '1', step: 'any' } %>
       <%= f.fields_for :roles do |role_form| %>

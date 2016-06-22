@@ -37,6 +37,8 @@
         <h2>Synopsis</h2>
         <%= raw @project.synopsis %>
       <% end %>
+      <h2>Ours team</h2>
+      <%= render 'joiner' %>
       <% if @project.description != "" %>
         <h2>A few words...</h2>
         <%= raw @project.description %>
@@ -149,8 +151,8 @@
       </div>
 
       <div class="col-xs-12 col-md-3">
-<%= render 'projects/caroussel2' %>
-</div>
+        <%= render 'projects/caroussel2' %>
+      </div>
     </div>
   </div>
 </section>
