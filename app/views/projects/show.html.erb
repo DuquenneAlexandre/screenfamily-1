@@ -48,9 +48,13 @@
 </div>
 
 <% end %>
+<% a = 1 %>
+<% if Order.find(1).amount_cents != 0 %>
+  <% Order.all.each do |o| %>
+    <% a = a + o.payment["amount"] %>
+  <% end %>
 
-<% a = 10 %>
-<% if a > 20 %>
-<%= progress_bar @project.pledged / @project.goal_for_crowdfunding * 100 %>
-<%= progress_bar 0.06 %>
+<% @project.goal_for_crowdfunding  / a %>
+  <% z = " 0.0" + (@project.goal_for_crowdfunding  / a).to_s %>
+<%= progress_bar z.to_f, alternative: 'success', striped: true %>
 <% end %>
