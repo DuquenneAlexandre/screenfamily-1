@@ -18,7 +18,7 @@
               <div class="post">
                 <div class="post-media-index">
                 <%= link_to project_path(proj) do %>
-                    <%= image_tag proj.project_picture %>
+                    <%= image_tag proj.project_picture.url(:photo_home_project_index) %>
                 <%end%>
                 </div>
                 <div class="post-meta font-alt">

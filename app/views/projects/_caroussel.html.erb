@@ -14,16 +14,16 @@
         <div class="carousel-inner" role="listbox">
           <div class="item active" style= "">
 
-            <%= image_tag @projects.find(1).project_picture %>
+            <%= image_tag @projects.find(1).project_picture.url(:photo_project_show_caroussel) %>
           </div>
           <div class="item">
-            <%= image_tag @projects.find(2).project_picture %>
+            <%= image_tag @projects.find(2).project_picture.url(:photo_project_show_caroussel) %>
           </div>
           <div class="item">
-             <%= image_tag @projects.find(3).project_picture %>
+             <%= image_tag @projects.find(3).project_picture.url(:photo_project_show_caroussel) %>
           </div>
           <div class="item">
-             <%= image_tag @projects.find(5).project_picture %>
+             <%= image_tag @projects.find(5).project_picture.url(:photo_project_show_caroussel) %>
           </div>
         </div>
 

@@ -29,7 +29,7 @@
       <div class="col-xs-12 col-md-9">
         <!-- MEDIA -->
         <div class="post-media">
-          <%= image_tag @project.project_picture %>
+          <%= image_tag @project.project_picture.url(:photo_home_project_show) %>
 
 
     <!-- POST CONTENT -->
@@ -37,8 +37,9 @@
           <% if @project.synopsis != "" %>
           <%= @project.synopsis %>
           <% end %>
+        <h2>A few words...</h2>
           <% if @project.description != "" %>
-          <%= @project.description %>
+          <%= raw @project.description %>
           <% end %>
     <!-- /POST CONTENT -->
           <!-- joiner -->
