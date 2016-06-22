@@ -37,15 +37,15 @@
           <% if @project.synopsis != "" %>
           <%= @project.synopsis %>
           <% end %>
+          <!-- joiner -->
+          <h2>Our Team</h2>
+          <%= render 'projects/joiner' %>
+          <!-- /joiner -->
         <h2>A few words...</h2>
           <% if @project.description != "" %>
           <%= raw @project.description %>
           <% end %>
     <!-- /POST CONTENT -->
-          <!-- joiner -->
-          <h2>Our Team</h2>
-          <%= render 'projects/joiner' %>
-          <!-- /joiner -->
         </div>
         <!-- /MEDIA -->
       </div>
