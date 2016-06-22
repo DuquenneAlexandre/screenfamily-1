@@ -1,0 +1,114 @@
+<section id="portfolio" class="module">
+
+    <!-- FILTER -->
+    <div class="row">
+
+      <div class="col-sm-12">
+        <ul id="filters" class="filters font-alt">
+          <li><a href="#" data-filter="*" class="current">All</a></li>
+          <li><a href="#" data-filter=".Animation">Animation</a></li>
+          <li><a href="#" data-filter=".Drame">Drame</a></li>
+          <li><a href="#" data-filter=".Documentary">Documentary</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- /FILTER -->
+    <div class="col-xs-offset-1">
+    <!-- WORKS GRID -->
+    <div class="row">
+
+      <div id="works-grid" class="works-grid works-hover-w" style="position: relative; height: 2808px;">
+
+        <!-- DO NOT DELETE THIS DIV -->
+        <div class="grid-sizer"></div>
+
+        <!-- PORTFOLIO ITEM -->
+          <div class="work-item Documentary" style="height: 351px; position: absolute; left: 369px; top: 0px;">
+            <%= link_to @projects.find(1) do %>
+              <%= image_tag @projects.find(1).project_picture %>
+              <div class="work-caption font-alt">
+                <h3 class="work-title"><%= @projects.find(1).name %></h3>
+                <div class="work-descr">
+                  <%= @projects.find(1).genre %>
+                </div>
+              </div>
+            <%end%>
+          </div>
+          <!-- PORTFOLIO ITEM -->
+          <div class="work-item Animation" style="height: 351px; position: absolute; left: 369px; top: 0px;">
+            <%= link_to @projects.find(7) do %>
+              <%= image_tag @projects.find(7).project_picture %>
+              <div class="work-caption font-alt">
+                <h3 class="work-title"><%= @projects.find(7).name %></h3>
+                <div class="work-descr">
+                  <%= @projects.find(7).genre %>
+                </div>
+              </div>
+            <%end%>
+          </div>
+          <!-- /PORTFOLIO ITEM -->
+
+          <!-- PORTFOLIO ITEM -->
+          <div class="work-item Documentary" style="height: 351px; position: absolute; left: 369px; top: 0px;">
+            <%= link_to @projects.find(4) do %>
+              <%= image_tag @projects.find(4).project_picture %>
+              <div class="work-caption font-alt">
+                <h3 class="work-title"><%= @projects.find(4).name %></h3>
+                <div class="work-descr">
+                  <%= @projects.find(4).genre %>
+                </div>
+              </div>
+            <%end%>
+          </div>
+          <!-- /PORTFOLIO ITEM -->
+
+          <!-- PORTFOLIO ITEM -->
+          <div class="work-item Action" style="height: 351px; position: absolute; left: 369px; top: 351px;">
+            <%= link_to @projects.find(6) do %>
+              <%= image_tag @projects.find(6).project_picture %>
+              <div class="work-caption font-alt">
+                <h3 class="work-title"><%= @projects.find(6).name %></h3>
+                <div class="work-descr">
+                  <%= @projects.find(6).genre %>
+                </div>
+              </div>
+            <%end%>
+          </div>
+          <!-- /PORTFOLIO ITEM -->
+
+          <!-- PORTFOLIO ITEM -->
+          <div class="work-item Drame" style="height: 351px; position: absolute; left: 0px; top: 702px;">
+            <%= link_to @projects.find(2) do %>
+              <%= image_tag @projects.find(2).project_picture %>
+              <div class="work-caption font-alt">
+                <h3 class="work-title"><%= @projects.find(2).name %></h3>
+                <div class="work-descr">
+                  <%= @projects.find(2).genre %>
+                </div>
+              </div>
+            <%end%>
+          </div>
+          <!-- /PORTFOLIO ITEM -->
+
+        <!-- PORTFOLIO ITEM -->
+        <div class="work-item Action" style="height: 351px; position: absolute; left: 369px; top: 702px;">
+          <%= link_to @projects.find(3) do %>
+            <%= image_tag @projects.find(3).project_picture %>
+            <div class="work-caption font-alt">
+              <h3 class="work-title"><%= @projects.find(3).name %></h3>
+              <div class="work-descr">
+                <%= @projects.find(3).genre %>
+              </div>
+            </div>
+          <%end%>
+        </div>
+        <!-- /PORTFOLIO ITEM -->
+
+      </div>
+
+    </div>
+    <!-- /WORKS GRID -->
+  </div>
+
+</section>
