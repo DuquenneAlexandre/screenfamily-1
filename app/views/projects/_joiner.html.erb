@@ -1,5 +1,4 @@
 <section id="team" class="module">
-
       <div class="row">
         <% @project.users.each do |user| %>
           <!-- TEAM MEMBER -->
@@ -19,7 +18,6 @@
               </div>
               <div class="team-descr">
                 <h5 class="team-name font-alt"><%= user.first_name %> <%= user.last_name %></h5>
-                <div class="team-role font-serif"><%= user.roles %></div>
               </div>
             </div>
           </div>
