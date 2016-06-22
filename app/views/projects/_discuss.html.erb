@@ -7,15 +7,14 @@
             <div class="col-xs-10 col-sx-offset-1">
               <div class="tab-pane" id="discuss">
                   <% # mur de discussion %>
-                  <%= render "shared/form_messages" %>
                   <ul class="coin_mess">
                     <% @messages.last(5).each do |message| %>
                       <li><strong><%= image_tag message.user.user_picture, class:"avatar avatar-large" %> <%= message.user.first_name %> - </strong><%= message.content %></li>
+                      <br>
                     <% end %>
                   </ul>
                   <br>
-                  <%= link_to 'Edit Post', edit_project_path(@project) %>
-                  <%= link_to 'Back to Posts', projects_path %>
+                  <%= render "shared/form_messages" %>
               </div>
             </div>
         </div>
