@@ -1,7 +1,11 @@
-<div class="margin_top">
-  <%= form_for @project do |f| %>
-  <%= f.label :scenario %>
-  <%= f.cktext_area :scenario %>
-  <%= f.button :input %>
-  <% end %>
+<div class="container">
+  <div class="margin_top margin-bottom">
+      <%= form_for @project do |f| %>
+      <%= f.label :scenario %>
+      <%= f.cktext_area :scenario %>
+      <div class="margin_top">
+        <%= f.button :input, name:"INPUT", class:"btn btn-block btn-round btn-d" %>
+      </div>
+      <% end %>
+  </div>
 </div>
