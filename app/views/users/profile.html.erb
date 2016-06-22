@@ -72,5 +72,10 @@
         </div>
         <% end %>
 
+<% Message.all.each do |mess|%>
+  <% if mess.user_id === current_user.id %>
+    <%= "Nom du projet: " + Project.all.find(mess.project_id).name %>
+  <% end %>
+<% end %>
     </div>
     <!-- /COMMENT FORM -->
