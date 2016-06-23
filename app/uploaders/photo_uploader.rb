@@ -4,17 +4,16 @@ class PhotoUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 
   version :photo_home_project do
-    cloudinary_transformation effect: "brightness:30",
+    cloudinary_transformation effect: "brightness:-10",
       width: 600, height: 400, crop: :thumb
   end
 
   version :bright_face do
-    cloudinary_transformation effect: "brightness:30",
-      width: 400, height: 400, crop: :thumb, gravity: :face
+    cloudinary_transformation width: 400, height: 400, crop: :thumb
   end
 
   version :photo_home_project_index do
-    cloudinary_transformation effect: "brightness:30",
+    cloudinary_transformation effect: "brightness:-10",
       width: 500, height: 300, crop: :thumb
   end
 
@@ -35,6 +34,6 @@ class PhotoUploader < CarrierWave::Uploader::Base
   end
 
   version :photo_home_project_best do
-    cloudinary_transformation width: 400, height: 400, crop: :thumb
+    cloudinary_transformation width: 400, height: 300, crop: :scale
   end
 end
