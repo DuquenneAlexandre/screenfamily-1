@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160622121608) do
+ActiveRecord::Schema.define(version: 20160623083437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,14 +46,6 @@ ActiveRecord::Schema.define(version: 20160622121608) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
-
-  create_table "events", force: :cascade do |t|
-    t.datetime "start_date"
-    t.datetime "end_date"
-    t.string   "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "messages", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -107,10 +99,10 @@ ActiveRecord::Schema.define(version: 20160622121608) do
     t.float    "longitude"
     t.boolean  "inprogress",                      default: false
     t.boolean  "finished",                        default: false
-    t.integer  "price_cents",                     default: 0,     null: false
     t.text     "description"
     t.integer  "pledged"
     t.integer  "price"
+    t.integer  "price_cents"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -131,7 +123,6 @@ ActiveRecord::Schema.define(version: 20160622121608) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "quantity"
-    t.string   "labl"
   end
 
   add_index "roles", ["project_id"], name: "index_roles_on_project_id", using: :btree
