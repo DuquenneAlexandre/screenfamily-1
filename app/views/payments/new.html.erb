@@ -1,28 +1,17 @@
-<p style="margin-top: 200px; text-align: center; font-size: 70px; font-family: underline;"> Welcome to our Crowdfounding place.</p>
-<div class="container" style="background-color: grey; border-radius: 8px;">
-  <div class="row">
-    <div class="col-xs-6 ">
-      <div class="paym" style="text-align: center; margin-top: 50px; font-size: 60px; color:white; margin-bottom: 10px;">
-        <%= Project.all.find(@order.project_sku.to_i).name %>
-          <%= image_tag Project.all.find(@order.project_sku.to_i).project_picture %>
-            <%= form_tag order_payments_path(@order) do %>
-      </div>
-      </div>
-      <div class="col-xs-6">
-      <div class="po" style="text-align: center; margin-top: 70px; font-size: 40px;">
-             <article>
-          <div class="paymm" style="margin-top: 200px; color:white;"><label class="amount">
-            <span>Amount: <%= humanized_money_with_symbol(@order.amount) %></span>
-          </label>
-        </article>
-          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-name="My project"
-            data-description="project <%= @order.project_sku %>"
-            data-amount="<%= @order.amount_cents %>"
-            data-currency="EUR"></script></div>
-        <% end %>
-        </div>
-      </div>
-    </div>
-</div>
+    <h1 style="margin-top: 70px; text-align: center;">Participation au projet "<%= Project.all.find(@order.project_sku.to_i).name %>"</h1>
+    <p><%= image_tag Project.all.find(@order.project_sku.to_i).project_picture %></p>
+<%= form_tag order_payments_path(@order) do %>
+  <article>
+    <label class="amount">
+      <span>Amount: <%= humanized_money_with_symbol(@order.amount) %></span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-name="My Teddy"
+    data-description="Teddy <%= @order.project_sku %>"
+    data-amount="<%= @order.amount_cents %>"
+    data-currency="EUR"></script>
+<% end %>
+
