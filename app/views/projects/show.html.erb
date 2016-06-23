@@ -44,9 +44,11 @@
     <div class="tab-pane" id="calendar">
       <%= render 'projects/calendar' %>
     </div>
+    <% if current_user.present? %>
     <% if current_user.id == @project.users.ids.reduce(:+) %>
-    <%= link_to "Edit my project", edit_project_path(@project), class:"btn btn-primary btn-block"%>
-<% end %>
+      <%= link_to "Edit my project", edit_project_path(@project), class:"btn btn-primary btn-block"%>
+    <% end %>
+    <% end %>
 </div>
 <% end %>
 
