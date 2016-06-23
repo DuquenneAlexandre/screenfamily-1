@@ -3,7 +3,7 @@ class PaymentsController < ApplicationController
 
   def new
   end
-  
+
   def create
     begin
       @amount_cents = @order.amount_cents
