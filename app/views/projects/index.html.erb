@@ -10,6 +10,12 @@
   <%= render 'caroussel' %>
   <% end %>
 
+<div class="container">
+  <div class="xs-6 margin_top font-alt">
+    <h1>NOW LIVE ON SCREENFAMILY</h1>
+  </div>
+</div>
+
 <section class="module">
     <div class="container">
       <div class="row multi-columns-row">
@@ -48,8 +54,10 @@
   </section>
 
  <!-- PAGINATION -->
+<div class="margin-bottom">
+  <%= will_paginate @projects, class:"text-center" %>
+</div>
 
-<%= will_paginate @projects, class:"text-center" %>
 <!-- <div class="row">
 
   <div class="col-sm-12 text-center m-t-60">
@@ -94,23 +102,6 @@
       <% end %>
     <% end %> -->
 
-<div class="NS_site__homepage_curated_pages curated-pages py4">
-  <div class="container-flex py2 px2">
-    <div class="title-card pb2">
-      <div class="row">
-        <div class="mobile-col">
-          <h2 class="h3 normal mb0">
-            <a class="green-dark" href="/discover/curated-pages?ref=home_curated">Curated pages</a>
-          </h2>
-        </div>
-          <div class="col-right right">
-            <a class="btn btn--border-gray btn--small" href="/discover/curated-pages?ref=home_curated">
-              See all
-            </a>
-          </div>
-        </div>
-      </div>
-  </div>
 
 <!-- <div class="container-flex px2 pb2 mobile-scroll-container">
 <div class="row mobile-scroll-row">
