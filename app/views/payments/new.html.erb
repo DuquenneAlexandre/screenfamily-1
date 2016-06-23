@@ -1,6 +1,7 @@
-    <h1 style="margin-top: 70px; text-align: center;">Participation au projet "<%= Project.all.find(@order.project_sku.to_i).name %>"</h1>
+    <h1 style="margin-top: 70px; text-align: center;">Project: "<%= Project.all.find(@order.project_sku.to_i).name %>"</h1>
     <p><%= image_tag Project.all.find(@order.project_sku.to_i).project_picture %></p>
 <%= form_tag order_payments_path(@order) do %>
+<div class="paiid" style="text-align: center;">
   <article>
     <label class="amount">
       <span>Amount: <%= humanized_money_with_symbol(@order.amount) %></span>
@@ -14,4 +15,5 @@
     data-amount="<%= @order.amount_cents %>"
     data-currency="EUR"></script>
 <% end %>
+</div>
 
