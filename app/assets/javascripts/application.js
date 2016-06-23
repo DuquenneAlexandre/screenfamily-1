@@ -38,3 +38,8 @@
 //= require contact
 //= require custom
 //= require_tree .
+
+
+$('#scrolldown').click(function(){
+$(document).scrollTop(1500) // any value you need
+});
