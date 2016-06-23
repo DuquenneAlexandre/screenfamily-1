@@ -510,9 +510,9 @@ number_of_participants: 5
 )
 project1.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466589014/559c8fed5739986c3ddcb69a6d995f3c_original_bmhjdx.jpg'
 user1.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523566/j4wo3gvbyc9jsd57hvuo.jpg'
-user1.save
+user1.save!
 project1.users << user1
-project1.save
+project1.save!
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -1009,9 +1009,9 @@ number_of_participants: 7
 )
 project2.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466499225/CHUG_vkftdt.jpg'
 user2.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466524034/11222145_10207231487968456_5608086083271334069_o_m80qjq.jpg'
-user2.save
+user2.save!
 project2.users << user2
-project2.save
+project2.save!
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
