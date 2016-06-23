@@ -512,7 +512,6 @@ project1.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/
 user1.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523566/j4wo3gvbyc9jsd57hvuo.jpg'
 user1.save
 project1.users << user1
-project1.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
