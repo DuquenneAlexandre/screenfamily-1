@@ -19,7 +19,7 @@
                 <% end %>
               <h3>Strong Believer</h3>
                 <p>A digital copy of the film and a digital download of the film's soundtrack.</p>
-                <p>Amount: <%= humanized_money_with_symbol(@project.price) %></p>
+                <p>Amount: €20</p>
                 <% if current_user.present? %>
                 <%= form_tag orders_path do %>
                 <%= hidden_field_tag 'project_id', @project.id %>
@@ -28,7 +28,7 @@
                 <% end %>
             <h3>Movie Star</h3>
                 <p>An EARLY digital copy of the film before its premiere and a Special Thanks credit.</p>
-                <p>Amount: <%= humanized_money_with_symbol(@project.price) %></p>
+                <p>Amount: €50</p>
                 <% if current_user.present? %>
                 <%= form_tag orders_path do %>
                 <%= hidden_field_tag 'project_id', @project.id %>

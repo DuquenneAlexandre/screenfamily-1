@@ -2,13 +2,16 @@
   <div class="row text-center">
     <form action="/projects" class="form">
       <div class="col-xs-6 col-sm-6 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-        <input name="start_date" type="date" class="form-control opacity over " placeholder="Start">
+        <label for="startsearch">Start Date</label>
+        <input name="start_date" type="date" class="form-control opacity over" id="startsearch" placeholder="Start">
       </div>
       <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
-        <input name="end_date" type="date" class="form-control opacity over " placeholder="End">
+        <label for="endsearch">End Date</label>
+        <input name="end_date" type="date" class="form-control opacity over" id="endsearch" placeholder="End">
       </div>
       <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
-        <select name="city" class="form-control opacity over" placeholder="City">
+        <label for="citysearch">City</label>
+        <select name="city" class="form-control opacity over" placeholder="City" id="citysearch">
           <option value=""></option>
           <option value="Anaheim">Anaheim</option>
           <option value="Bakersfield">Bakersfield</option>
@@ -24,7 +27,8 @@
 
       </div>
       <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
-        <select name="genre" class="form-control opacity over" placeholder="Genre">
+        <label for="genresearch">Genre</label>
+        <select name="genre" class="form-control opacity over" placeholder="Genre" id="genresearch">
           <option value=""></option>
           <option value="Action">Action</option>
           <option value="Adventure">Adventure</option>
@@ -44,7 +48,8 @@
         </select>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-        <input type="submit" class="btn opacity btn-primary btn-block" value="Search">
+        <label for="submitsearch"></label>
+        <input type="submit" class="btn opacity btn-primary btn-block" value="Search" id="submitsearch" style="margin-top:6px">
       </div>
     </form>
   </div>
