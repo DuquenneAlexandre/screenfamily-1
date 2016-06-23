@@ -1,7 +1,13 @@
 <p class="margin_top"><%= render 'shared/form_projects' %></p>
 
   <% if !params[:city].present? && !params[:genre].present? && !params[:start_date].present? && !params[:end_date].present?  %>
-  <%= render 'projects/caroussel' %>
+<% a = 0 %>
+ <% @projects.each do |pro| %>
+ <% if pro.id > 9 %>
+ <% a += 1 %>
+ <% end %>
+ <% end %>                    
+  <%= render 'caroussel' %>
   <% end %>
 
 <section class="module">

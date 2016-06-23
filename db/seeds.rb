@@ -1,3 +1,22 @@
+class ActiveRecord::Base
+ def self.truncate!
+   connection.execute("TRUNCATE #{table_name} RESTART IDENTITY CASCADE;")
+ end
+end
+
+# Not allowed in production.
+if Rails.env.in?(%(production)) && !ENV['FORCE']
+ STDERR.write "That's a terrible idea, all your records will be lost!!!\n"
+ exit
+end
+
+# We truncate the records so to regenerate the seed.
+# Each time we seed all the items are lost and recreated.
+[
+ User,
+ Project
+].map(&:truncate!)
+
 user1 = User.new(
 first_name: "Jay",
 last_name: "Gloser",
@@ -14,6 +33,8 @@ name: "The Main Street Entrepreneur",
 start_date: 8.days.from_now,
 end_date: 35.days.from_now,
 city: "Anaheim",
+price: 12,
+price_cents: 12000,
 genre: "Documentary",
 
 synopsis: "The Main Street Entrepreneur is a full length feature documentary detailing the choices made by ordinary people that have led to extraordinary outcomes, each building livelihoods doing what they love. Motivated and driven by personal aspirations, these individuals dared to take risks in pursuit of their dreams. Their journeys and the experiences they share will inspire and motivate you to choose a similar path, a path inviting you to follow your own dreams and live a life of fulfillment.",
@@ -510,6 +531,8 @@ project2 = Project.new(
 name: "Chug",
 start_date: 3.days.from_now,
 end_date: 11.days.from_now,
+price: 12,
+price_cents: 12000,
 city: "Bakersfield",
 genre: "Comedy",
 
@@ -1008,6 +1031,8 @@ name: "Little Witch Academia",
 start_date: 8.days.from_now,
 end_date: 19.days.from_now,
 city: "Fresno",
+price: 12,
+price_cents: 12000,
 genre: "Animation",
 
 synopsis: "Little Witch Academia 2 (tentative title) is the sequel to the acclaimed animated title Little Witch Academia, and will once again be directed by Yoh Yoshinari and hand animated by Studio TRIGGER. The episode is currently planned to be about 20 minutes long, but we've come to SCREENFAMILY in the hopes that we can make it even longer and better with your help! With your support, we want to increase the length of the episode by 15 minutes and make an amazing sequel that fans will be proud of! In order to accomplish this, we're hoping to raise $150,000 with this SCREENFAMILY project.",
@@ -1505,6 +1530,8 @@ name: "Wish I Was Here",
 start_date: 2.days.from_now,
 end_date: 12.days.from_now,
 city: "Long Beach",
+price: 12,
+price_cents: 12000,
 genre: "Drama",
 
 synopsis: "'Wish I Was Here' is the story of Aidan Bloom (played by me), a struggling actor, father and husband, who at 35 is still trying to find his identity; a purpose for his life. He and his wife are barely getting by financially and Aidan passes his time by fantasizing about being the great futuristic Space-Knight he'd always dreamed he'd be as a little kid.
@@ -2004,6 +2031,8 @@ name: "For The Love Of Spock",
 start_date: 3.days.from_now,
 end_date: 34.days.from_now,
 city: "Los Angeles",
+price: 12,
+price_cents: 12000,
 genre: "Documentary",
 
 synopsis: "Last year, just before Thanksgiving, I approached Leonard Nimoy about the possibility of working together on a film about Mr. Spock. I had skimmed through some of the books on the making of Star Trek and felt there was so much more to explore about the birth and evolution of Spock. And the timing seemed right, as the 50th anniversary of Star Trek: The Original Series was not that far away. He agreed that now was the right time, and that he was 100% committed to collaborating with me on this project.",
@@ -2503,6 +2532,8 @@ name: "Oakland Central Station",
 start_date: 5.days.from_now,
 end_date: 25.days.from_now,
 city: "Oakland",
+price: 12,
+price_cents: 12000,
 genre: "Drama",
 
 synopsis: "Two young people from different sides of the planet meet accidentally at Oakland Central Station. Intrigued by each other, they feel like getting in contact with one another, but are struggling to find a way given today's reserved public culture until...",
@@ -3003,7 +3034,8 @@ start_date: 2.days.from_now,
 end_date: 19.days.from_now,
 city: "Sacramento",
 genre: "Drama",
-
+price: 12,
+price_cents: 12000,
 synopsis: "DO YOU TAKE THIS MAN explores the different kinds of relationships we have in our lives, the different kinds of commitments we make, and ultimately what it means to be married - the ultimate commitment of choice. I wanted to tell a story about two very different people and how their differences influence and impact their relationship with each other, and with the other people in their lives, for better and for worse.",
 
 scenario: "<div>
@@ -3500,7 +3532,8 @@ start_date: 40.days.from_now,
 end_date: 70.days.from_now,
 city: "San Diego",
 genre: "Sci-Fi",
-
+price: 12,
+price_cents: 12000,
 synopsis: "The Replacement is a dark comedy set in a future where growing your own clones is as common as getting a new outfit. But sometimes your flawless clones make you feel like a loser. Simply put, it's a comedic take on social progress moving faster than anyone is prepared for.",
 
 scenario: "<div>
@@ -3997,7 +4030,8 @@ start_date: 5.days.from_now,
 end_date: 18.days.from_now,
 city: "San Francisco",
 genre: "Horror",
-
+price: 12,
+price_cents: 12000,
 synopsis: "They’re not sluggish zombies, weepy vampires, cartoonishly macho werewolves, or ghosts bitter at a life misspent. They don’t lurk in your nightmares or inside your television, and they aren’t alien clowns in the storm drain under your sleepy East coast town.",
 
 scenario: "<div>
@@ -4496,7 +4530,8 @@ start_date: 6.days.from_now,
 end_date: 19.days.from_now,
 city: "San Jose",
 genre: "Documentary",
-
+price: 12,
+price_cents: 12000,
 synopsis: "In Paris and all around the world, artists, friends and label team converge to spend some precious moments that makes Roche Musique a unique experience.
 
 To share those moments with our fans, we met 4 young talented producers keen to live new experiences too.",
@@ -4997,7 +5032,8 @@ start_date: 4.days.from_now,
 end_date: 27.days.from_now,
 city: "Anaheim",
 genre: "Horror",
-
+price: 12,
+price_cents: 12000,
 synopsis: "Darkness Reigns is a feature film about a filmmaker, Daniel Whitaker, who always thought he would hit it big in Hollywood, but was never able to fulfill his dream.  Instead, he's been relegated to shooting behind the scenes documentaries for other filmmakers.  But that all changes when he captures footage of unfathomable evil while shooting on the set of a horror film -- inside a reportedly haunted location -- where suddenly the entire crew, including the film's star, Casper Van Dien, is brutally attacked in front of the unblinking lens of Daniel's camera.",
 
 scenario: "<div>
@@ -5496,7 +5532,8 @@ start_date: 4.days.from_now,
 end_date: 19.days.from_now,
 city: "Bakersfield",
 genre: "Action",
-
+price: 12,
+price_cents: 12000,
 synopsis: "At night, a man escapes the depths of the Quartz mine he works in by climbing up its cliff, his body camouflaged with sparkly patterns.",
 
 scenario: "<div>
@@ -5993,7 +6030,8 @@ start_date: 10.days.from_now,
 end_date: 40.days.from_now,
 city: "Fresno",
 genre: "Animation",
-
+price: 12,
+price_cents: 12000,
 synopsis: "The film tells the story of Julia, a woman who realizes her life is not like the life of Jasmine Rose, her favorite soap opera protagonist. In an effort to “fix” herself, Julia tries to be more like the woman on the screen.",
 
 scenario: "<div>
@@ -6490,7 +6528,8 @@ start_date: 3.days.from_now,
 end_date: 28.days.from_now,
 city: "Long Beach",
 genre: "Animation",
-
+price: 12,
+price_cents: 12000,
 synopsis: "The film tells the story of Julia, a woman who realizes her life is not like the life of Jasmine Rose, her favorite soap opera protagonist. In an effort to “fix” herself, Julia tries to be more like the woman on the screen.",
 
 scenario: "<div>
@@ -6987,7 +7026,8 @@ start_date: 6.days.from_now,
 end_date: 24.days.from_now,
 city: "Los Angeles",
 genre: "Drama",
-
+price: 12,
+price_cents: 12000,
 synopsis: "Jim and Julia spend their day on a wonderful date in Los Angeles; they are very much in love. Interspersed, are scenes of Jim at Julia's funeral.",
 
 scenario: "<div>
