@@ -11,7 +11,13 @@ class ProjectsController < ApplicationController
     if params[:genre].present?
       @projects = @projects.where("genre LIKE ?", params[:genre])
     end
-    if (params[:start_date].present?) && (params[:end_date].present?) && (params[:start_date].to_date < params[:end_date].to_date)
+    if (params[:start_date].present?)
+      @projects = @projects.where("start_date >= ?", params[:start_date])
+    end
+    if (params[:end_date].present?)
+      @projects = @projects.where("end_date <= ?", params[:end_date])
+    end
+    if (params[:start_date].present?) && (params[:end_date].present?)
       @projects = @projects.where("start_date >= ? AND end_date <= ?", params[:start_date], params[:end_date])
     end
 
