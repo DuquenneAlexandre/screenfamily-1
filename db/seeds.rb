@@ -510,9 +510,9 @@ number_of_participants: 5
 )
 project1.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466589014/559c8fed5739986c3ddcb69a6d995f3c_original_bmhjdx.jpg'
 user1.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523566/j4wo3gvbyc9jsd57hvuo.jpg'
-user1.save!
-project1.save!
+user1.save
 project1.users << user1
+project1.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -1009,9 +1009,9 @@ number_of_participants: 7
 )
 project2.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466499225/CHUG_vkftdt.jpg'
 user2.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466524034/11222145_10207231487968456_5608086083271334069_o_m80qjq.jpg'
-user2.save!
-project2.save!
+user2.save
 project2.users << user2
+project2.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -1508,9 +1508,9 @@ number_of_participants: 4
 )
 project3.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466499229/Little.Witch.Academia.full.1921675_f0zvkp.jpg'
 user3.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466524034/13086735_10154011257583654_3491722265380897872_o_hnktph.jpg'
-user3.save!
-project3.save!
+user3.save
 project3.users << user3
+project3.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -2009,9 +2009,9 @@ number_of_participants: 5
 )
 project4.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466499225/maxdogmovie_p9l4tq.jpg'
 user4.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523525/gzeedhgu9vcfw4yblfyr.jpg'
-user4.save!
-project4.save!
+user4.save
 project4.users << user4
+project4.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -2508,9 +2508,9 @@ number_of_participants: 4
 )
 project5.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466499227/for-the-love-of-spock_czjkcz.png'
 user5.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523595/pjwhgh8grg1j1aas73nh.jpg'
-user5.save!
-project5.save!
+user5.save
 project5.users << user5
+project5.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -3009,9 +3009,9 @@ number_of_participants: 3
 )
 project6.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466589765/Copenhagen_Central_Station_pxgqvo.jpg'
 user6.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523595/pjwhgh8grg1j1aas73nh.jpg'
-user6.save!
-project6.save!
+user6.save
 project6.users << user6
+project6.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -3509,9 +3509,9 @@ number_of_participants: 6
 )
 project7.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466590457/maxresdefault_4_h2cnru.jpg'
 user7.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523595/pjwhgh8grg1j1aas73nh.jpg'
-user7.save!
-project7.save!
+user7.save
 project7.users << user7
+project7.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -4007,9 +4007,9 @@ number_of_participants: 11
 )
 project8.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466590791/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.17.59_zpsunj.png'
 user8.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523595/pjwhgh8grg1j1aas73nh.jpg'
-user8.save!
-project8.save!
+user8.save
 project8.users << user8
+project8.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -4505,9 +4505,9 @@ number_of_participants: 5
 )
 project9.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
 user9.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
-user9.save!
-project9.save!
+user9.save
 project9.users << user9
+project9.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -5007,9 +5007,9 @@ number_of_participants: 8
 )
 project10.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466611008/header-logo-rm-31-tt-width-604-height-403-crop-0-bgcolor-000000-nozoom_default-1-lazyload-0_dzlx4q.jpg'
 user10.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
-user10.save!
-project10.save!
+user10.save
 project10.users << user10
+project10.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -5507,9 +5507,9 @@ number_of_participants: 3
 )
 project11.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466611243/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_18.00.06_wb8nmn.png'
 user11.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
-user11.save!
-project11.save!
+user11.save
 project11.users << user11
+project11.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -6007,9 +6007,9 @@ number_of_participants: 9
 )
 project12.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466612930/24a9a4039c272c1cab0053c044e1cf5b_original_rxfoml.png'
 user12.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
-user12.save!
-project12.save!
+user12.save
 project12.users << user12
+project12.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -6505,9 +6505,9 @@ number_of_participants: 6
 )
 project13.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466613560/966cf00de95b807f0733d7e954e4af52_original_qx4gdr.jpg'
 user13.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
-user13.save!
-project13.save!
+user13.save
 project13.users << user13
+project13.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -7003,9 +7003,9 @@ number_of_participants: 4
 )
 project14.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466613860/8f7ca15bb79241240f0c145ac229fa0f_original_nzzunl.png'
 user14.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
-user14.save!
-project14.save!
+user14.save
 project14.users << user14
+project14.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -7501,6 +7501,6 @@ number_of_participants: 7
 )
 project15.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466614414/1d684fc1207d41f800ec95642a9dea96_original_io1ets.jpg'
 user15.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
-user15.save!
-project15.save!
+user15.save
 project15.users << user15
+project15.save
