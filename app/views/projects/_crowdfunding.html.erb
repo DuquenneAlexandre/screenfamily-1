@@ -6,10 +6,10 @@
               <% if !current_user.present? %>
               <h1>Subscribe to support this movie!</h1>
               <% end %>
-            <h2>Participez dés aujourd'hui à l'aboutissement d'un projet.</h2>
+            <h2>Participate now in this project!</h2>
 
-              <h3>Première pallier de contribution.</h3>
-                <p>Bénéficiez des premiers retours, suivez l'évolution du projet.</p>
+              <h3>Early Bird</h3>
+                <p>A big thank you shout out on social media.</p>
                 <p>Amount: <%= humanized_money_with_symbol(@project.price) %></p>
                 <% if current_user.present? %>
                 <%= form_tag orders_path do %>
@@ -17,8 +17,8 @@
                 <%= submit_tag 'Purshase', class: 'btn btn-primary' %>
                 <% end %>
                 <% end %>
-              <h3>Deuxième pallier de contribution.</h3>
-                <p>Participez à la rélisation en consultant les investissement et le bisness plan de la réalisation.</p>
+              <h3>Strong Believer</h3>
+                <p>A digital copy of the film and a digital download of the film's soundtrack.</p>
                 <p>Amount: <%= humanized_money_with_symbol(@project.price) %></p>
                 <% if current_user.present? %>
                 <%= form_tag orders_path do %>
@@ -26,8 +26,8 @@
                 <%= submit_tag 'Purshase', class: 'btn btn-primary' %>
                 <% end %>
                 <% end %>
-            <h3>Troisième pallier de contribution.</h3>
-                <p>Soyez le(s) premier(s) à découvrir le projet echevé.</p>
+            <h3>Movie Star</h3>
+                <p>An EARLY digital copy of the film before its premiere and a Special Thanks credit.</p>
                 <p>Amount: <%= humanized_money_with_symbol(@project.price) %></p>
                 <% if current_user.present? %>
                 <%= form_tag orders_path do %>
