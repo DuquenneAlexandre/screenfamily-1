@@ -6,7 +6,7 @@
  <% if pro.id > 9 %>
  <% a += 1 %>
  <% end %>
- <% end %>                    
+ <% end %>
   <%= render 'caroussel' %>
   <% end %>
 
@@ -16,7 +16,7 @@
           <%@projects.each do |proj|%>
             <!-- POST -->
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 m-b-60">
-              <div class="post">
+              <div class="post size-index-block">
                 <div class="post-media-index">
                 <%= link_to project_path(proj) do %>
                     <%= image_tag proj.project_picture.url(:photo_home_project_index) %>
@@ -35,12 +35,12 @@
                   <p><%= proj.synopsis[0..200] %>...</p>
                 </div>
                 <% end %>
-                <div class="post-more-link font-alt btn btn col-xs-offset-2">
-                  <%= link_to project_path(proj), class:"btn btn-default btn-round btn-lg" do %>
+              </div>
+                <div class="post-more-link font-alt btn btn col-xs-offset-1 col-xs-6">
+                  <%= link_to project_path(proj), class:"btn btn-info btn-lg" do %>
                     View Project
                   <%end%>
                 </div>
-              </div>
             </div>
           <% end %>
       </div>

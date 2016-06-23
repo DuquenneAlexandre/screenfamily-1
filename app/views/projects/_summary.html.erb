@@ -95,6 +95,7 @@
       <div class="col-xs-12 col-md-3">
         <!-- Choisir son role -->
         <div class="widget">
+        <% if current_user.present?%>
           <% if policy(@project).join_project? %>
             <h5 class="widget-title font-alt">Join the project!</h5>
             <%= simple_nested_form_for([@project, @project.roles.build]) do |f| %>
@@ -103,10 +104,12 @@
               <%= f.input :title, collection: @project.roles %>
             </div>
             <div class="actions">
-              <%= f.submit %>
+              <%= f.submit class:"btn btn-primary btn-block" %>
             </div>
             <% end %>
-
+          <% end %>
+          <% else %>
+            <%= link_to "Join us", new_user_session_path , class:"btn btn-success btn-block" %>
           <% end %>
         </div>
           <!-- /Son roles  -->
