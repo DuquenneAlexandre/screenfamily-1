@@ -115,7 +115,7 @@
           <!-- Choisir son role -->
         <div class="widget">
           <% if current_user.present? %>
-            <% if current_user.id == @project.users.ids.reduce(:+) %>
+            <% if current_user.id == @project.users.first.id %>
               <%= link_to "Edit my project", edit_project_path(@project), class:"btn btn-primary btn-block"%>
               <% if !@project.validated_for_crowdfunding? %>
                 <%= link_to "Go Growdfunding", set_crowdfunded_project_path(@project), class:"btn btn-success margin_top_light btn-block"%>
