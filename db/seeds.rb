@@ -510,8 +510,8 @@ number_of_participants: 5
 )
 project1.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466589014/559c8fed5739986c3ddcb69a6d995f3c_original_bmhjdx.jpg'
 user1.remote_user_picture_url= 'http://res.cloudinary.com/dj9tgdqp1/image/upload/v1466523566/j4wo3gvbyc9jsd57hvuo.jpg'
-user1.save
 project1.users << user1
+user1.save
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
