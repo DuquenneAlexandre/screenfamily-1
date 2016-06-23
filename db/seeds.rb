@@ -7499,6 +7499,7 @@ scenario: "<div>
 
 number_of_participants: 7
 )
+
 project15.remote_project_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466614414/1d684fc1207d41f800ec95642a9dea96_original_io1ets.jpg'
 user15.remote_user_picture_url= 'http://res.cloudinary.com/dmobtdbw6/image/upload/v1466592522/Capture_d_e%CC%81cran_2016-06-22_a%CC%80_12.39.49_t1lg3c.png'
 user15.save
