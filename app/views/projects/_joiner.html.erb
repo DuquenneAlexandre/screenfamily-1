@@ -1,28 +1,36 @@
 <section id="team" class="module">
-      <div class="row">
-        <% @project.users.each do |user| %>
-          <!-- TEAM MEMBER -->
-          <div class="col-xs-6 col-md-4">
-            <div class="team-item">
-              <div class="team-image">
-                <%= image_tag user.user_picture %>
-                <div class="team-detail text-center">
-                  <ul class="social-icon-links socicon-circle">
-                    <li>
-                      <%= link_to do %>
-                        <i class="fa-eye"></i>
-                      <%end %>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="team-descr">
-                <h5 class="team-name font-alt"><%= user.first_name %> <%= user.last_name %></h5>
-              </div>
+  <div class="row">
+    <% @project.users.each do |user| %>
+      <!-- TEAM MEMBER -->
+      <div class="col-xs-6 col-md-4">
+        <div class="team-item">
+          <div class="team-image">
+            <%= image_tag user.user_picture %>
+            <div class="team-detail text-center">
+              <ul class="social-icon-links socicon-circle">
+              <% if !current_user.present? %>
+                <li>
+                  <%= link_to new_user_session_path do %>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                  <%end %>
+                </li>
+                <% else %>
+                <li>
+                  <%= link_to profile_user_path(current_user) do %>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                  <%end %>
+                </li>
+                <% end %>
+              </ul>
             </div>
           </div>
-        <!-- /TEAM MEMBER -->
-        <%end%>
+          <div class="team-descr">
+            <h5 class="team-name font-alt"><%= user.first_name %> <%= user.last_name %></h5>
+          </div>
+        </div>
       </div>
+    <!-- /TEAM MEMBER -->
+    <%end%>
+  </div>
 
 </section>
